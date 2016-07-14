@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="Domini.Model.UsuariSoci" extends="Domini.Model.Usuari" table="USUARISOCI" lazy="false">
+        <key on-delete="cascade">
+            <column name="CORREU"/>
+        </key>
+        <many-to-one name="s" class="Domini.Model.Soci" fetch="join" cascade="save-update">
+            <column name="S" />
+        </many-to-one>
+    </joined-subclass>
+</hibernate-mapping>

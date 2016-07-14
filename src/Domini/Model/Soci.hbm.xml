@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Domini.Model.Soci"  table="SOCI">
+        <id name="numero" type="int">
+            <column name="NUMERO" />
+            <generator class="assigned" />
+        </id>
+        <set name="reserves" table="RESERVASOCI" inverse="true" lazy="false" access="field"  cascade="delete-orphan">
+            <key>
+                <column name="PROPIETARI" />
+            </key>
+            <one-to-many class="Domini.Model.Reserves.ReservaSoci" />
+        </set>
+        <property name="nom" type="java.lang.String">
+            <column name="NOM" />
+        </property>
+        <property name="cognoms" type="java.lang.String">
+            <column name="COGNOMS" />
+        </property>
+        <property name="dni" type="java.lang.String" unique="true">
+            <column name="DNI" />
+        </property>
+        <property name="telefon" type="java.lang.String">
+            <column name="TELEFON" />
+        </property>
+        <property name="adreca" type="java.lang.String">
+            <column name="ADRECA" />
+        </property>
+        <property name="naixement" type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate">
+            <column name="NAIXEMENT" />
+        </property>
+        <one-to-one name="q" class="Domini.Model.Quotes.Quota" lazy="false" cascade="delete"/>
+    </class>
+</hibernate-mapping>

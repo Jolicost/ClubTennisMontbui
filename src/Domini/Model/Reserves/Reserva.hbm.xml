@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:31:51 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <subclass name="Domini.Model.Reserves.Reserva" extends="Domini.Model.Reserves.Ocupacio" discriminator-value="Reserva" lazy="false" abstract="true">
+        <property name="dataRealitzada" type="org.jadira.usertype.dateandtime.joda.PersistentDateTime">
+            <column name="DATAREALITZADA" />
+        </property>
+    </subclass>
+</hibernate-mapping>

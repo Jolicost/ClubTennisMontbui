@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Domini.Model.Pista" table="PISTA" abstract="true">
+        <id name="IDPista" type="int">
+            <column name="IDPISTA" />
+            <generator class="increment" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        <property name="nom" type="java.lang.String" unique="true">
+            <column name="NOM" />
+        </property>
+        <set name="franges" table="FRANJA" inverse="true" lazy="false" access="field" cascade="delete-orphan">
+            <key>
+                <column name="PISTA" />
+            </key>
+            <one-to-many class="Domini.Model.Reserves.Franja" />
+        </set>
+        <many-to-one name="horari" class="Domini.Model.Calendari" fetch="join" column="id" cascade="save-update">
+
+        </many-to-one>
+    </class>
+</hibernate-mapping>

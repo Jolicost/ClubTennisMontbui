@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <subclass name="Domini.Model.Quotes.Membre" extends="Domini.Model.Quotes.Familiar" discriminator-value="Membre" lazy="false">
+    <many-to-one name="titular" class="Domini.Model.Quotes.Titular" fetch="join" lazy="false">
+           <column name="TITULAR" />
+    </many-to-one>
+   
+    </subclass>
+</hibernate-mapping>

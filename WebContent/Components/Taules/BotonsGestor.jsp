@@ -1,0 +1,1 @@
+<script src="Components/Taules/BotonsGestor.js"></script>

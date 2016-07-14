@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:31:51 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Domini.Model.Reserves.Franja" table="FRANJA" abstract="true">
+        <id name="ID" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        <property name="lapse" type="org.jadira.usertype.dateandtime.joda.PersistentInterval">
+            <column name="INICI" />  
+            <column name="FI" />     
+        </property>
+        <many-to-one name="pista" class="Domini.Model.Pista" fetch="join">
+            <column name="PISTA" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

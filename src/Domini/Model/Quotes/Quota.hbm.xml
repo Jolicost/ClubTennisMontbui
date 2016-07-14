@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Domini.Model.Quotes.Quota" table="QUOTA" abstract="true">
+        <id name="id" column="id" type="int">
+            <generator class="foreign">
+                <param name="property">propietari</param>
+            </generator>
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        
+        <one-to-one name="propietari" constrained="true" class="Domini.Model.Soci" lazy="false"/>
+    </class>
+</hibernate-mapping>

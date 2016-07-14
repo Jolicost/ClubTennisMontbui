@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2015 12:49:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Domini.Model.Calendari" table="CALENDARI">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="nom" type="java.lang.String">
+            <column name="NOM" />
+        </property>
+       <map name="obertura" table="OBERTURA" cascade="all" lazy="false">  
+			<key column="oberturaid"></key>  
+			<index column="dia" type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate"></index>  
+			<element type="org.jadira.usertype.dateandtime.joda.PersistentInterval">
+				<column name="INICI" />  
+	            <column name="FI" /> 
+			</element>  
+		</map> 
+    </class>
+</hibernate-mapping>
