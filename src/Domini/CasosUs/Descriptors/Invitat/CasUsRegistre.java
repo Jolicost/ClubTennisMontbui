@@ -21,5 +21,9 @@ public class CasUsRegistre extends CasUsInsert{
 	public int getRang(){
 		return FactoriaRangs.getInstance().getNormal().getPermis();
 	}
+	
+	public boolean esRegistre(){
+		return true;
+	}
 
 }

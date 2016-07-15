@@ -75,6 +75,14 @@ public abstract class CasUs {
 		this.actor = actor;
 	}
 	
+	public boolean esRegistre(){
+		return false;
+	}
+	
+	public boolean EsSubmitRegistre(){
+		return false;
+	}
+	
 
 	
 }

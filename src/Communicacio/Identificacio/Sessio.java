@@ -15,13 +15,7 @@ public class Sessio {
 	}
 	public CasUsSessio getCasUs(){return cu;}
 	public CasUsSessio Request() throws Timeout{
-		/*if (DateTime.now().isAfter(expiracio)){
-			throw new Timeout();
-		}
-		else{
-			expiracio = DateTime.now().plusSeconds(10);*/
-			return getCasUs();
-	//	}
+		return getCasUs();
 	}
 
 	public void Connect() throws Timeout{

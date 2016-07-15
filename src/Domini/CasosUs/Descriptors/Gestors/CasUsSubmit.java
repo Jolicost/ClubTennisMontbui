@@ -1,5 +1,6 @@
 package Domini.CasosUs.Descriptors.Gestors;
 
+import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Gestors.Controlador.CuaGestors;
 import Domini.CasosUs.Resultats.ResultatEntitat;
@@ -31,5 +32,7 @@ public class CasUsSubmit extends CasUsGestor {
 	public int getRang(){
 		return FactoriaRangs.getInstance().getNormal().getPermis();
 	}
+	
+
 
 }
