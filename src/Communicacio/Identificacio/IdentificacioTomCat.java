@@ -1,19 +1,18 @@
 package Communicacio.Identificacio;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-
 public class IdentificacioTomCat extends Identificacio{
 
 
 	
-	public IdentificacioTomCat(ServletRequest r){
+	public IdentificacioTomCat(String id){
 		super();
-		this.id = r.getRemoteAddr();
+		this.id = id;
 	}
 
 	private String id;
 	
+
+
 	@Override
 	public String getIdentificacio() {
 		return id;
@@ -26,5 +25,4 @@ public class IdentificacioTomCat extends Identificacio{
 	public void setId(String id) {
 		this.id = id;
 	}
-
 }

@@ -39,6 +39,10 @@ public abstract class Identificacio {
 			s = new Sessio(new CasUsSessio(new Invitat()));
 		}
 	}
+	
+	public boolean Expirada(){
+		return s.Expirada();
+	}
 
 	@Override
 	public boolean equals(Object obj) {

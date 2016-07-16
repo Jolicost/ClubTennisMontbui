@@ -1,6 +1,6 @@
 <%@ page import="java.util.Calendar" %>
 <link rel="stylesheet" type="text/css" href="Components/Footer/footer.css">
-
+<script src="Components/Footer/footer.js"></script>
 <div id="footer">
 <div class="container-fluid">
 <div class="row">

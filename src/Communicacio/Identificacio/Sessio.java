@@ -11,7 +11,7 @@ public class Sessio {
 	
 	public Sessio(CasUsSessio cu){
 		this.cu = cu;
-		expiracio = DateTime.now().plusMinutes(20);
+		expiracio = DateTime.now().plusMinutes(30);
 	}
 	public CasUsSessio getCasUs(){return cu;}
 	public CasUsSessio Request() throws Timeout{
@@ -23,8 +23,12 @@ public class Sessio {
 			throw new Timeout();
 		}
 		else{
-			expiracio = DateTime.now().plusMinutes(20);
+			expiracio = DateTime.now().plusMinutes(30);
 		}	
+	}
+	
+	public boolean Expirada(){
+		return DateTime.now().isAfter(expiracio);
 	}
 	
 }
