@@ -27,12 +27,12 @@ $(document).ready(function() {
     	views:{
     		agendaDay:{
         		allDaySlot:false,
-        		//minTime:'08:00',
+        		minTime:'08:00',
         		slotEventOverlap:false
         	},
         	
         	agendaWeek:{
-        		//minTime:'08:00',
+        		minTime:'08:00',
         		allDaySlot:false
         	},
         	
