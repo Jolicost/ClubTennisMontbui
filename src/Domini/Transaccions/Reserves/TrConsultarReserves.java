@@ -5,8 +5,12 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.function.Predicate;
 
+import org.joda.time.DateTime;
+
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoReserva;
+import Communicacio.Dades.Reserves.InfoReservaSoci;
+import Communicacio.Excepcions.DadaIncorrecta;
 import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
@@ -21,12 +25,12 @@ public class TrConsultarReserves {
 		this.soci = soci;
 	}
 	
-	public void Executar() throws BDExcepcio {
+	public void Executar() throws BDExcepcio, DadaIncorrecta {
 		resultat = new TreeSet<>();
 		Soci s = FactoriaControladors.getInstance().getCtrlSoci().get(soci);
 		Predicate<ReservaSoci> p = rs -> rs.EstaActiva();
 		for (ReservaSoci rs : s.getReservesCondicio(p)){
-			resultat.add(rs.toInfo());
+			resultat.add(rs.toInfo(s));
 		}
 	}
 

@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoOcupacio;
+import Communicacio.Dades.Reserves.InfoReservaSoci;
 import Communicacio.Dades.Reserves.InfoReservar;
 import Communicacio.Excepcions.DadaIncorrecta;
 import Communicacio.Excepcions.EntitatInvalida;
@@ -79,6 +80,10 @@ public abstract class Info {
 	}
 	
 	public InfoFranja toInfoFranja() throws DadaIncorrecta{
+		throw new DadaIncorrecta();
+	}
+	
+	public InfoReservaSoci toInfoReservaSoci() throws DadaIncorrecta{
 		throw new DadaIncorrecta();
 	}
 	

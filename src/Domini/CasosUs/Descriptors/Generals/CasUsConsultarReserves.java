@@ -1,10 +1,11 @@
 package Domini.CasosUs.Descriptors.Generals;
 
 import Domini.CasosUs.Descriptors.CasUs;
+import Domini.CasosUs.Descriptors.CasUsDada;
 import Domini.CasosUs.Resultats.Generals.ResultatReservesSoci;
 import Domini.Transaccions.Reserves.TrConsultarReserves;
 
-public class CasUsConsultarReserves extends CasUs {
+public class CasUsConsultarReserves extends CasUsDada {
 
 	@Override
 	public void ferCasUs() throws Exception {

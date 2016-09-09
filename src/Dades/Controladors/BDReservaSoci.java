@@ -17,6 +17,11 @@ public class BDReservaSoci extends Controlador implements CtrlReservaSoci {
 		super.Insert(r);
 	}
 
+	@Override
+	public ReservaSoci get(int idFranja) throws BDExcepcio {
+		return (ReservaSoci) super.get(ReservaSoci.class, idFranja);
+	}
+
 
 	
 

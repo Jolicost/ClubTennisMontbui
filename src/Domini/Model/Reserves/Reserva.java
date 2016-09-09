@@ -9,6 +9,7 @@ import Communicacio.Dades.Reserves.InfoReserva;
 public abstract class Reserva extends Ocupacio {
 	private DateTime dataRealitzada;
 
+	
 	public Reserva(){
 		
 	}
@@ -35,7 +36,6 @@ public abstract class Reserva extends Ocupacio {
 	
 	protected abstract InfoReserva crearInfoReserva();
 	
-
 
 	
 	

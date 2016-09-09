@@ -1,30 +1,39 @@
-<jsp:useBean id="info" class="Communicacio.Dades.Reserves.InfoReservaSoci" scope="request"/>
 
+<%@ page import="Communicacio.Dades.Reserves.*" %>
+<% InfoReservaSoci i = (InfoReservaSoci) request.getAttribute("info"); %>
 <p class="col-md-12">
 	<strong>Tipus: </strong>
-	<jsp:getProperty name="info" property="tipus"/>
+	<%= i.getTipus() %>
 </p>
 <p class="col-md-12">
 	<strong>Propietari: </strong>
-	<jsp:getProperty name="info" property="nomSoci"/>
+	<%= i.getNomSoci() %>
 </p>
 <p class="col-md-12">
 	<strong>Pista: </strong>
-	<jsp:getProperty name="info" property="nomPista"/>
+	<%= i.getNomPista() %>
 </p>
 <p class="col-md-12">
 	<strong>Esport: </strong>
-	<jsp:getProperty name="info" property="esport"/>
+	<%= i.getEsport() %>
 </p>
 <p class="col-md-12">
 	<strong>Data: </strong>
-	<jsp:getProperty name="info" property="diaFormat"/>
+	<%= i.getDiaFormat() %>
 </p>
 <p class="col-md-6">
 	<strong>Inici: </strong>
-	<jsp:getProperty name="info" property="iniciFormat"/>
+	<%= i.getIniciFormat() %>
 </p>
 <p class="col-md-6">
 	<strong>Fi: </strong>
-	<jsp:getProperty name="info" property="fiFormat"/>
+	<%= i.getFiFormat() %>
 </p>
+<% if (i.isCancelable()){
+%>
+	<button type="button" franja=<%= i.getIdFranja() %> class="cancelar-reserva btn btn-default col-xs-offset-3 col-xs-6">
+	Cancel·lar Reserva
+	</button>
+
+
+<%} %>

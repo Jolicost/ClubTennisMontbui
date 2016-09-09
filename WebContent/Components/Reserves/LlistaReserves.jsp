@@ -1,5 +1,6 @@
 <%@ page import="Communicacio.Dades.Reserves.*" %>
 <%@ page import="java.util.*" %>
+<script src="Components/Reserves/LlistaReserves.js"></script>
 <div class="container">
 <div class="row">
 <%
