@@ -52,12 +52,6 @@ $(document).ready(function() {
         },
         
         eventClick: function(calEvent, jsEvent, view) {
-			
-        	var sel = $('#calendar').fullCalendar('clientEvents',isSelected);
-			for (var i = 0 ; i < sel.length; i ++){
-				if (sel[i] != calEvent)
-					Select(sel[i]);
-			}
 			Select(calEvent);
 			$('#calendar').fullCalendar('rerenderEvents');
         },
@@ -97,9 +91,20 @@ $(document).ready(function() {
     $('#delete').click(function(){
     	
     	var array = $('#calendar').fullCalendar('clientEvents',isSelected);
-    	if (array.length > 0){
+    	if (array.length == 1){
     		if (confirm("vols eliminar la franja: " + array[0].title + "?"))
     			get('eliminar',{id:array[0].franja});
+    	}
+    	else if (array.length > 1){
+    		if (confirm("vols eliminar les franges seleccionades?")){
+    			var franges = [];
+    			for (var j = 0; j < array.length ; j++){
+    				franges.push(array[j].franja);
+    			}
+    			var json = {set:franges};
+    			get('eliminarSet',{ids:JSON.stringify(franges)});    
+    		}
+    					
     	}
     });
 
