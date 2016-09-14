@@ -15,5 +15,7 @@ public class Pagament extends ReservaSoci {
 	protected InfoReservaSoci crearInfoReservaSoci() {
 		return new InfoPagament();
 	}
+	
+	public boolean EsPagament(){return true;}
 
 }

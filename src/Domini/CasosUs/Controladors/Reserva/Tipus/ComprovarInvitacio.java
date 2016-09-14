@@ -15,7 +15,7 @@ public class ComprovarInvitacio extends TrComprovarTipus {
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioInvitacio(s);
+		return new RestriccioInvitacio(s,p);
 	}
 
 	@Override

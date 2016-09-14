@@ -1,29 +1,22 @@
 package Domini.CasosUs.Controladors.Reserva.Confirmar;
 
-import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarInvitacio;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarLimitada;
+import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarRanking;
 import Dades.Excepcions.BDExcepcio;
-import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Soci;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioInvitacio;
+import Domini.Model.Restriccions.RestriccioRanking;
 
-public class ConfirmacioInvitacio extends ConfirmacioLimitada{
-
-	public ConfirmacioInvitacio() {
-		super();
-	}
+public class ConfirmacioRanking extends ConfirmacioLimitada {
 
 	@Override
 	protected InfoConfirmarLimitada crearInfoLimitada() throws BDExcepcio {
-		return new InfoConfirmarInvitacio();
+		return new InfoConfirmarRanking();
 	}
 
 	@Override
 	protected IRestriccio crearRestriccio(Soci s) {
-		return new RestriccioInvitacio(s,p);
+		return new RestriccioRanking(s,p);
 	}
-
-
 
 }

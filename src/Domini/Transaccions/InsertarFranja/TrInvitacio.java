@@ -21,13 +21,13 @@ public class TrInvitacio extends TrReservaSoci {
 
 	@Override
 	protected ReservaSoci ObtenirReservaSoci() throws NoPotReservar {
-		RestriccioInvitacio ri = new RestriccioInvitacio(propietari);
+		RestriccioInvitacio ri = new RestriccioInvitacio(propietari,super.p);
 		ri.Test(Duracio);
 		return new Invitacio();
 	}
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioInvitacio(propietari);
+		return new RestriccioInvitacio(propietari,super.p);
 	}
 
 }

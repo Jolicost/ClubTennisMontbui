@@ -212,6 +212,10 @@ public class Soci implements Serializable {
 		this.alta = alta;
 	}
 	
+	public boolean JugaRanking(){
+		return false;
+	}
+	
 	
 	
 }

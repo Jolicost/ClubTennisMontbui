@@ -38,20 +38,21 @@ public class FiltreRestriccions {
 			resultat.addAll(u);
 		}
 		
-		RestriccioSenseReservaExclosio ex = new RestriccioSenseReservaExclosio(s);
+		RestriccioSenseReservaExclosio ex = new RestriccioSenseReservaExclosio(s,p);
 		
 		resultat = ex.Filtrar(resultat);
 		
-		RestriccioPista rp = new RestriccioPista(p,s);
-		resultat = rp.Filtrar(resultat);
+		//RestriccioPista rp = new RestriccioPista(p,s);
+		//resultat = rp.Filtrar(resultat);
 	}
 	
 	
 	private Set<IRestriccio> crearRestriccions(){
 		Set<IRestriccio> ret = new HashSet<>();
-		ret.add(new RestriccioSenseReserva(s));
-		ret.add(new RestriccioAnticipada(s));
-		ret.add(new RestriccioInvitacio(s));
+		ret.add(new RestriccioSenseReserva(s,p));
+		ret.add(new RestriccioAnticipada(s,p));
+		ret.add(new RestriccioInvitacio(s,p));
+		ret.add(new RestriccioRanking(s,p));
 		return ret;
 	}
 	

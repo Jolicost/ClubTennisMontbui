@@ -34,8 +34,7 @@ public abstract class TrReservaSoci extends TrReserva {
 	protected abstract IRestriccio getRestriccioQuota();
 	
 	private void ComprovarQuota() throws BDExcepcio, NoPotReservar{
-		RestriccioPista rp = new RestriccioPista(p,propietari);
-		rp.Test(Duracio);
+
 		IRestriccio quota = getRestriccioQuota();
 		quota.Test(Duracio);
 	}

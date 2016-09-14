@@ -25,7 +25,7 @@ public class TrPagament extends TrReservaSoci {
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioAnticipada(propietari);
+		return new RestriccioAnticipada(propietari,p);
 	}
 	
 

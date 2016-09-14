@@ -15,6 +15,8 @@ public class Anticipada extends NomesSocis {
 	protected InfoReservaSoci crearInfoReservaSoci() {
 		return new InfoNomesSocis();
 	}
+	
+	public boolean EsAnticipada(){return true;}
 
 
 

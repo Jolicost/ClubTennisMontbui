@@ -21,10 +21,9 @@ import Factories.FactoriaControladors;
 
 public abstract class ReservaSoci extends Reserva{
 	private Soci propietari;
+	//TODO Config attribute
 	
-	private static final int dies = 1;
-//	private static final Duration lapseCancelacio = new Duration(dies * 24 * 60 * 60 * 1000);
-	
+	private static final Duration lapseCancelacio = Duration.standardHours(8);
 	public ReservaSoci(){
 		
 	}
@@ -54,6 +53,10 @@ public abstract class ReservaSoci extends Reserva{
 	
 	public boolean EsSenseReserva(){return false;}
 	
+	public boolean EsPagament(){return false;}
+	public boolean EsNomesSocis(){return false;}
+	public boolean EsRanking(){return false;}
+	public boolean EsAnticipada(){return false;}
 	@Override
 	protected InfoReserva crearInfoReserva() {
 		InfoReservaSoci ret = crearInfoReservaSoci();
@@ -64,20 +67,28 @@ public abstract class ReservaSoci extends Reserva{
 	protected abstract InfoReservaSoci crearInfoReservaSoci();
 	
 	public boolean EsCancelable(DateTime cancelacio,Soci s){
-		return this.getInici().isAfter(cancelacio.plusDays(dies)) && s.equals(this.propietari) && this.EstaActiva();
+		try{
+			TestCancelar(cancelacio,s);
+			return true;
+		}
+		catch(CancelacioInvalida c){
+			return false;
+		}
 	}
 	
 	public void Cancelar(DateTime cancelacio,Soci s) throws CancelacioInvalida,BDExcepcio{
-		
-		
+		TestCancelar(cancelacio,s);
+		FactoriaControladors.getInstance().getCtrlFranja().delete(this.getID());
+	}
+	
+	protected void TestCancelar(DateTime cancelacio,Soci s) throws CancelacioInvalida{
 		if (!s.equals(this.propietari)) throw new PropietariInvalid();
 		
 		if (!this.EstaActiva()) throw new ReservaExpirada();
 		
-		if (!this.getInici().isAfter(cancelacio.plusDays(dies))) throw new SuperaAntelacio();
-		
-		FactoriaControladors.getInstance().getCtrlFranja().delete(this.getID());
+		if (!this.getInici().isAfter(cancelacio.plus(ReservaSoci.lapseCancelacio))) throw new SuperaAntelacio();
 	}
+	
 	public InfoFranja toInfo(Soci solicitant) throws DadaIncorrecta {
 		InfoReservaSoci irs = this.toInfo().toInfoReservaSoci();
 		irs.setCancelable(this.EsCancelable(DateTime.now(), solicitant));

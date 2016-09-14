@@ -8,12 +8,13 @@ import org.joda.time.DateTime;
 import org.joda.time.Interval;
 
 import Domini.Excepcions.NoPotReservar;
+import Domini.Model.Pista;
 import Domini.Model.Soci;
 
 public class RestriccioSenseReserva extends RestriccioReserva {
 
-	public RestriccioSenseReserva(Soci s) {
-		super(s);
+	public RestriccioSenseReserva(Soci s,Pista p) {
+		super(s,p);
 	}
 
 	@Override

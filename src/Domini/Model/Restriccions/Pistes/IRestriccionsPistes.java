@@ -16,4 +16,5 @@ public interface IRestriccionsPistes {
 	public Duration getUnitatReserva();
 	
 	public Set<Interval> Filtrar(Soci s,Set<Interval> in);
+	public boolean Test(Soci s,Interval in);
 }

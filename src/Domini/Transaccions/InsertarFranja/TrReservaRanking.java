@@ -8,33 +8,25 @@ import org.joda.time.Interval;
 import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
-import Domini.Model.Reserves.Anticipada;
 import Domini.Model.Reserves.NomesSocis;
+import Domini.Model.Reserves.ReservaRanking;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioRanking;
 
-public class TrReservaAnticipada extends TrNomesSocis {
-	public TrReservaAnticipada(Pista p, Interval dur,Soci propietari,DateTime realitzacio,Set<Soci> Participants) {
-		super(p, dur, propietari,realitzacio,Participants);
+public class TrReservaRanking extends TrNomesSocis {
+
+	public TrReservaRanking(Pista p, Interval dur, Soci propietari, DateTime realitzacio, Set<Soci> Jugadors) {
+		super(p, dur, propietari, realitzacio, Jugadors);
 	}
-
-
-
 
 	@Override
 	protected NomesSocis ObtenirNomesSocis() throws NoPotReservar {
-		return new Anticipada();
+		return new ReservaRanking();
 	}
-
-
-
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioAnticipada(propietari,p);
+		return new RestriccioRanking(this.propietari,p);
 	}
 
-
-
-	
 }

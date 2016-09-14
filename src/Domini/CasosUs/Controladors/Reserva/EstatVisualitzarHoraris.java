@@ -24,7 +24,7 @@ public class EstatVisualitzarHoraris extends EstatFerReserva {
 	}
 	
 	public void SeleccionarFranja(int IDPista,Interval i) throws Exception{
-		boolean Anticipada = i.getStart().isBefore(DateTime.now().plusMinutes(30));
+		boolean Anticipada = i.getStart().isBefore(DateTime.now().plusMinutes(15));
 		if (Anticipada){
 			
 			ConfirmarReserva next = new ConfirmarReservaSN();
@@ -45,6 +45,7 @@ public class EstatVisualitzarHoraris extends EstatFerReserva {
 			for (TrComprovarTipus  tr : FactoriaTipusReserva.getInstance().getTransaccionsSeleccionables()){
 				tr.setEsport(this.esport);
 				tr.setFranja(i);
+				tr.setIDPista(IDPista);
 				tr.setSoci(this.soci);
 				try{
 					tr.Executar();

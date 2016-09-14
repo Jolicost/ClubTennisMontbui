@@ -6,23 +6,33 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
+import org.joda.time.DateTime;
+import org.joda.time.Duration;
 import org.joda.time.Interval;
 
 import Domini.Excepcions.InsuficientQuota;
+import Domini.Excepcions.MaximAntelacio;
 import Domini.Excepcions.NoPotReservar;
+import Domini.Excepcions.CancelarReserva.SuperaAntelacio;
+import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 
 public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 
-	public RestriccioReservaLimitada(Soci s) {
-		super(s);
+	public RestriccioReservaLimitada(Soci s,Pista p) {
+		super(s,p);
 	}
 
 	@Override
 	public Set<Interval> Filtrar(Set<Interval> in) {
 		Set<Interval> ret = new HashSet<>();
-		for (Set<Interval> res : Separar(in)){
+		
+		
+		Set<Interval> in2 = new HashSet<>();
+		for (Interval i: in) if (this.TestPista(i)) in2.add(i);
+		
+		for (Set<Interval> res : Separar(in2)){
 			Predicate<ReservaSoci> p = this.createPredicate();
 			Interval example = res.iterator().next();
 			Interval per = this.getIntervalPertanyent(example);
@@ -40,6 +50,7 @@ public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 
 	@Override
 	public int Test(Interval in) throws NoPotReservar {
+		if (!TestPista(in)) throw new NoPotReservar();
 		Predicate<ReservaSoci> p = this.createPredicate();
 		Interval per = this.getIntervalPertanyent(in);
 		
@@ -70,9 +81,20 @@ public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 		return ret;
 	}
 	
+	protected boolean TestAntelacio(Interval i) {
+		Duration d = getMaximaAnticipacio();
+		return !DateTime.now().plus(d).isBefore(i.getStart());
+	}
+	
+	protected abstract boolean TestPista(Interval i);
+	
+	
 	protected abstract int getTimeKey(Interval i);
 	protected abstract Interval getIntervalPertanyent(Interval i);
 	protected abstract int getLimit();
+	protected abstract Duration getMaximaAnticipacio();
 	protected abstract Predicate<ReservaSoci> createPredicate();
+	
+
 
 }

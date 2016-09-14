@@ -57,10 +57,6 @@ public class RestriccioFrontennis implements IRestriccionsPistes{
 			int dies = Days.daysBetween( DateTime.now(),in.getStart()).getDays();
 			if(dies >= 3) throw new MaximAntelacio();
 		}
-		else{
-			RestriccioSenseReserva r = new RestriccioSenseReserva(null);
-			r.Test(in);
-		}
 	}
 	
 	private boolean CheckReservarBool(Interval in,int ReservesVigents){
@@ -72,14 +68,6 @@ public class RestriccioFrontennis implements IRestriccionsPistes{
 		else if (i == 1){
 			int dies = Days.daysBetween( DateTime.now(),in.getStart()).getDays();
 			if(dies >= 3) return false;
-		}
-		else{
-			RestriccioSenseReserva r = new RestriccioSenseReserva(null);
-			try {
-				return r.Test(in) > 0;
-			} catch (NoPotReservar e) {
-				return false;
-			}
 		}
 		return true;
 	}
@@ -100,6 +88,12 @@ public class RestriccioFrontennis implements IRestriccionsPistes{
 	private Predicate<ReservaSoci> crearVigentsFronto(){
 		Predicate<ReservaSoci> ret = rs -> rs.EsFronto() && rs.EstaActiva() && !rs.EsSenseReserva();
 		return ret;
+	}
+
+	@Override
+	public boolean Test(Soci s, Interval in) {
+		int i = s.getReservesCondicio(crearVigentsFronto()).size();
+		return CheckReservarBool(in,i);
 	}
 
 }

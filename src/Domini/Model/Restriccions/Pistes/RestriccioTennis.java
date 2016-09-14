@@ -57,5 +57,11 @@ public class RestriccioTennis implements IRestriccionsPistes {
 	}
 
 
+	@Override
+	public boolean Test(Soci s, Interval in) {
+		return CheckReservar(s,in.getStart());
+	}
+
+
 
 }

@@ -2,15 +2,17 @@ package Domini.Model.Restriccions;
 
 import java.util.function.Predicate;
 
+import org.joda.time.Duration;
 import org.joda.time.Interval;
 
+import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 
-public class RestriccioInvitacio extends RestriccioReservaLimitada {
+public class RestriccioInvitacio extends RestriccioAnticipada {
 
-	public RestriccioInvitacio(Soci s) {
-		super(s);
+	public RestriccioInvitacio(Soci s,Pista p) {
+		super(s,p);
 	}
 
 	@Override
@@ -34,5 +36,7 @@ public class RestriccioInvitacio extends RestriccioReservaLimitada {
 		Predicate<ReservaSoci> ret = rs -> rs.EsInvitacio();
 		return ret;
 	}
+
+
 
 }

@@ -28,7 +28,7 @@ public class TrSenseReserva extends TrNomesSocis {
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioSenseReserva(propietari);
+		return new RestriccioSenseReserva(propietari,p);
 	}
 
 }

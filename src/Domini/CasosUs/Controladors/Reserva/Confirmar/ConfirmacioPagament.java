@@ -28,7 +28,7 @@ public class ConfirmacioPagament extends ConfirmacioLimitada{
 
 	@Override
 	protected IRestriccio crearRestriccio(Soci s) {
-		return new RestriccioAnticipada(s);
+		return new RestriccioAnticipada(s,p);
 	}
 
 }

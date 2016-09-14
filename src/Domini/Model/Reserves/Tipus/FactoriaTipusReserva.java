@@ -21,7 +21,7 @@ public class FactoriaTipusReserva {
 	private ReservaPagament rp = new ReservaPagament();
 	private ReservaSN rsn = new ReservaSN();
 	private ReservaNomesSocis rns = new ReservaNomesSocis();
-	
+	private ReservaTipusRanking rr = new ReservaTipusRanking();
 	
 	public FactoriaTipusReserva(){
 		tipus = new HashMap<>();
@@ -30,6 +30,7 @@ public class FactoriaTipusReserva {
 		tipus.put(rp.getNom(), rp);
 		tipus.put(rsn.getNom(), rsn);
 		tipus.put(rns.getNom(), rns);
+		tipus.put(rr.getNom(),rr);
 	}
 	public ReservaInvitacio getInvitacio() {
 		return ri;
@@ -42,6 +43,9 @@ public class FactoriaTipusReserva {
 	}
 	public ReservaNomesSocis getNomesSocis(){
 		return rns;
+	}
+	public ReservaTipusRanking getRanking(){
+		return rr;
 	}
 	public TipusReserva get(String tipus) throws TipusReservaInvalid{
 		if (this.tipus.containsKey(tipus)){
