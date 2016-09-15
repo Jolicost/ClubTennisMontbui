@@ -8,7 +8,10 @@
 <script src='fullcalendar/lang-all.js'></script>
 <script src="Components/Calendari/Calendari.js"></script>
 <script>
-<% Set<InfoHorari> disponibilitats = (Set<InfoHorari>) (Set<?>) request.getAttribute("disponibilitats"); %>
+<% Set<InfoHorari> d = (Set<InfoHorari>) (Set<?>) request.getAttribute("disponibilitats"); 
+	SortedSet<InfoHorari> disponibilitats = new TreeSet<>();
+	disponibilitats.addAll(d);
+%>
 $(document).ready(function() {
 	$.getScript("Components/Util/getpost.js");
     // page is now ready, initialize the calendar...
@@ -174,15 +177,16 @@ function AlternarPista(IDPista,mapa){
 	<div class="panel panel-default">
 	    <div class="panel-heading">
 	        <h4 class="panel-title">
-	            <p class="accordion-toggle text text-center text-muted" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-	            <strong>Mostrar Pistes
+	            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+	            <p class="text text-center text-muted"><strong>Mostrar Pistes
 	            </strong>
 	            </p>
+	            </a>
 	            
 	        </h4>
 	    </div>
-	    <div id="collapseOne" class="panel-collapse collapse" style="margin:20px">
-	    	<div class="row">
+	    <div id="collapseOne" class="panel-collapse collapse">
+	    	<div class="row" style="margin:10px">
 	    	<div class="col col-md-6 col-md-offset-3">
 	    	<% 
 			for (InfoHorari ih : disponibilitats){%> 

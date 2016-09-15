@@ -3,7 +3,7 @@ package Communicacio.Dades;
 import java.util.SortedSet;
 
 
-public class InfoHorari extends Info {
+public class InfoHorari extends Info implements Comparable<InfoHorari>{
 	private SortedSet<InfoLapse> disponibilitats;
 	private int IDPista;
 	private String nomPista;
@@ -42,6 +42,11 @@ public class InfoHorari extends Info {
 
 	public void setNomPista(String nomPista) {
 		this.nomPista = nomPista;
+	}
+
+	@Override
+	public int compareTo(InfoHorari o) {
+		return this.nomPista.compareTo(o.nomPista);
 	}
 	
 
