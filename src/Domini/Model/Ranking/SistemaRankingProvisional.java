@@ -18,9 +18,9 @@ public class SistemaRankingProvisional implements SistemaRanking {
 			525,
 			545,
 			558,
-			578,
 			599,
-			611,	
+			611,
+			630,
 	};
 	
 	private static int[] socis_fem = {
