@@ -1,11 +1,14 @@
 package Utils;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
 import org.joda.time.Interval;
+import org.joda.time.LocalDate;
 
 public abstract class IntervalUtils{
 
@@ -25,6 +28,9 @@ public abstract class IntervalUtils{
 		return temp;
 	}
 	
+	
+
+	
 	private static Set<Interval> Difference(Set<Interval> x,Interval y){
 		Set<Interval> ret = new HashSet<>();
 		for (Interval i:x){
@@ -32,6 +38,16 @@ public abstract class IntervalUtils{
 		}
 		return ret;
 	}
+	
+	public static Set<Interval> Difference(Interval x,Set<Interval> y ){
+		Set<Interval> temp = new HashSet<>();
+		temp.add(x);
+		for (Interval i : y){
+			temp = Difference(temp,i);
+		}
+		return temp;
+	}
+	
 
 	private static Set<Interval> Difference(Interval x,Interval y){
 		Set<Interval> ret = new HashSet<>();
@@ -90,6 +106,23 @@ public abstract class IntervalUtils{
 				}
 				
 				it = it.plus(dur);
+			}
+		}
+		return ret;
+	}
+	
+	public static Map<LocalDate,Set<Interval>> SplitByDay(Set<Interval> in){
+		Map<LocalDate,Set<Interval>> ret = new HashMap<>();
+		
+		for (Interval i:in){
+			LocalDate dia = i.getStart().toLocalDate();
+			if (ret.containsKey(dia)){
+				ret.get(dia).add(i);
+			}
+			else{
+				Set<Interval> conj = new HashSet<>();
+				conj.add(i);
+				ret.put(dia, conj);
 			}
 		}
 		return ret;

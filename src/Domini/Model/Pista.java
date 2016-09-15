@@ -7,7 +7,6 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.joda.time.DateTime;
 import org.joda.time.Duration;
 import org.joda.time.Interval;
 import org.joda.time.LocalDate;
@@ -16,9 +15,7 @@ import Communicacio.Dades.Info;
 import Communicacio.Dades.InfoHorari;
 import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.InfoPista;
-import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoLliure;
-import Domini.Excepcions.NoPotReservar;
 import Domini.Excepcions.PistaTancada;
 import Domini.Model.Reserves.Franja;
 import Domini.Model.Restriccions.Filtre.FiltreRestriccions;
@@ -137,11 +134,30 @@ public abstract class Pista {
 	
 	
 	public InfoHorari ObtenirInfo(Interval i,Soci s){
-		Set<Interval> IntervalObert = horari.getOberturesDies(i);
-		Set<Interval> IntervalAssignat = IntervalUtils.Intersaction(IntervalObert, IntervalsFranges());
-		Set<Interval> IntervalDisponible = IntervalUtils.Difference(IntervalObert, IntervalAssignat);
-		Set<Interval> IntervalsDividits = IntervalUtils.Split(IntervalDisponible, getTempsReserva());
+		//Set<Interval> IntervalObert = horari.getOberturesDies(i);
+		//Set<Interval> IntervalAssignat = IntervalUtils.Intersaction(IntervalObert, IntervalsFranges());
+		//Set<Interval> IntervalDisponible = IntervalUtils.Difference(IntervalObert, IntervalsFranges());
+		//Set<Interval> IntervalsDividits = IntervalUtils.Split(IntervalDisponible, getTempsReserva());
 		
+		Set<Interval> IntervalDisponible = new HashSet<>();
+		Map<LocalDate,Interval> obertures_dies = horari.getObertura();
+		
+		Map<LocalDate,Set<Interval>> ocupacions_dies = IntervalUtils.SplitByDay(IntervalsFranges());
+
+		for (LocalDate dia:obertures_dies.keySet()){
+			if (ocupacions_dies.containsKey(dia)){
+				Interval obert = obertures_dies.get(dia);
+				Set<Interval> ocupat = ocupacions_dies.get(dia);
+				
+				IntervalDisponible.addAll(IntervalUtils.Difference(obert,ocupat));
+			}
+			else{
+				IntervalDisponible.add(obertures_dies.get(dia));
+			}
+		}
+		
+		
+		Set<Interval> IntervalsDividits = IntervalUtils.Split(IntervalDisponible, getTempsReserva());
 		FiltreRestriccions f = new FiltreRestriccions(s,this, IntervalsDividits);
 		f.Executar();
 		IntervalsDividits = f.getResultat();
