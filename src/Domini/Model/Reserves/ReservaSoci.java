@@ -57,6 +57,7 @@ public abstract class ReservaSoci extends Reserva{
 	public boolean EsNomesSocis(){return false;}
 	public boolean EsRanking(){return false;}
 	public boolean EsAnticipada(){return false;}
+	public boolean EsInvitacio(){return false;}
 	@Override
 	protected InfoReserva crearInfoReserva() {
 		InfoReservaSoci ret = crearInfoReservaSoci();

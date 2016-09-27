@@ -152,6 +152,15 @@ public class Soci implements Serializable {
 		return ret;
 	}
 	
+	public Set<ReservaSoci> getReservesPropietariCondicio(Predicate<ReservaSoci> cond){
+		Set<ReservaSoci> ret = new HashSet<>();
+		for (ReservaSoci rs : this.getReserves()) {
+			if (cond.test(rs)) {
+				ret.add(rs);
+			}
+		}
+		return ret;
+	}
 	public boolean ReservaExistix(Predicate<ReservaSoci> cond){
 		for (ReservaSoci rs : this.q.ObtenirReserves()) if (cond.test(rs)) return true;
 		return false;

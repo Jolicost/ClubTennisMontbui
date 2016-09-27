@@ -145,14 +145,16 @@ public abstract class Pista {
 		Map<LocalDate,Set<Interval>> ocupacions_dies = IntervalUtils.SplitByDay(IntervalsFranges());
 
 		for (LocalDate dia:obertures_dies.keySet()){
-			if (ocupacions_dies.containsKey(dia)){
-				Interval obert = obertures_dies.get(dia);
-				Set<Interval> ocupat = ocupacions_dies.get(dia);
-				
-				IntervalDisponible.addAll(IntervalUtils.Difference(obert,ocupat));
-			}
-			else{
-				IntervalDisponible.add(obertures_dies.get(dia));
+			Interval obert = obertures_dies.get(dia);
+			if (i.overlaps(obert)){
+				if (ocupacions_dies.containsKey(dia)){
+					Set<Interval> ocupat = ocupacions_dies.get(dia);
+					
+					IntervalDisponible.addAll(IntervalUtils.Difference(obert,ocupat));
+				}
+				else{
+					IntervalDisponible.add(obertures_dies.get(dia));
+				}
 			}
 		}
 		

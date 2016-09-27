@@ -1,5 +1,6 @@
 package Domini.Model.Restriccions;
 
+import java.util.Set;
 import java.util.function.Predicate;
 
 import org.joda.time.Duration;
@@ -44,5 +45,10 @@ public class RestriccioRanking extends RestriccioAnticipada {
 			return anticipacio && tennis;
 		}
 		return false;
+	}
+	
+	protected Set<ReservaSoci> obtenirReservesRealitzades(Soci s,Predicate<ReservaSoci> cond){
+		 return s.getReservesPropietariCondicio(cond);
+		
 	}
 }

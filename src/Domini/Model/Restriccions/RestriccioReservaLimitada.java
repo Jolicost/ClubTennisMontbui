@@ -40,7 +40,7 @@ public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 			Predicate<ReservaSoci> espai = r -> r.Intersecciona(per);
 			espai = p.and(espai);
 			
-			Set<ReservaSoci> mateixEspai = s.getReservesCondicio(espai);
+			Set<ReservaSoci> mateixEspai = this.obtenirReservesRealitzades(s,espai);
 			if (mateixEspai.size() < this.getLimit()){
 				ret.addAll(res);
 			}
@@ -57,7 +57,7 @@ public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 		Predicate<ReservaSoci> espai = r -> r.Intersecciona(per);
 		espai = p.and(espai);
 		
-		Set<ReservaSoci> mateixEspai = s.getReservesCondicio(espai);
+		Set<ReservaSoci> mateixEspai = this.obtenirReservesRealitzades(s,espai);
 		int r =  this.getLimit() - mateixEspai.size();
 		if (r <= 0) throw new InsuficientQuota();
 		return r;
@@ -88,7 +88,10 @@ public abstract class RestriccioReservaLimitada extends RestriccioReserva {
 	
 	protected abstract boolean TestPista(Interval i);
 	
-	
+	protected Set<ReservaSoci> obtenirReservesRealitzades(Soci s,Predicate<ReservaSoci> cond){
+		 return s.getReservesCondicio(cond);
+		
+	}
 	protected abstract int getTimeKey(Interval i);
 	protected abstract Interval getIntervalPertanyent(Interval i);
 	protected abstract int getLimit();

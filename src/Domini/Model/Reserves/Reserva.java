@@ -24,8 +24,8 @@ public abstract class Reserva extends Ocupacio {
 		this.dataRealitzada = dataRealitzada;
 	}
 	
-	public boolean EsInvitacio(){return false;}
-	public boolean EsNomesSocis(){return false;}
+	
+
 
 	@Override
 	protected InfoFranja crearInfo() {
