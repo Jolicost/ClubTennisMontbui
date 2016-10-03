@@ -2,14 +2,12 @@ package Domini.CasosUs.Gestors.Franges;
 
 import Communicacio.Dades.Info;
 import Communicacio.Dades.Reserves.InfoOcupacio;
-import Communicacio.Excepcions.DadaIncorrecta;
-import Communicacio.Excepcions.EntitatInvalida;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
 import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.Accions.Accio;
 import Domini.Model.Reserves.Franja;
 import Domini.Model.Reserves.Ocupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 import Factories.FactoriaControladors;
 
 public class GestorOcupacio extends GestorFranja{

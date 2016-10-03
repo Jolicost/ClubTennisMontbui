@@ -1,4 +1,4 @@
-package Presentacio.Components.Gestors.Ocupacions;
+package Presentacio.Components.Gestors.Franges.Ocupacions;
 
 import Presentacio.Components.Gestors.VistaInsertIndividual;
 

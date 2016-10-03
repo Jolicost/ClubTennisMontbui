@@ -7,10 +7,10 @@ import Domini.Model.Pista;
 import Domini.Model.Reserves.Franja;
 import Factories.FactoriaControladors;
 
-public class GestorFranjaPistaInsert extends GestorOcupacio{
+public class GestorOcupacioPistaInsert extends GestorOcupacio{
 
 	private int idPista;
-	public GestorFranjaPistaInsert(int idPista) {
+	public GestorOcupacioPistaInsert(int idPista) {
 		super(FactoriaAccions.getInstance().getInsert());
 		this.idPista = idPista;
 	}

@@ -26,6 +26,6 @@ public class GestorOcupacionsPista extends GestorOcupacions {
 	}
 	
 	public Gestor getIndividualInserter() throws Exception {
-		return new GestorFranjaPistaInsert(id);
+		return new GestorOcupacioPistaInsert(id);
 	}
 }

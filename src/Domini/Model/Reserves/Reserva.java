@@ -37,6 +37,10 @@ public abstract class Reserva extends Ocupacio {
 	protected abstract InfoReserva crearInfoReserva();
 	
 
+	public void Populate(InfoReserva ir){
+		super.Populate(ir);
+		if (ir.getDataRealitzada() != null) this.setDataRealitzada(ir.getDataRealitzada());
+	}
 	
 	
 	

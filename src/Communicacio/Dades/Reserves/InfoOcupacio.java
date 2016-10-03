@@ -3,7 +3,6 @@ package Communicacio.Dades.Reserves;
 
 import java.util.Map;
 
-import org.joda.time.DateTime;
 import org.joda.time.Interval;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
@@ -11,7 +10,7 @@ import org.joda.time.LocalTime;
 import Communicacio.Dades.Info;
 import Communicacio.Excepcions.DadaIncorrecta;
 import Communicacio.Excepcions.EntitatInvalida;
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 
 public class InfoOcupacio extends InfoFranja {
 

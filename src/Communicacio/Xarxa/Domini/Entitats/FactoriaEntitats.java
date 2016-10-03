@@ -2,14 +2,10 @@ package Communicacio.Xarxa.Domini.Entitats;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.ServletRequest;
 
 import Communicacio.Dades.Info;
-import Communicacio.Excepcions.InsuficientPermis;
-import Dades.Excepcions.BDExcepcio;
-import Domini.CasosUs.Sessio.CasUsSessio;
 
 public class FactoriaEntitats {
 	private static FactoriaEntitats instance = new FactoriaEntitats();
@@ -23,6 +19,8 @@ public class FactoriaEntitats {
 	private EntitatOcupacio oc = new EntitatOcupacio();
 	private EntitatHoraris oh = new EntitatHoraris();
 	private EntitatOcupacions occ = new EntitatOcupacions();
+	private EntitatReserva r = new EntitatReserva();
+	private EntitatFranges f = new EntitatFranges();
 	
 	private Map<String,Entitat> entitats;
 	
@@ -36,6 +34,8 @@ public class FactoriaEntitats {
 		entitats.put(oc.getEntitat(), oc);
 		entitats.put(oh.getEntitat(), oh);
 		entitats.put(occ.getEntitat(), occ);
+		entitats.put(r.getEntitat(), r);
+		entitats.put(f.getEntitat(), f);
 	}
 	
 	public Entitat getEntitat(String entitat) throws EntitatInvalida{
@@ -78,5 +78,12 @@ public class FactoriaEntitats {
 
 	public String getOcupacions() {
 		return occ.getEntitat();
+	}
+
+	public String getReserva() {
+		return r.getEntitat();
+	}
+	public String getFranges(){
+		return f.getEntitat();
 	}
 }

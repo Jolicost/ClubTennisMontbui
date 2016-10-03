@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoOcupacio;
+import Communicacio.Dades.Reserves.InfoReserva;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
 import Communicacio.Dades.Reserves.InfoReservar;
 import Communicacio.Excepcions.DadaIncorrecta;
@@ -88,6 +89,10 @@ public abstract class Info {
 	}
 	
 	public InfoOcupacions toInfoOcupacions() throws DadaIncorrecta{
+		throw new DadaIncorrecta();
+	}
+	
+	public InfoReserva toInfoReserva() throws DadaIncorrecta{
 		throw new DadaIncorrecta();
 	}
 	public List<String> getAttributeNames(){

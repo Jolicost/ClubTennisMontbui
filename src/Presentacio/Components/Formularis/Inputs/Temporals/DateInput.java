@@ -6,6 +6,7 @@ import Presentacio.Components.Formularis.Inputs.LabelInput;
 
 public class DateInput extends LabelInput {
 
+	
 	@Override
 	protected InputZone getInputZone() {
 		return new InputZoneText();
@@ -25,7 +26,10 @@ public class DateInput extends LabelInput {
 		super.setLabel(getLabelName());
 	}
 
-	protected String getLabelName(){return "Data: ";}
+	protected String getLabelName(){
+		if (super.label != null) return super.label;
+		else return "Data: ";
+	}
 	protected String getInputType(){return "date";}
 
 }

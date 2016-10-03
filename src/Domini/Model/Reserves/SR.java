@@ -6,6 +6,7 @@ import Communicacio.Dades.Reserves.InfoReserva;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
 import Communicacio.Dades.Reserves.InfoSenseReserva;
 import Domini.Model.Soci;
+import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
 
 public class SR extends NomesSocis {
 	public SR(){
@@ -18,9 +19,8 @@ public class SR extends NomesSocis {
 	@Override
 	public boolean EsSenseReserva(){return true;}
 	@Override
-	protected String getTipus() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getTipus() {
+		return FactoriaTipusReserva.getInstance().getSenseReserva().getNom();
 	}
 	@Override
 	protected InfoReservaSoci crearInfoReservaSoci() {

@@ -26,6 +26,7 @@ public class AccionsAdministrador extends GrupAccions{
 		menu.add(new AccioGestorEntitat("Socis",admin.getPermis(),FactoriaEntitats.getInstance().getSoci()));
 		menu.add(new AccioGestorEntitat("Pistes",monitor.getPermis(),FactoriaEntitats.getInstance().getPista()));
 		menu.add(new AccioGestorEntitat("Calendaris",admin.getPermis(),FactoriaEntitats.getInstance().getCalendari()));
+		menu.add(new AccioGestorEntitat("Franges",monitor.getPermis(),FactoriaEntitats.getInstance().getFranges()));
 	}
 
 	@Override

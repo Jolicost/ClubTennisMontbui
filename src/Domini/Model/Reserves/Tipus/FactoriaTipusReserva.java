@@ -74,6 +74,17 @@ public class FactoriaTipusReserva {
 		return ret;
 	}
 	
+	
+	public Set<String> getAll(){
+		Set<String> ret = new HashSet<>();
+		tipus.values().forEach(v -> ret.add(v.getNom()));
+		return ret;
+	}
+	
+	public Map<String,TipusReserva> getAllTipus(){
+		return tipus;
+	}
+
 	public Set<TrComprovarTipus> getTransaccionsSeleccionables(){
 		Predicate<TipusReserva> p = (t) -> t.EsSeleccionable();
 		return getTransaccionsCondicio(p);

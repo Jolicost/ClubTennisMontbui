@@ -1,17 +1,18 @@
-package Presentacio.Components.Gestors.Ocupacions;
+package Presentacio.Components.Gestors.Franges;
 
-import Communicacio.Dades.InfoObertura;
-import Communicacio.Dades.Reserves.InfoOcupacio;
+import Communicacio.Dades.Reserves.InfoFranja;
 import Presentacio.Components.Formularis.Inputs.Ocupacions.TipusOcupacioInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.DiaInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.IntervalInput;
 
-public class FormulariOcupacioUpdate extends FormulariOcupacio {
+public abstract class FormulariFranjaUpdate extends FormulariFranja {
 
-	private InfoOcupacio i;
-	public FormulariOcupacioUpdate(InfoOcupacio i){
+	protected InfoFranja i;
+	
+	public FormulariFranjaUpdate(InfoFranja i){
 		this.i = i;
 	}
+	
 	@Override
 	protected IntervalInput getIntervalInput() {
 		String inici = i.getInterval().getStart().toLocalTime().toString();
@@ -23,9 +24,4 @@ public class FormulariOcupacioUpdate extends FormulariOcupacio {
 	protected DiaInput getDiaInput() {
 		return new DiaInput(i.getDia().toString());
 	}
-	@Override
-	protected TipusOcupacioInput getTipusInput() {
-		return new TipusOcupacioInput(i.getTipus());
-	}
-
 }

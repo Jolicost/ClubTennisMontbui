@@ -1,6 +1,6 @@
 package Presentacio.Components.Formularis.Inputs.Ocupacions;
 
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 import Presentacio.Components.Formularis.Inputs.ListInput;
 
 public class TipusOcupacioInput extends ListInput {

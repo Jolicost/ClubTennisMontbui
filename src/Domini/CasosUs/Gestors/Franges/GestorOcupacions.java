@@ -8,6 +8,7 @@ import Communicacio.Dades.Info;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Gestors.Accions.FactoriaAccions;
+import Domini.Model.Reserves.Franja;
 import Factories.FactoriaControladors;
 
 public class GestorOcupacions extends GestorFranges {
@@ -21,8 +22,9 @@ public class GestorOcupacions extends GestorFranges {
 	
 	@Override
 	public Gestor getIndividualUpdater(Serializable id) throws Exception {
-		GestorOcupacio ret = new GestorOcupacio(FactoriaAccions.getInstance().getUpdate(),Integer.valueOf(id.toString()));
-		return ret;
+		int idFranja = Integer.valueOf(id.toString());
+		Franja f = FactoriaControladors.getInstance().getCtrlFranja().get(idFranja);
+		return f.getTipusFranja().getGestorFranjaUpdate(idFranja);
 	}
 
 	@Override

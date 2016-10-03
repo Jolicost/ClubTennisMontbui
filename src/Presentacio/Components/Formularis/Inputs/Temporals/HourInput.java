@@ -20,7 +20,7 @@ public class HourInput extends LabelInput {
 		super.setLabel(getLabelName());
 	}
 
-	protected String getLabelName(){return "Time: ";}
+	protected String getLabelName(){return super.name;}
 	protected String getInputType(){return "time";}
 	@Override
 	protected InputZone getInputZone() {

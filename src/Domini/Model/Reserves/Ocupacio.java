@@ -9,12 +9,11 @@ public abstract class Ocupacio extends Franja {
 	}
 
 	
-	protected abstract String getTipus();
+	public abstract String getTipus();
 
 
 	public void Populate(InfoOcupacio io) {
-		this.setLapse(io.getInterval());
-		
+		super.Populate(io);
 	}
 	
 

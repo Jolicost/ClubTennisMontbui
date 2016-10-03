@@ -1,13 +1,10 @@
 package Domini.CasosUs.Gestors.Franges;
 
 import Communicacio.Dades.Info;
-import Communicacio.Dades.Reserves.InfoOcupacio;
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
 import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.GestorIndividualAccio;
 import Domini.CasosUs.Gestors.Accions.Accio;
 import Domini.Model.Reserves.Franja;
-import Domini.Model.Reserves.Ocupacio;
 import Factories.FactoriaControladors;
 
 public abstract class GestorFranja extends GestorIndividualAccio {

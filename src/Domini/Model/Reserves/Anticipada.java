@@ -2,13 +2,13 @@ package Domini.Model.Reserves;
 
 import Communicacio.Dades.Reserves.InfoNomesSocis;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
+import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
 
 public class Anticipada extends NomesSocis {
 
 	@Override
-	protected String getTipus() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getTipus() {
+		return FactoriaTipusReserva.getInstance().getNomesSocis().getNom();
 	}
 
 	@Override

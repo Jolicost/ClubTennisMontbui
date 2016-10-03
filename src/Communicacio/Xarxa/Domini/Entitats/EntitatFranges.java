@@ -1,49 +1,50 @@
 package Communicacio.Xarxa.Domini.Entitats;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import Communicacio.Dades.Info;
-import Communicacio.Dades.Reserves.InfoReserva;
-import Communicacio.Excepcions.InsuficientPermis;
 import Communicacio.Excepcions.NoTeGestor;
-import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.GestorColectiu;
-import Domini.CasosUs.Sessio.CasUsSessio;
+import Domini.CasosUs.Gestors.Franges.GestorFrangesTotal;
+import Presentacio.Components.Gestors.VistaCRUDFranges;
 import Presentacio.Components.Gestors.VistaGestorEntitat;
 import Presentacio.Components.Gestors.VistaGestorIndividual;
 import Presentacio.Components.Gestors.VistaInsertIndividual;
 import Presentacio.Components.Gestors.VistaSelectEntitat;
-import Presentacio.Components.Gestors.Franges.Reserves.VistaUpdateReserva;
 
-public class EntitatReserva extends Entitat {
+public class EntitatFranges extends Entitat {
 
 	@Override
 	public String getEntitat() {
-		return "reserva";
-	}
-	@Override
-	public VistaGestorEntitat getGestorEntitat() {
-		return null;
+		return "franges";
 	}
 
 	@Override
-	public GestorColectiu getGestor() throws NoTeGestor{
-		throw new NoTeGestor();
+	public VistaGestorEntitat getGestorEntitat() {
+		return new VistaCRUDFranges();
 	}
+
+	@Override
+	public GestorColectiu getGestor() throws NoTeGestor {
+		return new GestorFrangesTotal();
+	}
+
 	@Override
 	public VistaSelectEntitat getSelectorEntitat() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	@Override
 	public Info getInfo() {
-		return new InfoReserva();
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	@Override
 	public VistaGestorIndividual getGestorIndividual() {
-		return new VistaUpdateReserva();
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	@Override
 	public VistaInsertIndividual getInsertIndividual() {
 		// TODO Auto-generated method stub

@@ -5,14 +5,12 @@
 <div class="container-fluid">
 <div class="row">
 <div class="col col-md-4">
-
-	<h3 class="text text-muted text-center">Reserves</h3>
-	<h2 class="text small text-center">Club Tennis Montbui &copy; <%= Calendar.getInstance().get(Calendar.YEAR) %></h2>
+	<h3 class="text text-center text-muted">Reserves</h3>
+	<h2 class="text small text-center">Reserves Club Tennis Montbui &copy; <%= Calendar.getInstance().get(Calendar.YEAR) %></h2>
 </div>
 
 <div class="col col-md-4">
 	<p class="text small text-muted"><span class="glyphicon glyphicon-globe"></span> Carrer Sant Passanals, 0, Santa Margarida de Montbui</p>
-	<p class="text small text-muted"><span class="glyphicon glyphicon-phone"></span> 650 48 83 40</p>
 	<p class="text small text-muted"><a href="mailto:info@tennismontbui.net"><span class="glyphicon glyphicon-envelope"></span> info@tennismontbui.net</a></p>
 	<p class="text small text-muted"><a href="mailto:joanolivacostas@gmail.com"><span class="glyphicon glyphicon-envelope"></span> webmaster</a></p>
 </div>

@@ -1,10 +1,9 @@
-package Presentacio.Components.Gestors.Ocupacions;
+package Presentacio.Components.Gestors.Franges;
 
-import Presentacio.Components.Formularis.Inputs.Ocupacions.TipusOcupacioInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.DiaInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.IntervalInput;
 
-public class FormulariOcupacioInsert extends FormulariOcupacio {
+public abstract class FormulariFranjaInsert extends FormulariFranja{
 
 	@Override
 	protected IntervalInput getIntervalInput() {
@@ -15,10 +14,4 @@ public class FormulariOcupacioInsert extends FormulariOcupacio {
 	protected DiaInput getDiaInput() {
 		return new DiaInput();
 	}
-
-	@Override
-	protected TipusOcupacioInput getTipusInput() {
-		return new TipusOcupacioInput();
-	}
-
 }

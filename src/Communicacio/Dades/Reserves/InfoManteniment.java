@@ -1,6 +1,6 @@
 package Communicacio.Dades.Reserves;
 
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 
 public class InfoManteniment extends InfoOcupacio {
 

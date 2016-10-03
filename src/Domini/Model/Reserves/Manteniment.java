@@ -3,13 +3,13 @@ package Domini.Model.Reserves;
 import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoManteniment;
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 
 public class Manteniment extends Ocupacio{
 
 
 	@Override
-	protected String getTipus() {
+	public String getTipus() {
 		return FactoriaTipusOcupacio.getInstance().getManteniment();
 	}
 	

@@ -1,11 +1,11 @@
-package Communicacio.Xarxa.Domini.Entitats.Ocupacio;
+package Domini.Model.Reserves.Tipus;
 
 import Communicacio.Dades.Reserves.InfoAltres;
 import Communicacio.Dades.Reserves.InfoOcupacio;
 import Domini.Model.Reserves.Altres;
 import Domini.Model.Reserves.Ocupacio;
 
-public class EntitatAltres extends EntitatTipusOcupacio {
+public class OcupacioAltres extends TipusOcupacio {
 
 	@Override
 	public String getNom() {

@@ -1,21 +1,19 @@
 <%@ page import="org.joda.time.*" %>
 <%@ page import="java.util.*" %>
 <%@ page import="Communicacio.Dades.*" %>
+<%@ page import="Communicacio.Dades.Reserves.*" %>
 <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
 <script src='fullcalendar/lib/jquery.min.js'></script>
 <script src='fullcalendar/lib/moment.min.js'></script>
 <script src='fullcalendar/fullcalendar.js'></script>
 <script src='fullcalendar/lang-all.js'></script>
-<script src="Components/Calendari/Calendari.js"></script>
 <script>
-<% Set<InfoHorari> d = (Set<InfoHorari>) (Set<?>) request.getAttribute("disponibilitats"); 
-	SortedSet<InfoHorari> disponibilitats = new TreeSet<>();
-	disponibilitats.addAll(d);
-%>
+<% Set<InfoHorari> ocupacions = (Set<InfoHorari>) (Set<?>) request.getAttribute("taula"); %>
 $(document).ready(function() {
 	$.getScript("Components/Util/getpost.js");
     // page is now ready, initialize the calendar...
-	var evnts = LoadEvents();
+
+    var evnts = LoadEvents();
     var pistes = LoadPistes();
     var mapa = SplitEvents(evnts,pistes);
     
@@ -30,11 +28,13 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
     	lang:'ca',
     	header: {
-    		left:   'title,myCustomButton',
+    		left:   'title',
             center: 'today',
             right:  'month,agendaWeek,agendaDay, ,prev,next'
     	},
+    	
     	height:'auto',
+    
     	firstDay:1,
     	businessHours:true,
     	
@@ -42,12 +42,12 @@ $(document).ready(function() {
     	views:{
     		agendaDay:{
         		allDaySlot:false,
-        		minTime:'08:00',
+        		//minTime:'08:00',
         		slotEventOverlap:false
         	},
         	
         	agendaWeek:{
-        		minTime:'08:00',
+        		//minTime:'08:00',
         		allDaySlot:false
         	},
         	
@@ -64,40 +64,61 @@ $(document).ready(function() {
         },
         
         eventClick: function(calEvent, jsEvent, view) {
-
-        	var parameters = {
-        		IDPista:calEvent.IDPista,
-        		inici:calEvent.start,
-        		fi:calEvent.end
-        	};
-        	
-        	var s = JSON.stringify(parameters);
-            post("SeleccionarFranja",{franja:s});
-
+			Select(calEvent);
+			$('#calendar').fullCalendar('rerenderEvents');
         },
         
-    	/*
-    	events: [
-    	 <% for (InfoHorari ih : disponibilitats){%>
-    	 	<%for (InfoLapse i: ih.getDisponibilitats()){%>
-    	 	
-		    	 {
-		             title: '<%= ih.getNomPista() %>',
-		             start: '<%= i.getInterval().getStart().toString() %>',
-		             end: '<%= i.getInterval().getEnd().toString() %>',
-		             IDPista: <%= ih.getIDPista() %>,
-		         },
-    		 
-    	 	<%}%>
-    	 <%}%>
-    	],
-    	*/
-    	
     	
         events: getVisibleEvents(mapa),
+    	
     })
+    
+    
+
+    $('#update').click(function(){
+    	var array = $('#calendar').fullCalendar('clientEvents',isSelected);
+    	if (array.length > 0){
+    		get('editar',{id:array[0].franja});
+    	}
+    });
+    
+    $('#insert').click(function(){
+    	get('insertar',{});
+    });
+    
+    $('#delete').click(function(){
+    	
+    	var array = $('#calendar').fullCalendar('clientEvents',isSelected);
+    	if (array.length == 1){
+    		if (confirm("vols eliminar la franja: " + array[0].title + "?"))
+    			get('eliminar',{id:array[0].franja});
+    	}
+    	else if (array.length > 1){
+    		if (confirm("vols eliminar les franges seleccionades?")){
+    			var franges = [];
+    			for (var j = 0; j < array.length ; j++){
+    				franges.push(array[j].franja);
+    			}
+    			var json = {set:franges};
+    			get('eliminarSet',{ids:JSON.stringify(franges)});    
+    		}
+    					
+    	}
+    });
 
 });
+
+function Select(calEvent){
+	calEvent.sel = !calEvent.sel;
+	
+	var antic = calEvent.color;
+	calEvent.color = calEvent.colorSec;
+	calEvent.colorSec = antic;
+}
+
+function isSelected(event){
+	return event.sel;
+}
 
 function getVisibleEvents(mapa){
 	var ret = [];
@@ -118,13 +139,17 @@ function getVisibleEvents(mapa){
 function LoadEvents(){
 	var events = [	
 	<% 
-	for (InfoHorari ih : disponibilitats){%>
+	for (InfoHorari ih : ocupacions){%>
 		<%for (InfoLapse i: ih.getDisponibilitats()){%>
+			<% InfoFranja f = i.toInfoFranja();%>
 			{
-				title: '<%= ih.getNomPista() %>',
+				title: '<%= ih.getNomPista() + "," + f.getTitol() %>',
 	            start: '<%= i.getInterval().getStart().toString() %>',
 	            end: '<%= i.getInterval().getEnd().toString() %>',
 	            IDPista: <%= ih.getIDPista() %>,
+	            franja: '<%= f.getIdFranja() %>',
+	            sel:false,
+	            colorSec:'green',
 			},
 		<%}%>
 	<%}%>
@@ -135,7 +160,7 @@ function LoadEvents(){
 function LoadPistes(){
 	return [
 	<% 
-	for (InfoHorari ih : disponibilitats){%>
+	for (InfoHorari ih : ocupacions){%>
 		<%= ih.getIDPista() %>,
 	<%}%>
 	];
@@ -193,7 +218,7 @@ function AlternarPista(IDPista,mapa){
 }
 
 </script>
-<% if (disponibilitats.size() > 1){ %>
+<% if (ocupacions.size() > 1){ %>
 <div class="container container-fluid">
 <div class="panel-group" id="accordion">
 	<br/>
@@ -212,7 +237,7 @@ function AlternarPista(IDPista,mapa){
 	    	<div class="row" style="margin:10px">
 	    	<div class="col col-md-6 col-md-offset-3">
 	    	<% 
-			for (InfoHorari ih : disponibilitats){%> 
+			for (InfoHorari ih : ocupacions){%> 
 				
 				<div class="col col-md-4 VeurePista" idpista=<%= ih.getIDPista() %>>
 					<div class="panel panel-default">
@@ -234,5 +259,11 @@ function AlternarPista(IDPista,mapa){
 </div>
 </div>
 <% } %>
+
+<div id="botons" class="container contaner-fluid">
+<button id="update" type="button" class="btn btn-default">Editar</button>
+<!-- <button id="insert" type="button" class="btn btn-default">Insertar</button> -->
+<button id="delete" type="button" class="btn btn-default">Eliminar</button>
+</div>
 <div id="calendar" class="container container-fluid">
 </div>

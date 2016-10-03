@@ -2,13 +2,13 @@ package Domini.Model.Reserves;
 
 import Communicacio.Dades.Reserves.InfoPagament;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
+import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
 
 public class Pagament extends ReservaSoci {
 
 	@Override
-	protected String getTipus() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getTipus() {
+		return FactoriaTipusReserva.getInstance().getPagament().getNom();
 	}
 
 	@Override

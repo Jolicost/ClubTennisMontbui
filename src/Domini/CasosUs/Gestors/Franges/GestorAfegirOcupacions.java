@@ -13,12 +13,11 @@ import Communicacio.Dades.InfoDiaSetmana;
 import Communicacio.Dades.InfoOcupacions;
 import Communicacio.Excepcions.EntitatInvalida;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Communicacio.Xarxa.Domini.Entitats.Ocupacio.FactoriaTipusOcupacio;
 import Dades.Excepcions.BDExcepcio;
-import Domini.Model.Calendari;
 import Domini.Model.Pista;
 import Domini.Model.Reserves.Franja;
 import Domini.Model.Reserves.Ocupacio;
+import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 import Factories.FactoriaControladors;
 
 public class GestorAfegirOcupacions extends GestorOcupacionsPista {

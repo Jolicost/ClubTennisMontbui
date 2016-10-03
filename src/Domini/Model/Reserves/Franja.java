@@ -2,11 +2,12 @@ package Domini.Model.Reserves;
 
 import org.joda.time.DateTime;
 import org.joda.time.Interval;
-import org.joda.time.ReadableInstant;
 
-import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Domini.Model.Pista;
+import Domini.Model.Reserves.Tipus.FactoriaTipusFranja;
+import Domini.Model.Reserves.Tipus.TipusFranja;
+import Domini.Model.Reserves.Tipus.TipusReservaInvalid;
 
 public abstract class Franja {
 	private int ID;
@@ -90,4 +91,14 @@ public abstract class Franja {
 	}
 	
 	protected abstract InfoFranja crearInfo();
+
+	public abstract String getTipus();
+	
+	public TipusFranja getTipusFranja() throws TipusReservaInvalid{
+		return FactoriaTipusFranja.getInstance().get(this.getTipus());
+	}
+	
+	public void Populate(InfoFranja i){
+		if (i.getInterval() != null) this.setLapse(i.getInterval());
+	}
 }

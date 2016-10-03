@@ -10,8 +10,8 @@ import Presentacio.Components.Gestors.VistaGestorEntitat;
 import Presentacio.Components.Gestors.VistaGestorIndividual;
 import Presentacio.Components.Gestors.VistaInsertIndividual;
 import Presentacio.Components.Gestors.VistaSelectEntitat;
-import Presentacio.Components.Gestors.Ocupacions.VistaInsertOcupacio;
-import Presentacio.Components.Gestors.Ocupacions.VistaUpdateOcupacio;
+import Presentacio.Components.Gestors.Franges.Ocupacions.VistaInsertOcupacio;
+import Presentacio.Components.Gestors.Franges.Ocupacions.VistaUpdateOcupacio;
 
 public class EntitatOcupacio extends Entitat {
 

@@ -1,11 +1,10 @@
-package Presentacio.Components.Gestors.Ocupacions;
+package Presentacio.Components.Gestors.Franges;
 
 import Presentacio.Components.Formularis.Formulari;
-import Presentacio.Components.Formularis.Inputs.Ocupacions.TipusOcupacioInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.DiaInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.IntervalInput;
 
-public abstract class FormulariOcupacio extends Formulari {
+public abstract class FormulariFranja extends Formulari{
 
 	@Override
 	protected String getDispatcher() {
@@ -16,10 +15,8 @@ public abstract class FormulariOcupacio extends Formulari {
 	protected void createInputs() {
 		this.AddComponent(getIntervalInput());
 		this.AddComponent(getDiaInput());
-		this.AddComponent(getTipusInput());
 	}
 	
 	protected abstract IntervalInput getIntervalInput();
 	protected abstract DiaInput getDiaInput();
-	protected abstract TipusOcupacioInput getTipusInput();
 }
