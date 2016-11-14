@@ -1,5 +1,6 @@
 package Dades.Controladors;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;
@@ -35,6 +36,10 @@ public class BDUsuari extends Controlador implements CtrlUsuari {
 	@Override
 	public void Delete(String correu)  throws BDExcepcio {
 		super.Delete(Usuari.class,correu);
+	}
+
+	public boolean Exists(String correu) throws BDExcepcio {
+		return super.Exists(Usuari.class,correu);
 	}
 
 	

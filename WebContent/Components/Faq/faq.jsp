@@ -1,7 +1,7 @@
 <div class="container">
     <br />
     <div class="panel-group" id="accordion">
-        <h3>No apareix la opció de reservar</h3>
+        <h3>No apareix l'opció de reservar</h3>
         <br/>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -65,8 +65,25 @@
         
         
         
-        <h3>Puc veure el calendari però no puc acabar de reservar</h3>
+        <h3>No puc acabar de reservar</h3>
         <br/>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                    No apareix cap calendari 
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+            		Si no pots veure el calendari de les franges, probablement es tracti 
+            		d'un error del navegador: <strong>Internet explorer</strong> no és 
+            		compatible amb el calendari d'aquesta pàgina i per tant no es pot fer 
+            		servir per reservar
+                </div>
+            </div>
+        </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -145,16 +162,14 @@
 		<div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
-                    He olvidat la meva contrasenya
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+                    He olvidat la contrasenya del meu correu i del meu usuari
                     </a>
                 </h4>
             </div>
-            <div id="collapseEight" class="panel-collapse collapse">
+            <div id="collapseNine" class="panel-collapse collapse">
                 <div class="panel-body">
-            		La funció de canviar la contrasenya també s'ha d'incorporar pròximament
-            		<br>
-            		Si has perdut la teva contrasenya contacta amb el club
+            		En aquest cas hauràs de contactar amb un administrador per tal de modificar les teves dades d'usuari
                 </div>
             </div>
         </div>

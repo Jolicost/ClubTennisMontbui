@@ -33,7 +33,7 @@ function SendData(){
 		inici:diaInici,
 		fi:diaFi,
 		tipus:t,
-		dies:Dies,
+		dies:Dies
 	}
 	
 	post("submit",{info:JSON.stringify(dada)});

@@ -11,7 +11,7 @@
 
 <div class="col col-md-4">
 	<p class="text small text-muted"><span class="glyphicon glyphicon-globe"></span> Carrer Sant Passanals, 0, Santa Margarida de Montbui</p>
-	<p class="text small text-muted"><a href="mailto:info@tennismontbui.net"><span class="glyphicon glyphicon-envelope"></span> info@tennismontbui.net</a></p>
+	<p class="text small text-muted"><a href="mailto:reserves.tennis.montbui@gmail.com"><span class="glyphicon glyphicon-envelope"></span> correu d'assistència</a></p>
 	<p class="text small text-muted"><a href="mailto:joanolivacostas@gmail.com"><span class="glyphicon glyphicon-envelope"></span> webmaster</a></p>
 </div>
 
@@ -22,6 +22,8 @@
 			<a target="_blank" href="https://goo.gl/3xzw1F" title="Normativa de les reserves">Normes</a>
 			-
 			<a href="/Faq" title="Faq">Preguntes freqüents</a>
+			-
+			<a href="/ContrasenyaOlvidada" title="Recuperar Contrasenya">Recuperar Contrasenya</a>
 	</p>
 </div>
 </div>

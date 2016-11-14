@@ -11,4 +11,5 @@ public interface CtrlUsuari {
 	public void Update(Usuari u) throws BDExcepcio;
 	public void Delete(String correu) throws BDExcepcio;
 	public Set<Usuari> getAll() throws BDExcepcio;
+	public boolean Exists(String correu) throws BDExcepcio;
 }

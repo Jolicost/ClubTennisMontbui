@@ -10,6 +10,7 @@ import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.Generals.ResultatDefecte;
 import Domini.Excepcions.ActorInvalid;
 import Domini.Excepcions.CasUsInvalid;
+import Domini.MetaCasosUs.Recuperacio.CasUsRecuperacio;
 import Domini.Model.Rang.FactoriaRangs;
 
 public abstract class CasUs {
@@ -35,6 +36,9 @@ public abstract class CasUs {
 		throw new CasUsInvalid();
 	}
 	public CasUsReservar toReservar() throws CasUsInvalid{
+		throw new CasUsInvalid();
+	}
+	public CasUsRecuperacio toRecuperacio() throws CasUsInvalid{
 		throw new CasUsInvalid();
 	}
 	public ControladorCasUs getControladorCasUs() throws ActorInvalid{
