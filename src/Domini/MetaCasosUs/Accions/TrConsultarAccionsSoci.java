@@ -13,22 +13,10 @@ public class TrConsultarAccionsSoci extends TrConsultarAccionsMembre {
 	protected List<InfoAccio> ConsultarAccions() {
 		List<InfoAccio> ret = new ArrayList<>();
 		GrupAccions grup = FactoriaAccions.getIntance().getReservar();
-		if (grup.getMenu().size() > 0){
-			InfoAccioGrup g = new InfoAccioGrup();
-			g.setTitol(grup.getNomGrup());
-			List<InfoAccio> accions = new ArrayList<>();
-			for (Accio a: grup.getMenu()){
-				accions.add(a.toInfo());
-			}
-			g.setGrup(accions);
-			ret.add(g);
-		}
+		ret.add(grup.crearInfoGrup());
 		
-		InfoAccioIndividual veure = new InfoAccioIndividual();
-		veure.setTitol("Veure Reserves");
-		veure.setDispacher("VeureReserves");
-		ret.add(veure);
-		
+		GrupAccions veure = FactoriaAccions.getIntance().getVeureReserves();
+		ret.add(veure.crearInfoGrup());
 		
 		return ret;
 	}

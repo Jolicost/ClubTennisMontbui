@@ -19,7 +19,7 @@ for (InfoHorari ih:ocupacions){
 
 %>
 $(document).ready(function() {
-	$.getScript("Components/Util/getpost.js");
+	//$.getScript("Components/Util/getpost.js");
     // page is now ready, initialize the calendar...
 
     var evnts = LoadEvents();
@@ -318,10 +318,5 @@ function rerenderEvents(evnts,mapaPistes,mapaTipus){
 </div>
 <% } %>
 
-<div id="botons" class="container contaner-fluid">
-<button id="update" type="button" class="btn btn-default">Editar</button>
-<!-- <button id="insert" type="button" class="btn btn-default">Insertar</button> -->
-<button id="delete" type="button" class="btn btn-default">Eliminar</button>
-</div>
 <div id="calendar" class="container container-fluid">
 </div>

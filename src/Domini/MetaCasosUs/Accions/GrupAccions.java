@@ -22,6 +22,15 @@ public abstract class GrupAccions {
 	public List<Accio> getMenu() {
 		return menu;
 	}
+	
+	public InfoAccioGrup crearInfoGrup(){
+		InfoAccioGrup ret = new InfoAccioGrup();
+		ret.setTitol(getNomGrup());
+		List<InfoAccio> accions = new ArrayList<>();
+		for (Accio a: menu) accions.add(a.toInfo());
+		ret.setGrup(accions);
+		return ret;
+	}
 
 	
 

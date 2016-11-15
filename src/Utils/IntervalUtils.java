@@ -53,13 +53,13 @@ public abstract class IntervalUtils{
 		Set<Interval> ret = new HashSet<>();
 		if (x.overlaps(y)){
 			Interval z = x.overlap(y);
-			Interval k = union(x,y);
-			if (!k.getStart().equals(z.getStart())){
-				Interval j = new Interval(k.getStart(),z.getStart());
+			//Interval k = union(x,y);
+			if (!x.getStart().equals(z.getStart())){
+				Interval j = new Interval(x.getStart(),z.getStart());
 				ret.add(j);
 			}
-			if (!k.getEnd().equals(z.getEnd())){
-				Interval j = new Interval(z.getEnd(),k.getEnd());
+			if (!x.getEnd().equals(z.getEnd())){
+				Interval j = new Interval(z.getEnd(),x.getEnd());
 				ret.add(j);
 			}
 		}

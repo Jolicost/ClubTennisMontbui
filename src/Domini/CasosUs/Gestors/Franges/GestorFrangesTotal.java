@@ -6,6 +6,9 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.joda.time.DateTime;
+import org.joda.time.Interval;
+
 import Communicacio.Dades.Info;
 import Communicacio.Dades.InfoHorari;
 import Communicacio.Dades.InfoLapse;
@@ -32,6 +35,26 @@ public class GestorFrangesTotal extends GestorFranges {
 			InfoHorari ih = new InfoHorari();
 			SortedSet<InfoLapse> franges = new TreeSet<>();
 			for (Franja f:p.getFranges()){
+				franges.add(f.toInfo());
+			}
+			ih.setDisponibilitats(franges);
+			ih.setNomPista(p.getNom());
+			ih.setIDPista(p.getIDPista());
+			
+			ret.add(ih);
+		}
+		
+		return ret;
+	}
+	
+	public Set<Info> getAllInterval(DateTime d1,DateTime d2) throws Exception{
+		Interval i = new Interval(d1,d2);
+		Set<Info> ret = new HashSet<>();
+		Set<Pista> pi = FactoriaControladors.getInstance().getCtrlPista().getAll();
+		for (Pista p:pi){
+			InfoHorari ih = new InfoHorari();
+			SortedSet<InfoLapse> franges = new TreeSet<>();
+			for (Franja f:p.getFrangesCondicio(fa -> fa.Intersecciona(i))){
 				franges.add(f.toInfo());
 			}
 			ih.setDisponibilitats(franges);

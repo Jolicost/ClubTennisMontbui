@@ -60,6 +60,10 @@ public class InfoLapse extends Info implements Comparable<InfoLapse>,Comparator<
 	public String getTitol(){
 		return "Lapse";
 	}
+	
+	public String getTipus(){
+		return "lapse";
+	}
 	public InfoLapse toInfoLapse() throws DadaIncorrecta{
 		return this;
 	}

@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.function.Predicate;
 
 import org.joda.time.Duration;
 import org.joda.time.Interval;
@@ -210,6 +211,13 @@ public abstract class Pista {
 	
 	public abstract String getNomEsport();
 
+	public Set<Franja> getFrangesCondicio(Predicate<Franja> p) {
+		Set<Franja> ret = new HashSet<>();
+		for (Franja f: this.franges){
+			if (p.test(f)) ret.add(f);
+		}
+		return ret;
+	}
 	
 	
 }

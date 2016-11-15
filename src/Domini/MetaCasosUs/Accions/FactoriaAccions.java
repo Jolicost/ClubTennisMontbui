@@ -7,12 +7,16 @@ public class FactoriaAccions {
 	
 	private GrupAccions administrar = new AccionsAdministrador();
 	private GrupAccions reservar = new AccionsReservar();
+	private GrupAccions veureReserves = new AccionsVeureReserves();
 	
 	public GrupAccions getAdministrar(){
 		return administrar;
 	}
 	public GrupAccions getReservar(){
 		return reservar;
+	}
+	public GrupAccions getVeureReserves(){
+		return veureReserves;
 	}
 	
 

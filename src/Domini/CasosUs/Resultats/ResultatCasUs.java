@@ -44,7 +44,7 @@ public abstract class ResultatCasUs {
 	}
 	
 	public void CreatePage(UseCaseWebBuilder w) throws IOException, ServletException, Exception{
-
+		this.PopulateParameters(w);
 	}
 	
 	protected Map<String,Object> createParameters(){
