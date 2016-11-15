@@ -16,7 +16,7 @@ public class ReservaInvitacio extends TipusReserva {
 
 	@Override
 	public String getNom() {
-		return "invitacio";
+		return "Invitacio";
 	}
 
 	@Override

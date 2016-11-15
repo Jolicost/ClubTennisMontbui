@@ -8,7 +8,7 @@
 %>
 $(document).ready(function() {
 	$.getScript("Components/Util/getpost.js");
-	$('#<%=id %>').click( function(){
+	$("[id='<%=id %>']").click( function(){
 		get('<%=submit%>',{<%=param%>:'<%=value%>'});
     });
    

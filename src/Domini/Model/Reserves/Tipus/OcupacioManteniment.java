@@ -9,7 +9,7 @@ public class OcupacioManteniment extends TipusOcupacio {
 
 	@Override
 	public String getNom() {
-		return "manteniment";
+		return "Manteniment";
 	}
 
 	@Override

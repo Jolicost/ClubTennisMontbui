@@ -13,7 +13,7 @@ public class ReservaPagament extends TipusReserva {
 
 	@Override
 	public String getNom() {
-		return "pagament";
+		return "Pagament";
 	}
 
 	@Override

@@ -2,7 +2,7 @@
 <script>
 	$(document).ready(function() {
 	$.getScript("Components/Util/getpost.js");
-	$('#<%=request.getAttribute("id").toString() %>').click( function(){
+	$("[id='<%=request.getAttribute("id").toString() %>']").click( function(){
 		<% 
 		String submit = request.getAttribute("submit").toString();
 		String method = request.getAttribute("method").toString();
