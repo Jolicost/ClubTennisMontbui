@@ -1,12 +1,11 @@
 package Domini.Model.Reserves;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import org.joda.time.DateTime;
-import org.joda.time.Days;
 import org.joda.time.Duration;
 
-import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoReserva;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
@@ -21,11 +20,12 @@ import Factories.FactoriaControladors;
 
 public abstract class ReservaSoci extends Reserva{
 	private Soci propietari;
+	protected Set<Soci> jugadors;
 	//TODO Config attribute
 	
 	private static final Duration lapseCancelacio = Duration.standardHours(8);
 	public ReservaSoci(){
-		
+		jugadors = new HashSet<>();
 	}
 	public ReservaSoci(Soci propietari) {
 		super();
@@ -94,6 +94,12 @@ public abstract class ReservaSoci extends Reserva{
 		InfoReservaSoci irs = this.toInfo().toInfoReservaSoci();
 		irs.setCancelable(this.EsCancelable(DateTime.now(), solicitant));
 		return irs;
+	}
+	public Set<Soci> getJugadors() {
+		return jugadors;
+	}
+	public void setJugadors(Set<Soci> jugadors) {
+		this.jugadors = jugadors;
 	}
 
 	

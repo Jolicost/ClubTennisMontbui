@@ -17,6 +17,7 @@ public class FactoriaTipusOcupacio {
 	private TipusOcupacio cursets = new OcupacioCursets();
 	private TipusOcupacio manteniment = new OcupacioManteniment();
 	private TipusOcupacio altres = new OcupacioAltres();
+	private TipusOcupacio partits = new OcupacioPartits();
 	
 	public FactoriaTipusOcupacio(){
 		tipus = new HashMap<>();
@@ -27,6 +28,7 @@ public class FactoriaTipusOcupacio {
 		tipus.put(cursets.getNom(), cursets);
 		tipus.put(manteniment.getNom(), manteniment);
 		tipus.put(altres.getNom(), altres);
+		tipus.put(partits.getNom(),partits);
 	}
 	
 	public TipusOcupacio get(String nom) throws EntitatInvalida{
@@ -46,6 +48,9 @@ public class FactoriaTipusOcupacio {
 	public String getAltres(){return altres.getNom();}
 	public String getCursets(){return cursets.getNom();}
 	public String getManteniment(){return manteniment.getNom();}
+	public String getPartits() {
+		return partits.getNom();
+	}
 	
 	public Set<String> getAll(){
 		Set<String> ret = new HashSet<>();
@@ -60,4 +65,6 @@ public class FactoriaTipusOcupacio {
 	public static FactoriaTipusOcupacio getInstance() {
 		return instance;
 	}
+
+	
 }

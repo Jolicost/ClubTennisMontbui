@@ -7,5 +7,11 @@
         <many-to-one name="propietari" class="Domini.Model.Soci" fetch="join">
         	<column name="PROPIETARI"/>
         </many-to-one>
+        <set name="jugadors" table="participantsReserva">
+            <key>
+                <column name="idFranja"/>
+            </key>
+            <many-to-many class="Domini.Model.Soci" column="numeroSoci"/>
+        </set>
     </subclass>
 </hibernate-mapping>

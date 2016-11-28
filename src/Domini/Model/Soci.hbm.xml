@@ -33,5 +33,11 @@
             <column name="NAIXEMENT" />
         </property>
         <one-to-one name="q" class="Domini.Model.Quotes.Quota" lazy="false" cascade="delete"/>
+        <set name="participa" table="participantsReserva">
+            <key>
+                <column name="numeroSoci"/>
+            </key>
+            <many-to-many class="Domini.Model.Reserves.ReservaSoci" column="idFranja"/>
+        </set>
     </class>
 </hibernate-mapping>

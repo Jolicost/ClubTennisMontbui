@@ -12,8 +12,8 @@ public class SR extends NomesSocis {
 	public SR(){
 		
 	}
-	public SR(Soci propietari,Set<Soci> Jugadors){
-		super(propietari,Jugadors);
+	public SR(Soci propietari){
+		super(propietari);
 	}
 	
 	@Override

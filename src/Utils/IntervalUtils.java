@@ -1,7 +1,9 @@
 package Utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -91,22 +93,56 @@ public abstract class IntervalUtils{
 	}
 	public static Set<Interval> Split(Set<Interval> x,Duration dur){
 		Set<Interval> ret = new HashSet<>();
-		DateTime now = DateTime.now();
 		for (Interval i:x){
-			DateTime it = i.getStart();
+			List<Interval> l = Split(i,dur);
+			if (l.size() > 1){
+				int j = l.size() - 1;
+				if (l.get(j).toDuration().isShorterThan(dur)){
+					/* Last interval was cut, we need to merge them */
+					DateTime start = l.get(j - 1).getStart();
+					DateTime end = l.get(j).getEnd();
+					Interval k = new Interval(start,end);
+					l.remove(j);
+					l.remove(j - 1);
+					l.add(k);
+				}
+			}
 			
-			while (!it.plus(dur).isAfter(i.getEnd())){
-				DateTime fi = it.plus(dur);
-				if (now.isBefore(fi) && now.isAfter(it)){
-					ret.add(new Interval(now,fi));
+			ret.addAll(l);
+		}
+		return ret;
+	}
+	
+	public static List<Interval> Split(Interval x,Duration dur){
+		DateTime start = x.getStart();
+		DateTime end = x.getEnd();
+		List<Interval> ret = new ArrayList<>();
+		while (start.isBefore(end)){
+			DateTime n = DateTime.now();
+			/* Get the real end based on last interval gap */
+			DateTime realend;
+			if (start.plus(dur).isAfter(end)){
+				realend = end;
+			}
+			else realend = start.plus(dur);
+			
+			if (realend.isAfter(n)){
+				
+				
+				DateTime realstart;
+				/* Get the real start in any case */
+				if (start.isBefore(DateTime.now())){
+					realstart = DateTime.now();
 				}
 				else{
-					if (now.isBefore(it))
-						ret.add(new Interval(it,it.plus(dur)));
+					realstart = start;
 				}
 				
-				it = it.plus(dur);
-			}
+				
+
+				ret.add(new Interval(realstart,realend));
+			}	
+			start = start.plus(dur);
 		}
 		return ret;
 	}

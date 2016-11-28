@@ -17,6 +17,7 @@ import Domini.Excepcions.SociNoTitular;
 import Domini.Model.Quotes.Individual;
 import Domini.Model.Quotes.Quota;
 import Domini.Model.Quotes.Titular;
+import Domini.Model.Reserves.Reserva;
 import Domini.Model.Reserves.ReservaSoci;
 
 public class Soci implements Serializable {
@@ -33,6 +34,7 @@ public class Soci implements Serializable {
 	private LocalDate naixement;
 	private LocalDate alta;
 	protected Set<ReservaSoci> reserves;
+	protected Set<ReservaSoci> participa;
 	private Quota q;
 	
 	 
@@ -223,6 +225,14 @@ public class Soci implements Serializable {
 	
 	public boolean JugaRanking(){
 		return false;
+	}
+
+	public Set<ReservaSoci> getParticipa() {
+		return participa;
+	}
+
+	public void setParticipa(Set<ReservaSoci> participa) {
+		this.participa = participa;
 	}
 	
 	

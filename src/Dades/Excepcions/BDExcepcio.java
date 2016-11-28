@@ -12,7 +12,7 @@ public class BDExcepcio extends Exception{
 
 	@Override
 	public String toString() {
-		return "Error en la base de dades";
+		return super.getMessage();
 	}
 
 }
