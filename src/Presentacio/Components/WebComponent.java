@@ -61,7 +61,7 @@ public abstract class WebComponent {
 	public boolean HasChilds(){return false;}
 	public abstract Collection<WebComponent> createChilds() throws Exception;
 	
-	public void setWritter(WebWritter ww){this.ww = ww;}
+	public void setWritter(IWebWritter ww){this.ww = ww;}
 	public void setDomain(IWebIO io){this.io = io;}
 	
 	protected void writeStart() throws IOException, ServletException{

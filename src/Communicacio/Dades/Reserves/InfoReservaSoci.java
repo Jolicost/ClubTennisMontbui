@@ -1,18 +1,20 @@
 package Communicacio.Dades.Reserves;
 
-import java.time.Instant;
-
-import org.joda.time.Interval;
+import java.util.HashSet;
+import java.util.Set;
 
 import Communicacio.Excepcions.DadaIncorrecta;
 
 public class InfoReservaSoci extends InfoReserva {
 
-	public InfoReservaSoci(){}
+	public InfoReservaSoci(){
+		participants = new HashSet<>();
+	}
 	
 	private String nomSoci;
 	private boolean Cancelable;
-
+	private Set<String> participants;
+	
 	public String getNomSoci() {
 		return nomSoci;
 	}
@@ -36,6 +38,18 @@ public class InfoReservaSoci extends InfoReserva {
 	
 	public InfoReservaSoci toInfoReservaSoci() throws DadaIncorrecta{
 		return this;
+	}
+
+	public Set<String> getParticipants() {
+		return participants;
+	}
+
+	public void setParticipants(Set<String> participants) {
+		this.participants = participants;
+	}
+	
+	public String printParticipants(){
+		return participants.toString();
 	}
 	
 	

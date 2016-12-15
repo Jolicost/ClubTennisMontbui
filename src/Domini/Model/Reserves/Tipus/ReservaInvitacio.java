@@ -1,5 +1,7 @@
 package Domini.Model.Reserves.Tipus;
 
+import org.joda.time.Interval;
+
 import Communicacio.Dades.Reserves.Tipus.InfoTipusInvitacio;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReserva;
@@ -42,6 +44,12 @@ public class ReservaInvitacio extends TipusReserva {
 	@Override
 	public TrObtenirConfirmacio crearTransaccioObtenirConfirmacio() {
 		return new ConfirmacioInvitacio();
+	}
+
+	public Interval getIntervalPertanyent(Interval i)  {
+		return new Interval(
+				i.getStart().dayOfMonth().withMinimumValue().millisOfDay().withMinimumValue(),
+				i.getStart().dayOfMonth().withMaximumValue().millisOfDay().withMaximumValue());
 	}
 
 

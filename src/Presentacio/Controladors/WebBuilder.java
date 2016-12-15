@@ -13,7 +13,7 @@ import Presentacio.Components.WebComponent;
 
 public class WebBuilder {
 
-	private WebWritter ww;
+	protected WebWritter ww;
 	
 	
 	private Queue<WebComponent> addedComponents;
@@ -31,7 +31,7 @@ public class WebBuilder {
 		addedComponents = new LinkedList<>();
 	}
 
-	private void CreateWritter(HttpServletRequest request,HttpServletResponse response){
+	protected void CreateWritter(HttpServletRequest request,HttpServletResponse response){
 		ww = new WebWritter(request,response);
 	}
 	
@@ -64,15 +64,13 @@ public class WebBuilder {
 	
 	
 	
-	private void Write(WebComponent w) throws IOException, ServletException{
+	protected void Write(WebComponent w) throws IOException, ServletException{
 		w.Include();
 		ww.Finish();
 	}
 	
-	private void Build(WebComponent w) throws Exception{
-		w.setWritter(ww);
-		w.setDomain(ww);
-		
+	protected void Build(WebComponent w) throws Exception{
+		InitWebComponent(w);
 		if (w.HasChilds()){
 			for (WebComponent c: w.createChilds()){
 				Build(c);
@@ -82,7 +80,12 @@ public class WebBuilder {
 		addedComponents.add(w);
 	}
 	
-	private void InitContent(){
+	protected void InitWebComponent(WebComponent w){
+		w.setWritter(ww);
+		w.setDomain(ww);
+	}
+	
+	protected void InitContent(){
 		while (!addedComponents.isEmpty()){
 			addedComponents.poll().InitContent();
 		}

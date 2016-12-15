@@ -125,6 +125,11 @@ $(document).ready(function() {
     					
     	}
     });
+    
+    $('#detalls').click(function(){
+    	var events = $('#calendar').fullCalendar('clientEvents',isSelected);
+    	if (events.length > 0) mostrarDetalls(events[0]);
+    });
 
 });
 
@@ -153,6 +158,9 @@ function LoadEvents(){
 	            IDPista: <%= ih.getIDPista() %>,
 	            franja: '<%= f.getIdFranja() %>',
 	            nomTipus: '<%= f.getTipus() %>',
+	            detalls:{
+	            	participants:'<%= f.printParticipants()%>'
+	            },
 	            sel:false,
 	            colorSec:'green',
 			},
@@ -162,6 +170,14 @@ function LoadEvents(){
 	return events;	
 }
 
+function mostrarDetalls(franja){
+	var detalls = franja.detalls;
+	var msg = "";
+	for (var prop in detalls){
+		msg += prop  + ': ' + detalls[prop];
+	}
+	alert(msg);
+}
 
 
 function Split(events,values,fConsultEvent){
@@ -322,6 +338,7 @@ function rerenderEvents(evnts,mapaPistes,mapaTipus){
 <button id="update" type="button" class="btn btn-default">Editar</button>
 <!-- <button id="insert" type="button" class="btn btn-default">Insertar</button> -->
 <button id="delete" type="button" class="btn btn-default">Eliminar</button>
+<button id="detalls" type="button" class="btn btn-default">Detalls</button>
 </div>
 <div id="calendar" class="container container-fluid">
 </div>

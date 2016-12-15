@@ -33,7 +33,7 @@
             <column name="NAIXEMENT" />
         </property>
         <one-to-one name="q" class="Domini.Model.Quotes.Quota" lazy="false" cascade="delete"/>
-        <set name="participa" table="participantsReserva">
+        <set name="participa" table="participantsReserva" lazy="false">
             <key>
                 <column name="numeroSoci"/>
             </key>

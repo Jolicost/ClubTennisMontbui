@@ -34,6 +34,10 @@
 						<strong>Pista: </strong>
 						<jsp:getProperty name="info" property="nomPista"/>
 					</p>
+					<p class="col-md-12">
+						<strong>Participants: </strong>
+						<jsp:getProperty name="info" property="participantsString"/>
+					</p>
 					
 					<jsp:include page="/Components/Botons/botolinksimple.jsp">
 					<jsp:param value="ConfirmarReserva" name="submit"/>

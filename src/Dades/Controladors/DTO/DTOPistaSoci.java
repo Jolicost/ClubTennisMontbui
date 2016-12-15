@@ -28,22 +28,6 @@ public class DTOPistaSoci extends DTO{
 		this.IDPista = idPista;
 		this.nsoci = nsoci;
 	}
-	
-	public void executar() throws BDExcepcio{
-		try{
-			SessionFactory s = HibernateUtil.getInstance().getSessionFactory();
-			Session se = s.openSession();
-	    	Transaction tx;
-	    	tx = se.beginTransaction();
-	    	pista = (Pista) se.get(Pista.class,this.IDPista);
-	    	soci = (Soci) se.get(Soci.class, this.nsoci);
-	    	tx.commit();
-	    	se.close();
-		}
-    	catch(HibernateException h){
-			throw TransformarExcepcio(h);
-		}
-	}
 
 	public Pista getPista() {
 		return pista;
@@ -52,25 +36,12 @@ public class DTOPistaSoci extends DTO{
 	public Soci getSoci() {
 		return soci;
 	}
-	
-	private BDExcepcio TransformarExcepcio(HibernateException e){
-		try{
-			tirar(e);
-		}
-		catch(NonUniqueObjectException | ConstraintViolationException i){
-			return new JaExisteix();
-		}
-		catch(PropertyValueException h){
-			return new ViolacioNoNull();
-		}
-		catch(HibernateException h){
-			return new BDExcepcio(h.getMessage());
-		}
-		return null;
+
+	@Override
+	protected void performJob(Session s) throws HibernateException {
+	  	pista = (Pista) s.get(Pista.class,this.IDPista);
+    	soci = (Soci) s.get(Soci.class, this.nsoci);
 	}
-	
-	private void tirar(HibernateException e) throws HibernateException{
-		throw e;
-	}
+
 
 }

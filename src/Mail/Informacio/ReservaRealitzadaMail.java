@@ -16,6 +16,7 @@ public class ReservaRealitzadaMail extends InformacioMail {
 	}
 	@Override
 	protected String getMsg() {
+		String participants = reserva.hasParticipants() ? "Participants: " + reserva.printParticipants() : "";
 		return "Reserva realitzada: \n" +
 				"Soci nº: " + reserva.getNumero() + "\n" +
 				"Nom: " + reserva.getNom() + " " + reserva.getCognoms() + ".\n" +
@@ -23,7 +24,8 @@ public class ReservaRealitzadaMail extends InformacioMail {
 				"Hora: " + reserva.getIniciFormat() + "-" + reserva.getFiFormat() + "\n" +
 				"Esport: " + reserva.getEsport() + "\n" +
 				"Nom Pista: " + reserva.getNomPista() + "\n" +
-				"Tipus: " + reserva.getTipus();
+				"Tipus: " + reserva.getTipus() + "\n" +
+				participants + "\n";
  	}
 
 }

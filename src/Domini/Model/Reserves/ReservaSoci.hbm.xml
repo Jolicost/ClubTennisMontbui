@@ -7,7 +7,7 @@
         <many-to-one name="propietari" class="Domini.Model.Soci" fetch="join">
         	<column name="PROPIETARI"/>
         </many-to-one>
-        <set name="jugadors" table="participantsReserva">
+        <set name="jugadors" table="participantsReserva"  lazy="false">
             <key>
                 <column name="idFranja"/>
             </key>

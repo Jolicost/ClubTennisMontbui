@@ -45,6 +45,14 @@ public class InfoReservaRealitzada extends Info {
 	public String getDiaFormat() {
 		return i.getDiaFormat();
 	}
+	
+	public String printParticipants(){
+		return i.getParticipants().toString();
+	}
+	
+	public boolean hasParticipants(){
+		return i.getParticipants().size() > 0;
+	}
 
 	private InfoFranja i;
 	

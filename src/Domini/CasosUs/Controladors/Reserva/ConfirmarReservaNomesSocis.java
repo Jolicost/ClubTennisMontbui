@@ -17,12 +17,21 @@ public class ConfirmarReservaNomesSocis extends ConfirmarReserva{
 	public ConfirmarReservaNomesSocis() {
 		super();
 	}
+	
+	protected Set<Soci> participants;
 
 	@Override
 	protected TrReserva crearTransaccio() throws BDExcepcio {
-		Set<Soci> socis = new HashSet<>();
-		TrNomesSocis ret = new TrReservaAnticipada(super.getPista(), i, super.obtenirSoci(), DateTime.now(), socis);
+		TrNomesSocis ret = new TrReservaAnticipada(super.getPista(), i, super.obtenirSoci(), DateTime.now(),participants);
 		return ret;
+	}
+
+	public Set<Soci> getParticipants() {
+		return participants;
+	}
+
+	public void setParticipants(Set<Soci> participants) {
+		this.participants = participants;
 	}
 
 

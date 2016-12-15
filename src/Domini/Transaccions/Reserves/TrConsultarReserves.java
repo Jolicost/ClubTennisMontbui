@@ -29,7 +29,7 @@ public class TrConsultarReserves {
 		resultat = new TreeSet<>();
 		Soci s = FactoriaControladors.getInstance().getCtrlSoci().get(soci);
 		Predicate<ReservaSoci> p = rs -> rs.EstaActiva();
-		for (ReservaSoci rs : s.getReservesCondicio(p)){
+		for (ReservaSoci rs : s.getReservesParticipaCondicio(p)){
 			resultat.add(rs.toInfo(s));
 		}
 	}

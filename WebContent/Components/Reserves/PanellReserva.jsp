@@ -29,6 +29,13 @@
 	<strong>Fi: </strong>
 	<%= i.getFiFormat() %>
 </p>
+<%
+	if (i.getParticipants().size() > 0){
+		%>
+		<p class="col-md-12"><strong>Participants:</strong> <%= i.getParticipants().toString() %> </p>		
+		<%
+	}
+%>
 <% if (i.isCancelable()){
 %>
 	<button type="button" franja=<%= i.getIdFranja() %> class="cancelar-reserva btn btn-default col-xs-offset-3 col-xs-6">

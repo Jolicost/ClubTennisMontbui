@@ -1,5 +1,8 @@
 package Communicacio.Dades.Reserves;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import Communicacio.Dades.InfoLapse;
 import Communicacio.Excepcions.DadaIncorrecta;
 
@@ -49,6 +52,12 @@ public class InfoFranja extends InfoLapse {
 	}
 	public void setEsport(String esport) {
 		this.esport = esport;
+	}
+	public Set<String> getParticipants(){
+		return new HashSet<>();
+	}
+	public String printParticipants(){
+		return "";
 	}
 
 }

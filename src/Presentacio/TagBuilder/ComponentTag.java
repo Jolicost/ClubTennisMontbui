@@ -37,9 +37,18 @@ public abstract class ComponentTag {
 		response.getWriter().append("<" + buildComponentTag() + ">\n");
 	}
 	
+	public String writeStart(){
+		return "<" + buildComponentTag() + ">\n";
+	}
+	
+	public String writeEnd(){
+		if (skipend) return "";
+		else return "</" + getComponentTag() + ">\n";
+	}
+	
 	public void writeEnd(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 		if (!skipend)
-		response.getWriter().append("</" + getComponentTag() + ">\n");
+		response.getWriter().append(writeEnd());
 	}
 
 	public void setTagName(String tag){this.tag = tag;}

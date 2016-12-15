@@ -18,8 +18,8 @@ import Presentacio.Vistes.Rols.Rol;
 
 public class WebWritter implements IWebWritter,IWebIO{
 
-	private HttpServletRequest request;
-	private HttpServletResponse response;
+	protected HttpServletRequest request;
+	protected HttpServletResponse response;
 	
 	private List<String> errors;
 	private List<String> success;

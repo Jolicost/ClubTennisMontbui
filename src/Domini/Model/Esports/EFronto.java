@@ -21,4 +21,14 @@ public class EFronto implements IEsport {
 		return "frontennis";
 	}
 
+	@Override
+	public int getMinimJugadors() {
+		return 1;
+	}
+
+	@Override
+	public int getMaximJugadors() {
+		return 4;
+	}
+
 }

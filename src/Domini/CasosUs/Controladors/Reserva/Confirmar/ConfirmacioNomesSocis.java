@@ -1,27 +1,32 @@
 package Domini.CasosUs.Controladors.Reserva.Confirmar;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarLimitada;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarNomesSocis;
-import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarReserva;
-import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioNomesSocis;
 
 public class ConfirmacioNomesSocis extends ConfirmacioLimitada{
 
 	public ConfirmacioNomesSocis() {
 		super();
+		participants = new HashSet<>();
 	}
+
 
 	@Override
 	protected InfoConfirmarLimitada crearInfoLimitada() {
-		return new InfoConfirmarNomesSocis();
+		InfoConfirmarLimitada ret = new InfoConfirmarNomesSocis();
+		return ret;
 	}
 
 	@Override
 	protected IRestriccio crearRestriccio(Soci s) {
-		return new RestriccioAnticipada(s,p);
+		return new RestriccioNomesSocis(s,p);
 	}
+
 
 }

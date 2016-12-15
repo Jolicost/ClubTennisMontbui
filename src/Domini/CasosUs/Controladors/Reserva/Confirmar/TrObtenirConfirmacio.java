@@ -1,5 +1,8 @@
 package Domini.CasosUs.Controladors.Reserva.Confirmar;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.joda.time.Interval;
 
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarReserva;
@@ -13,11 +16,12 @@ public abstract class TrObtenirConfirmacio {
 
 	public TrObtenirConfirmacio() {
 		super();
-		
+		participants = new HashSet<>();
 	}
 	protected int IdPista;
 	protected Interval interval;
 	protected int NSoci;
+	protected Set<String> participants;
 	
 	protected InfoConfirmarReserva result;
 	
@@ -58,6 +62,7 @@ public abstract class TrObtenirConfirmacio {
 		this.result.setInterval(this.interval);
 		this.result.setIdPista(this.IdPista);
 		this.result.setNomPista(p.getNom());
+		this.result.setParticipants(participants);
 	}
 
 	protected abstract InfoConfirmarReserva crearInfo() throws BDExcepcio, NoPotReservar;
@@ -66,6 +71,12 @@ public abstract class TrObtenirConfirmacio {
 	}
 	public void setNSoci(int nSoci) {
 		NSoci = nSoci;
+	}
+	public Set<String> getParticipants() {
+		return participants;
+	}
+	public void setParticipants(Set<String> participants) {
+		this.participants = participants;
 	}
 
 }

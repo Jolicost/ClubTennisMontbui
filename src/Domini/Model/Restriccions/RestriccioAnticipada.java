@@ -8,8 +8,9 @@ import org.joda.time.Interval;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
+import Domini.Model.Reserves.Tipus.TipusReservaInvalid;
 
-public class RestriccioAnticipada extends RestriccioReservaLimitada {
+public abstract class RestriccioAnticipada extends RestriccioReservaLimitada {
 
 	public RestriccioAnticipada(Soci s,Pista p) {
 		super(s,p);
@@ -31,11 +32,6 @@ public class RestriccioAnticipada extends RestriccioReservaLimitada {
 		return s.getMaxReservesSetmana();
 	}
 
-	@Override
-	protected Predicate<ReservaSoci> createPredicate() {
-		Predicate<ReservaSoci> ret = rt -> rt.EsAnticipada() || rt.EsPagament();
-		return ret;
-	}
 
 	@Override
 	protected Duration getMaximaAnticipacio() {

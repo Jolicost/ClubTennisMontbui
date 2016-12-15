@@ -2,6 +2,8 @@ package Communicacio.Dades.Reserves.Confirmar;
 
 
 
+import java.util.Set;
+
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 
@@ -13,6 +15,7 @@ public class InfoConfirmarReserva extends InfoFranja{
 		super();
 	}
 	private String esport;
+	private Set<String> participants;
 	
 	public String getEsport() {
 		return esport;
@@ -20,6 +23,8 @@ public class InfoConfirmarReserva extends InfoFranja{
 	public void setEsport(String esport) {
 		this.esport = esport;
 	}
+	
+	
 
 	
 	public String getTipus(){
@@ -50,6 +55,16 @@ public class InfoConfirmarReserva extends InfoFranja{
 	
 	public String getView(){
 		return null;
+	}
+	public Set<String> getParticipants() {
+		return participants;
+	}
+	public void setParticipants(Set<String> participants) {
+		this.participants = participants;
+	}
+	
+	public String getParticipantsString(){
+		return participants.toString();
 	}
 	
 

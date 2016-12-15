@@ -1,5 +1,7 @@
 package Domini.CasosUs.Controladors.Reserva;
 
+import java.util.Set;
+
 import org.joda.time.Interval;
 
 import Domini.CasosUs.Resultats.ResultatCasUs;
@@ -28,6 +30,9 @@ public abstract class EstatFerReserva {
 		throw new EstatInvalid();
 	}
 	public void SeleccionarTipus(String tipus) throws Exception{
+		throw new EstatInvalid();
+	}
+	public void TriarParticipants(Set<Integer> participants) throws Exception{
 		throw new EstatInvalid();
 	}
 	public void Confirmar()throws Exception{

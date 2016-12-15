@@ -7,6 +7,7 @@ import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;
 import Domini.Model.Restriccions.IRestriccio;
 import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioPagament;
 
 public class ConfirmacioPagament extends ConfirmacioLimitada{
 
@@ -28,7 +29,7 @@ public class ConfirmacioPagament extends ConfirmacioLimitada{
 
 	@Override
 	protected IRestriccio crearRestriccio(Soci s) {
-		return new RestriccioAnticipada(s,p);
+		return new RestriccioPagament(s,p);
 	}
 
 }

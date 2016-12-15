@@ -8,4 +8,6 @@ public interface IEsport {
 	
 	public boolean PistaEsEsport(Pista p);
 	public String getNomEsport();
+	public int getMinimJugadors();
+	public int getMaximJugadors();
 }

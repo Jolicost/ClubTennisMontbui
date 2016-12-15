@@ -1,5 +1,7 @@
 package Domini.CasosUs.Controladors.Reserva;
 
+import java.util.Set;
+
 import org.joda.time.Interval;
 
 import Domini.CasosUs.Actors.Soci;
@@ -27,6 +29,9 @@ public class FerReserva {
 	}
 	public void SeleccionarTipus(String tipus) throws Exception{
 		estat.SeleccionarTipus(tipus);
+	}
+	public void SeleccionarParticipants(Set<Integer> participants) throws Exception{
+		estat.TriarParticipants(participants);
 	}
 	public void Confirmar() throws Exception{
 		estat.Confirmar();

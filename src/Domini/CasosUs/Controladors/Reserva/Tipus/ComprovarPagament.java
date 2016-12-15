@@ -4,6 +4,7 @@ import Communicacio.Dades.Reserves.Tipus.InfoTipusPagament;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.Model.Restriccions.IRestriccio;
 import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioPagament;
 
 public class ComprovarPagament extends TrComprovarTipus {
 
@@ -15,7 +16,7 @@ public class ComprovarPagament extends TrComprovarTipus {
 
 	@Override
 	protected IRestriccio getRestriccioQuota()  {
-		return new RestriccioAnticipada(s,p);
+		return new RestriccioPagament(s,p);
 	}
 
 	@Override

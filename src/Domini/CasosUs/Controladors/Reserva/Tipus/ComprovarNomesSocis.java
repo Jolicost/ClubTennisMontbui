@@ -4,6 +4,7 @@ import Communicacio.Dades.Reserves.Tipus.InfoTipusNomesSocis;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.Model.Restriccions.IRestriccio;
 import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioNomesSocis;
 
 public class ComprovarNomesSocis extends TrComprovarTipus {
 
@@ -16,7 +17,7 @@ public class ComprovarNomesSocis extends TrComprovarTipus {
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioAnticipada(s,p);
+		return new RestriccioNomesSocis(s,p);
 	}
 
 	@Override

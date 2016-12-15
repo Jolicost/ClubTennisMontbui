@@ -50,7 +50,8 @@ public class FiltreRestriccions {
 	private Set<IRestriccio> crearRestriccions(){
 		Set<IRestriccio> ret = new HashSet<>();
 		ret.add(new RestriccioSenseReserva(s,p));
-		ret.add(new RestriccioAnticipada(s,p));
+		ret.add(new RestriccioPagament(s,p));
+		ret.add(new RestriccioNomesSocis(s,p));
 		ret.add(new RestriccioInvitacio(s,p));
 		ret.add(new RestriccioRanking(s,p));
 		return ret;

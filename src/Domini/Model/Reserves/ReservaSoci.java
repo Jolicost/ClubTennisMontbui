@@ -62,6 +62,9 @@ public abstract class ReservaSoci extends Reserva{
 	protected InfoReserva crearInfoReserva() {
 		InfoReservaSoci ret = crearInfoReservaSoci();
 		ret.setNomSoci(this.propietari.getNomComplet());
+		Set<String> participants = new HashSet<>();
+		this.jugadors.forEach(j -> participants.add(j.getNomComplet()));
+		ret.setParticipants(participants);
 		return ret;
 	}
 	
@@ -83,7 +86,7 @@ public abstract class ReservaSoci extends Reserva{
 	}
 	
 	protected void TestCancelar(DateTime cancelacio,Soci s) throws CancelacioInvalida{
-		if (!s.equals(this.propietari)) throw new PropietariInvalid();
+		if (!(s.equals(this.propietari)||this.getJugadors().contains(s))) throw new PropietariInvalid();
 		
 		if (!this.EstaActiva()) throw new ReservaExpirada();
 		
@@ -93,6 +96,9 @@ public abstract class ReservaSoci extends Reserva{
 	public InfoFranja toInfo(Soci solicitant) throws DadaIncorrecta {
 		InfoReservaSoci irs = this.toInfo().toInfoReservaSoci();
 		irs.setCancelable(this.EsCancelable(DateTime.now(), solicitant));
+		Set<String> participants = new HashSet<>();
+		this.jugadors.forEach(j -> participants.add(j.getNomComplet()));
+		irs.setParticipants(participants);
 		return irs;
 	}
 	public Set<Soci> getJugadors() {

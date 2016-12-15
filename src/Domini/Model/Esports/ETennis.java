@@ -21,4 +21,14 @@ public class ETennis implements IEsport{
 		return "tennis";
 	}
 
+	@Override
+	public int getMinimJugadors() {
+		return 2;
+	}
+
+	@Override
+	public int getMaximJugadors() {
+		return 4;
+	}
+
 }

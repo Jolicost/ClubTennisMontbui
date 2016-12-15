@@ -8,6 +8,8 @@ import org.joda.time.Interval;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
+import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
+import Domini.Model.Reserves.Tipus.TipusReservaInvalid;
 
 public class RestriccioInvitacio extends RestriccioAnticipada {
 
@@ -22,8 +24,7 @@ public class RestriccioInvitacio extends RestriccioAnticipada {
 
 	@Override
 	protected Interval getIntervalPertanyent(Interval i) {
-		return new Interval(i.getStart().dayOfMonth().withMinimumValue().millisOfDay().withMinimumValue(),
-							i.getStart().dayOfMonth().withMaximumValue().millisOfDay().withMaximumValue());
+		return FactoriaTipusReserva.getInstance().getInvitacio().getIntervalPertanyent(i);
 	}
 
 	@Override

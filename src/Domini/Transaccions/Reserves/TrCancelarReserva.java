@@ -25,7 +25,7 @@ public class TrCancelarReserva {
 		Soci s = FactoriaControladors.getInstance().getCtrlSoci().get(soci);
 		Predicate<ReservaSoci> p = rs -> rs.getID() == idFranja;
 		
-		Set<ReservaSoci> reserves = s.getReservesCondicio(p);
+		Set<ReservaSoci> reserves = s.getReservesParticipaCondicio(p);
 		
 		try{
 			ReservaSoci cancelar = reserves.iterator().next();

@@ -1,5 +1,7 @@
 package Domini.Model.Reserves.Tipus;
 
+import org.joda.time.Interval;
+
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReserva;
 import Domini.CasosUs.Controladors.Reserva.Confirmar.TrObtenirConfirmacio;
@@ -41,4 +43,6 @@ public abstract class TipusReserva extends TipusFranja {
 	public GestorFranja getGestorFranjaUpdate(int IDFranja) {
 		return new GestorReserva(FactoriaAccions.getInstance().getUpdate(),IDFranja);
 	}
+	
+
 }

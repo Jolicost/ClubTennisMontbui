@@ -12,6 +12,7 @@ import Domini.Model.Reserves.Anticipada;
 import Domini.Model.Reserves.NomesSocis;
 import Domini.Model.Restriccions.IRestriccio;
 import Domini.Model.Restriccions.RestriccioAnticipada;
+import Domini.Model.Restriccions.RestriccioNomesSocis;
 
 public class TrReservaAnticipada extends TrNomesSocis {
 	public TrReservaAnticipada(Pista p, Interval dur,Soci propietari,DateTime realitzacio,Set<Soci> Participants) {
@@ -31,7 +32,7 @@ public class TrReservaAnticipada extends TrNomesSocis {
 
 	@Override
 	protected IRestriccio getRestriccioQuota() {
-		return new RestriccioAnticipada(propietari,p);
+		return new RestriccioNomesSocis(propietari,p);
 	}
 
 

@@ -1,30 +1,22 @@
 package Domini.Model;
 
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Predicate;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
 import org.joda.time.LocalDate;
 
 import Communicacio.Dades.InfoSoci;
-import Domini.Excepcions.NoPotReservar;
 import Domini.Excepcions.SociNoTitular;
 import Domini.Model.Quotes.Individual;
 import Domini.Model.Quotes.Quota;
 import Domini.Model.Quotes.Titular;
-import Domini.Model.Reserves.Reserva;
 import Domini.Model.Reserves.ReservaSoci;
 
-public class Soci implements Serializable {
+public class Soci {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	private int numero;
 	private String dni;
 	private String nom;
@@ -122,10 +114,7 @@ public class Soci implements Serializable {
 		ret.setAdreca(this.getAdreca());
 		return ret;
 	}
-	@Override
-	public boolean equals(Object obj) {
-		return numero == ((Soci)obj).numero;
-	}
+
 	@Override
 	public String toString() {
 		return String.valueOf(this.getNumero());
@@ -151,6 +140,17 @@ public class Soci implements Serializable {
 				ret.add(rs);
 			}
 		}
+		return ret;
+	}
+	
+	public Set<ReservaSoci> getReservesParticipaCondicio(Predicate<ReservaSoci> cond){
+		Set<ReservaSoci> ret = new HashSet<>();
+		for (ReservaSoci rs : this.q.ObtenirReservesParticipa()) {
+			if (cond.test(rs)) {
+				ret.add(rs);
+			}
+		}
+		ret.addAll(getReservesPropietariCondicio(cond));
 		return ret;
 	}
 	
@@ -210,6 +210,10 @@ public class Soci implements Serializable {
 		return q.getMembres();
 	}
 	
+	public Set<Soci> getMembresNE(){
+		return q.getMembresNE();
+	}
+	
 	public void canviarQuota(Quota q){
 		this.q = q;
 		q.setPropietari(this);
@@ -233,6 +237,12 @@ public class Soci implements Serializable {
 
 	public void setParticipa(Set<ReservaSoci> participa) {
 		this.participa = participa;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Soci s = (Soci)obj;
+		return this.getNumero() == s.getNumero();
 	}
 	
 	

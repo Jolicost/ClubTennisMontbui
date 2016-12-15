@@ -1,5 +1,7 @@
 package Communicacio.Dades;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.joda.time.LocalDate;
@@ -100,6 +102,31 @@ public class InfoSoci extends Info {
 	}
 	public void setNaixament(LocalDate naixament) {
 		this.naixament = naixament;
+	}
+	@Override
+	public String toString() {
+		return "InfoSoci [numero=" + numero + ", dni=" + dni + ", nom=" + nom + ", cognoms=" + cognoms + ", quota="
+				+ quota + ", telefon=" + telefon + ", adreca=" + adreca + ", naixament=" + naixament + "]";
+	}
+	
+	public String getNomComplet(){
+		return nom + " " + cognoms;
+	}
+	
+	public List<String> getPublicAttributesValues(){
+		List<String> ret = new ArrayList<>();
+		ret.add(String.valueOf(this.numero));
+		ret.add(this.getNom());
+		ret.add(this.getCognoms());
+		return ret;
+	}
+	
+	public List<String> getPublicAttributesNames(){
+		List<String> ret = new ArrayList<>();
+		ret.add("numero");
+		ret.add("nom");
+		ret.add("cognoms");
+		return ret;
 	}
 	
 }

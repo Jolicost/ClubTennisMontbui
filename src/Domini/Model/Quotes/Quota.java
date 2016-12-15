@@ -1,11 +1,11 @@
 package Domini.Model.Quotes;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import Domini.Excepcions.SociNoTitular;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
-import Factories.FactoriaNormes;
 
 public abstract class Quota {
 	
@@ -30,6 +30,13 @@ public abstract class Quota {
 	
 	public Set<ReservaSoci> ObtenirReserves(){
 		return propietari.getReserves();
+	}
+	
+	public Set<ReservaSoci> ObtenirReservesParticipa(){
+		Set<ReservaSoci> ret = new HashSet<>();
+		ret.addAll(propietari.getParticipa());
+		ret.addAll(this.ObtenirReserves());
+		return ret;
 	}
 
 
@@ -58,6 +65,10 @@ public abstract class Quota {
 
 	public Set<Soci> getMembres() throws SociNoTitular{
 		throw new SociNoTitular();
+	}
+	
+	public Set<Soci> getMembresNE(){
+		return new HashSet<>();
 	}
 	
 	public void AfegirMembre(Membre m) throws SociNoTitular{
