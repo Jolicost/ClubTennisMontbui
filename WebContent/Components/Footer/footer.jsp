@@ -10,7 +10,7 @@
 </div>
 
 <div class="col col-md-4">
-	<p class="text small text-muted"><span class="glyphicon glyphicon-globe"></span> Carrer Sant Passanals, 0, Santa Margarida de Montbui</p>
+	<p class="text small text-muted"><span class="glyphicon glyphicon-globe"></span> Carrer Can Passanals, 0, Santa Margarida de Montbui</p>
 	<p class="text small text-muted"><a href="mailto:reserves.tennis.montbui@gmail.com"><span class="glyphicon glyphicon-envelope"></span> correu d'assistència</a></p>
 	<p class="text small text-muted"><a href="mailto:joanolivacostas@gmail.com"><span class="glyphicon glyphicon-envelope"></span> webmaster</a></p>
 </div>

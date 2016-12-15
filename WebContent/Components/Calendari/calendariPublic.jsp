@@ -106,6 +106,11 @@ $(document).ready(function() {
     	get('insertar',{});
     });
     
+    $('#detalls').click(function(){
+    	var events = $('#calendar').fullCalendar('clientEvents',isSelected);
+    	if (events.length > 0) mostrarDetalls(events[0]);
+    });
+    
     $('#delete').click(function(){
     	
     	var array = $('#calendar').fullCalendar('clientEvents',isSelected);
@@ -154,12 +159,24 @@ function LoadEvents(){
 	            franja: '<%= f.getIdFranja() %>',
 	            nomTipus: '<%= f.getTipus() %>',
 	            sel:false,
+	            detalls:{
+	            	participants:'<%= f.printParticipants()%>'
+	            },
 	            colorSec:'green',
 			},
 		<%}%>
 	<%}%>
 	];
 	return events;	
+}
+
+function mostrarDetalls(franja){
+	var detalls = franja.detalls;
+	var msg = "";
+	for (var prop in detalls){
+		msg += prop  + ': ' + detalls[prop];
+	}
+	alert(msg);
 }
 
 
@@ -317,6 +334,16 @@ function rerenderEvents(evnts,mapaPistes,mapaTipus){
 </div>
 </div>
 <% } %>
-
-<div id="calendar" class="container container-fluid">
+<div class="container container-fluid">
+<div class="row" style="padding:10px">
+	<div class="col col-md-12">
+	<button id="detalls" type="button" class="btn btn-default center-block">Detalls</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col col-md-12">
+	<div id="calendar">
+	</div>
+</div>
+</div>
 </div>

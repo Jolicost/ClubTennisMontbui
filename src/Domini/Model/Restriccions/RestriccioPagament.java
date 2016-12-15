@@ -1,5 +1,6 @@
 package Domini.Model.Restriccions;
 
+import java.util.Set;
 import java.util.function.Predicate;
 
 import Domini.Model.Pista;
@@ -16,6 +17,10 @@ public class RestriccioPagament extends RestriccioAnticipada {
 	protected Predicate<ReservaSoci> createPredicate() {
 		Predicate<ReservaSoci> ret = rt -> rt.EsPagament() || rt.EsAnticipada();
 		return ret;
+	}
+	
+	protected Set<ReservaSoci> obtenirReservesRealitzades(Soci s,Predicate<ReservaSoci> cond){
+		 return s.getReservesParticipaCondicio(cond);
 	}
 
 }

@@ -41,7 +41,7 @@ public class TrQuotaSuperadaNomesSocis extends TrQuotaSuperada {
 
 	@Override
 	protected boolean ReservaValida(ReservaSoci r) {
-		return r.EsAnticipada();
+		return r.EsAnticipada() || r.EsPagament();
 	}
 
 }

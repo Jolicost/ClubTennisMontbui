@@ -17,7 +17,7 @@ InfoTriarParticipants i = (InfoTriarParticipants) request.getAttribute("info");
 	<div class="row">
 		<div class="col col-md-12">
 		<h2 class="text">Tria els participants:
-		<span class="text text-muted small">Mínim: <%=i.getMinim() - 1 %> ;</span>
+		<span class="text text-muted small">Mínim: <%=i.getMinim() - 1 %> </span>
 		<span class="text text-muted small">Màxim: <%= i.getMaxim() - 1 %></span>
 		</h3>
 		<button class="btn btn-default center-block" id="seleccionar">Seleccionar</button>
