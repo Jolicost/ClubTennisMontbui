@@ -2,8 +2,6 @@ package Domini.CasosUs.Gestors.Obertures;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-
 import org.joda.time.Interval;
 import org.joda.time.LocalDate;
 

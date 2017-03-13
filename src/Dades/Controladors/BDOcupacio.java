@@ -2,7 +2,6 @@ package Dades.Controladors;
 
 import java.util.Set;
 
-import Communicacio.Dades.Info;
 import Dades.Excepcions.BDExcepcio;
 import Domini.InterficieBD.CtrlOcupacio;
 import Domini.Model.Reserves.Ocupacio;

@@ -1,7 +1,6 @@
 package Presentacio.Components.Gestors.Usuari;
 
 import Presentacio.Components.WebComponent;
-import Presentacio.Components.Formularis.Inputs.Soci.NSociInput;
 import Presentacio.Components.Formularis.Inputs.Usuari.PassInput;
 import Presentacio.Components.Formularis.Inputs.Usuari.RangList;
 

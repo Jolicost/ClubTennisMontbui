@@ -1,8 +1,6 @@
 package Presentacio.Components.Gestors.Franges.Ocupacions;
 
 import Presentacio.Components.Formularis.Inputs.Ocupacions.TipusOcupacioInput;
-import Presentacio.Components.Formularis.Inputs.Temporals.DiaInput;
-import Presentacio.Components.Formularis.Inputs.Temporals.IntervalInput;
 import Presentacio.Components.Gestors.Franges.FormulariFranjaInsert;
 
 public class FormulariOcupacioInsert extends FormulariFranjaInsert implements FormulariOcupacio {

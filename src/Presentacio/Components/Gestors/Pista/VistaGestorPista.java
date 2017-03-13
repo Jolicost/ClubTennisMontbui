@@ -5,7 +5,6 @@ import java.util.List;
 import Communicacio.Dades.Info;
 import Presentacio.Components.WebComponent;
 import Presentacio.Components.Gestors.VistaGestorIndividual;
-import Presentacio.TagBuilder.RowTag;
 
 public class VistaGestorPista extends VistaGestorIndividual {
 

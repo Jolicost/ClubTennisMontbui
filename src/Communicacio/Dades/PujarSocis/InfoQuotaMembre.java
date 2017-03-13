@@ -5,9 +5,7 @@ import java.util.Map;
 import Domini.CasosUs.Controladors.PujarSocis.SociNoMembre;
 import Domini.CasosUs.Controladors.PujarSocis.TitularNoTrobat;
 import Domini.Excepcions.SociNoTitular;
-import Domini.Model.Soci;
 import Domini.Model.Quotes.Membre;
-import Domini.Model.Quotes.Quota;
 import Domini.Model.Quotes.Titular;
 
 public class InfoQuotaMembre extends InfoQuota{

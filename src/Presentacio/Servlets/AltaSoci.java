@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaAltaSoci;
-import Presentacio.Main.PaginaFaq;
 
 /**
  * Servlet implementation class AltaSoci

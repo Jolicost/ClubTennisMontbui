@@ -15,7 +15,6 @@ import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsDelete;
 import Domini.CasosUs.Descriptors.Gestors.CasUsDeleteSet;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class Esborrar

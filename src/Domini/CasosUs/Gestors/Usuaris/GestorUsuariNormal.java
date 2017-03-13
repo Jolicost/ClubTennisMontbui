@@ -10,7 +10,6 @@ import Domini.Excepcions.SociJaAssignat;
 import Domini.Model.Usuari;
 import Domini.Model.UsuariSoci;
 import Domini.Model.Rang.FactoriaRangs;
-import Domini.Model.Rang.Rang;
 import Factories.FactoriaControladors;
 
 public class GestorUsuariNormal extends GestorUsuari {

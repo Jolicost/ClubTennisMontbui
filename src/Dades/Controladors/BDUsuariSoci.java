@@ -3,8 +3,6 @@ package Dades.Controladors;
 import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;
-import Dades.Excepcions.NoExisteix;
-import Domini.InterficieBD.CtrlUsuari;
 import Domini.InterficieBD.CtrlUsuariSoci;
 import Domini.Model.Usuari;
 import Domini.Model.UsuariSoci;

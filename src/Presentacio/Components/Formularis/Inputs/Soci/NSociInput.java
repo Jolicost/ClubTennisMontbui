@@ -4,6 +4,10 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public abstract class NSociInput extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public NSociInput(){
 		super();
 		super.setName(getInputName());

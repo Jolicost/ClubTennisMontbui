@@ -1,7 +1,6 @@
 package Domini.CasosUs.Gestors.Obertures;
 
 import Communicacio.Dades.Info;
-import Communicacio.Dades.InfoObertura;
 import Communicacio.Excepcions.GestorInvalid;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Dades.Excepcions.BDExcepcio;

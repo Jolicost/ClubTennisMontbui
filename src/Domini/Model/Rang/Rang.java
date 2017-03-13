@@ -1,16 +1,16 @@
 package Domini.Model.Rang;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Comparator;
-
-import sun.reflect.annotation.TypeAnnotation.LocationInfo.Location;
 
 public abstract class Rang implements Comparable<Rang>,Comparator<Rang>,Serializable {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public abstract String toString();
 	public boolean EsAdmin(){
 		return false;

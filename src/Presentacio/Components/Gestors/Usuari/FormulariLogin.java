@@ -3,7 +3,6 @@ package Presentacio.Components.Gestors.Usuari;
 import Presentacio.Components.Formularis.Formulari;
 import Presentacio.Components.Formularis.Inputs.Usuari.MailInput;
 import Presentacio.Components.Formularis.Inputs.Usuari.PassInput;
-import Presentacio.TagBuilder.DesktopColumnTag;
 
 public class FormulariLogin extends Formulari {
 

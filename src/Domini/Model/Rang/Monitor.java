@@ -2,6 +2,11 @@ package Domini.Model.Rang;
 
 public class Monitor extends Rang {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public String toString() {
 		return "Monitor";

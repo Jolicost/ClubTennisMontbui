@@ -1,8 +1,6 @@
 package Domini.CasosUs.Controladors.Reserva.Confirmar;
 
 import java.util.HashSet;
-import java.util.Set;
-
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarLimitada;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarNomesSocis;
 import Domini.Model.Soci;

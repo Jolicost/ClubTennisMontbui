@@ -12,8 +12,6 @@ import Dades.Excepcions.BDExcepcio;
 import Dades.Excepcions.JaExisteix;
 import Dades.Excepcions.ViolacioNoNull;
 import Dades.Factories.HibernateUtil;
-import Domini.Model.Pista;
-import Domini.Model.Soci;
 
 public abstract class DTO {
 

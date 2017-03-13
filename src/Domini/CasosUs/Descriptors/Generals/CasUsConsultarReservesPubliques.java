@@ -5,7 +5,6 @@ import org.joda.time.DateTime;
 import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Gestors.Franges.GestorFrangesTotal;
 import Domini.CasosUs.Resultats.Generals.ResultatFrangesPubliques;
-import Domini.Excepcions.ActorInvalid;
 import Domini.Model.Rang.FactoriaRangs;
 
 public class CasUsConsultarReservesPubliques extends CasUs {

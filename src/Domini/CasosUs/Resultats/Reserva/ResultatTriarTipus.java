@@ -1,14 +1,10 @@
 package Domini.CasosUs.Resultats.Reserva;
 
-import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
-import javax.servlet.ServletException;
-
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaSeleccionarTipus;
 
 public class ResultatTriarTipus extends ResultatReserva{

@@ -1,12 +1,7 @@
 package Domini.CasosUs.Gestors.Controlador;
 
-import java.io.Serializable;
-import java.util.Set;
 import java.util.Stack;
 
-import Communicacio.Dades.Info;
-import Communicacio.Descriptors.FactoriaDescriptors;
-import Communicacio.Excepcions.CapGestor;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.Excepcions.CapCasUs;
 

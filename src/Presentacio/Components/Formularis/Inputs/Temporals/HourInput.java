@@ -6,6 +6,10 @@ import Presentacio.Components.Formularis.Inputs.LabelInput;
 
 public class HourInput extends LabelInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public HourInput(){
 		super();
 		super.setType(getInputType());

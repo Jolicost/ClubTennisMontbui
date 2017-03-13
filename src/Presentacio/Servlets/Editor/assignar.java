@@ -1,23 +1,17 @@
 package Presentacio.Servlets.Editor;
 
 import java.io.IOException;
-import java.util.Set;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Communicacio.Dades.Info;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsAssignar;
-import Domini.CasosUs.Descriptors.Gestors.CasUsGestionar;
 import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaHome;
 import Presentacio.Main.PaginaSelector;
 
 /**

@@ -5,7 +5,6 @@ import java.util.Set;
 import Dades.Excepcions.BDExcepcio;
 import Domini.InterficieBD.CtrlCalendari;
 import Domini.Model.Calendari;
-import Domini.Model.Soci;
 
 public class BDCalendari extends Controlador implements CtrlCalendari {
 

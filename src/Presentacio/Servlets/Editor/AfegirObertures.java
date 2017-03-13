@@ -11,11 +11,7 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsAfegirObertures;
-import Domini.CasosUs.Descriptors.Gestors.CasUsAssignar;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
-import Presentacio.Main.PaginaSelector;
 
 /**
  * Servlet implementation class GestionarObertures

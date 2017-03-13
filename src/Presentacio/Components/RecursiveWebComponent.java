@@ -1,9 +1,6 @@
 package Presentacio.Components;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.servlet.ServletException;
 
 public abstract class RecursiveWebComponent extends MultipleWebComponent {

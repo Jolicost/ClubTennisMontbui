@@ -11,9 +11,7 @@ import org.joda.time.Duration;
 import org.joda.time.Interval;
 
 import Domini.Excepcions.InsuficientQuota;
-import Domini.Excepcions.MaximAntelacio;
 import Domini.Excepcions.NoPotReservar;
-import Domini.Excepcions.CancelarReserva.SuperaAntelacio;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;

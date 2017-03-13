@@ -9,9 +9,7 @@ import Domini.Model.Soci;
 import Domini.Model.Reserves.Pagament;
 import Domini.Model.Reserves.ReservaSoci;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
 import Domini.Model.Restriccions.RestriccioPagament;
-import Domini.Model.Restriccions.RestriccioReservaLimitada;
 
 public class TrPagament extends TrReservaSoci {
 

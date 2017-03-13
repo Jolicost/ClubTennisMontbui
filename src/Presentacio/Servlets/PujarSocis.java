@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
 import Presentacio.Main.PaginaPujarSocis;
 
 /**

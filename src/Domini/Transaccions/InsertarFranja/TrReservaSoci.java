@@ -4,14 +4,12 @@ import org.joda.time.DateTime;
 import org.joda.time.Interval;
 
 import Dades.Excepcions.BDExcepcio;
-import Domini.Excepcions.InsuficientQuota;
 import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.Reserva;
 import Domini.Model.Reserves.ReservaSoci;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioPista;
 
 public abstract class TrReservaSoci extends TrReserva {
 	

@@ -4,8 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.joda.time.DateTime;
-import org.joda.time.Interval;
-
 import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;
 import Domini.Transaccions.InsertarFranja.TrReserva;

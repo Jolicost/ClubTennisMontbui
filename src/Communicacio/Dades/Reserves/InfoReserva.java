@@ -10,7 +10,6 @@ import org.joda.time.LocalTime;
 import Communicacio.Dades.Info;
 import Communicacio.Excepcions.DadaIncorrecta;
 import Communicacio.Excepcions.EntitatInvalida;
-import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 
 public class InfoReserva extends InfoFranja {
 	private DateTime dataRealitzada;

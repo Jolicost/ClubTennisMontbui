@@ -3,12 +3,8 @@ package Presentacio.Components.Gestors.Usuari;
 import java.util.List;
 
 import Communicacio.Dades.Info;
-import Presentacio.Components.MultipleWebComponent;
 import Presentacio.Components.WebComponent;
 import Presentacio.Components.Gestors.VistaGestorIndividual;
-import Presentacio.Components.Gestors.Soci.BotoAssignarQuota;
-import Presentacio.TagBuilder.RowTag;
-import Presentacio.TagBuilder.TagFactory;
 
 public class VistaGestorUsuari extends VistaGestorIndividual{
 

@@ -9,7 +9,6 @@ import Communicacio.Descriptors.DescriptorGestor;
 import Communicacio.Descriptors.FactoriaDescriptors;
 import Communicacio.Excepcions.DescriptorInvalid;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
 
 public class ResultatEntitat extends ResultatCasUs {
 

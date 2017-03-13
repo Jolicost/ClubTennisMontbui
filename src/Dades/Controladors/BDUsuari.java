@@ -1,6 +1,5 @@
 package Dades.Controladors;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;

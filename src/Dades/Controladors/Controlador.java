@@ -39,6 +39,7 @@ public class Controlador  {
 		}
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public Object get(Class c,Serializable ser) throws BDExcepcio{
 		try{
 			Object ret;
@@ -87,6 +88,7 @@ public class Controlador  {
 		}
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public boolean Exists(Class c,Serializable ser) throws BDExcepcio{
 		try{
 			Transaction tx;
@@ -120,6 +122,7 @@ public class Controlador  {
 		}
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public void Delete(Class c,Serializable ser) throws BDExcepcio{
 		try{
 		SessionFactory s =  HibernateUtil.getInstance().getSessionFactory();

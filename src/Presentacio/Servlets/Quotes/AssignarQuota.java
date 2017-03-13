@@ -10,11 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Domini.CasosUs.Descriptors.Gestors.CasUsAssignar;
 import Domini.CasosUs.Descriptors.Gestors.CasUsAssignarQuota;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaSelector;
 
 /**
  * Servlet implementation class AssignarQuota

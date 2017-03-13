@@ -1,6 +1,5 @@
 package Domini.CasosUs.Controladors.Reserva.Tipus;
 
-import Communicacio.Dades.Reserves.InfoReservaRanking;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusRanking;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.Model.Restriccions.IRestriccio;

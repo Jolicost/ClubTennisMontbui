@@ -5,6 +5,11 @@ import Presentacio.Components.Formularis.Inputs.ListInput;
 
 public class InputTipusPista extends ListInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public InputTipusPista() {
 		super("tipus","tipus");
 		AddValues();

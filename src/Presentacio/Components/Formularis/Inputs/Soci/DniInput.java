@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class DniInput extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public DniInput() {
 		super("dni","dni");
 		super.setIsRequired(true);

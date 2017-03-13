@@ -4,6 +4,10 @@ import Presentacio.Components.Formularis.Inputs.Soci.NameInput;
 
 public class InputNomCalendari extends NameInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public InputNomCalendari() {
 		super();
 	}

@@ -2,6 +2,10 @@ package Presentacio.Components.Formularis.Inputs.Usuari;
 
 public class ConfirmPassInput extends PassInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String idTo;
 	public ConfirmPassInput(String idTo) {
 		super();

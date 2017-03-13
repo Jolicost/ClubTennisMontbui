@@ -8,8 +8,6 @@ import javax.servlet.ServletException;
 
 import Presentacio.Components.SingleWebComponent;
 import Presentacio.TagBuilder.CenteredDesktopColumnTag;
-import Presentacio.TagBuilder.ComponentTag;
-import Presentacio.TagBuilder.Lists.ListElementTag;
 import Presentacio.TagBuilder.Lists.ListTag;
 
 public class LlistaErrors extends SingleWebComponent {

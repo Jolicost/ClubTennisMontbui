@@ -101,6 +101,9 @@ public abstract class Franja {
 	public void Populate(InfoFranja i){
 		if (i.getInterval() != null) this.setLapse(i.getInterval());
 	}
+	public boolean mateixInterval(Interval i){
+		return this.lapse.equals(i);
+	}
 	@Override
 	public boolean equals(Object obj) {
 		return this.ID == ((Franja) obj).ID;

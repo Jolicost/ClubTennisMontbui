@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Set;
 
 import Communicacio.Dades.InfoHorari;
-import Presentacio.Controladors.WebBuilder;
 
 public class ResultatHorariEsport extends ResultatReserva {
 	public ResultatHorariEsport() {

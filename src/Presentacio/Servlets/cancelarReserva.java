@@ -11,12 +11,8 @@ import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Descriptors.Generals.CasUsCancelarReserva;
-import Domini.CasosUs.Descriptors.Invitat.CasUsRegistre;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaRegistre;
 
 /**
  * Servlet implementation class cancelarReserva

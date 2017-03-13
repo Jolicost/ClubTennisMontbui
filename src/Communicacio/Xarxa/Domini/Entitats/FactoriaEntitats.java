@@ -21,6 +21,7 @@ public class FactoriaEntitats {
 	private EntitatOcupacions occ = new EntitatOcupacions();
 	private EntitatReserva r = new EntitatReserva();
 	private EntitatFranges f = new EntitatFranges();
+	private EntitatCalendariOcupacions cs = new EntitatCalendariOcupacions();
 	
 	private Map<String,Entitat> entitats;
 	
@@ -36,6 +37,7 @@ public class FactoriaEntitats {
 		entitats.put(occ.getEntitat(), occ);
 		entitats.put(r.getEntitat(), r);
 		entitats.put(f.getEntitat(), f);
+		entitats.put(cs.getEntitat(), cs);
 	}
 	
 	public Entitat getEntitat(String entitat) throws EntitatInvalida{
@@ -85,5 +87,8 @@ public class FactoriaEntitats {
 	}
 	public String getFranges(){
 		return f.getEntitat();
+	}
+	public String getCalendariSetmanal(){
+		return cs.getEntitat();
 	}
 }

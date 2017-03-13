@@ -1,6 +1,5 @@
 package Domini.MetaCasosUs.Accions;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import Communicacio.Dades.Accions.InfoAccio;

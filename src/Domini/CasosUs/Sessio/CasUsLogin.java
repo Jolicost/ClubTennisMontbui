@@ -1,7 +1,6 @@
 package Domini.CasosUs.Sessio;
 
 import Dades.Excepcions.BDExcepcio;
-import Dades.Excepcions.NoExisteix;
 import Domini.Excepcions.ContrasenyaIncorrecta;
 import Domini.Model.Usuari;
 import Factories.FactoriaControladors;

@@ -1,7 +1,6 @@
 package Presentacio.Components.Formularis.Inputs.Usuari;
 
 import Presentacio.Components.MultipleWebComponent;
-import Presentacio.TagBuilder.NullTag;
 
 public class ConfirmarPass extends MultipleWebComponent {
 

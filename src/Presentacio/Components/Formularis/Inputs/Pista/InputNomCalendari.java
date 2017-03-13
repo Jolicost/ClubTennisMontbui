@@ -4,6 +4,12 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class InputNomCalendari extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
 	public InputNomCalendari(String initialValue) {
 		super("calendari","calendari");
 		super.setIsDisabled(true);

@@ -95,6 +95,12 @@ public abstract class Info {
 	public InfoReserva toInfoReserva() throws DadaIncorrecta{
 		throw new DadaIncorrecta();
 	}
+	public InfoCalendariSetmanal toInfoCalendariSetmanal() throws DadaIncorrecta {
+		throw new DadaIncorrecta();
+	}
+	public InfoCalendariOcupacions toInfoCalendariOcupacions() throws DadaIncorrecta{
+		throw new DadaIncorrecta();
+	}
 	public List<String> getAttributeNames(){
 		Field[] fields = this.getClass().getFields();
 		List<String> ret = new ArrayList<>();
@@ -133,5 +139,7 @@ public abstract class Info {
 	public void PopulateParameters(WebBuilder w){
 		
 	}
+
+	
 	
 }

@@ -1,14 +1,8 @@
 package Domini.CasosUs.Descriptors.Gestors;
 
-import Communicacio.Excepcions.GestorInvalid;
-import Communicacio.Xarxa.Domini.Entitats.Entitat;
-import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Descriptors.CasUsDada;
 import Domini.CasosUs.Gestors.Gestor;
-import Domini.CasosUs.Gestors.Controlador.CuaCasosUs;
-import Domini.CasosUs.Gestors.Controlador.CuaGestors;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.Excepcions.CasUsInvalid;
 import Domini.Model.Rang.FactoriaRangs;

@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import Communicacio.Dades.Info;
-import Communicacio.Excepcions.GestorInvalid;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Gestors.GestorColectiu;

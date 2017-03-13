@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.Soci.NSociInput;
 
 public class NSociInputUsuari extends NSociInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public NSociInputUsuari(){
 		super.setIsDisabled(true);
 	}

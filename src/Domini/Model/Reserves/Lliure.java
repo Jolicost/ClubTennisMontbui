@@ -1,9 +1,7 @@
 package Domini.Model.Reserves;
 
-import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoLliure;
-import Domini.Model.Reserves.Tipus.TipusFranja;
 
 public class Lliure extends Franja {
 

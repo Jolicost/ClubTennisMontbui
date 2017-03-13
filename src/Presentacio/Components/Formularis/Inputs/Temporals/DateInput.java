@@ -7,6 +7,10 @@ import Presentacio.Components.Formularis.Inputs.LabelInput;
 public class DateInput extends LabelInput {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Override
 	protected InputZone getInputZone() {
 		return new InputZoneText();

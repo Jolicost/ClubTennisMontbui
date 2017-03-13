@@ -5,16 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import Communicacio.Dades.Info;
-import Communicacio.Dades.InfoUsuari;
-import Communicacio.Excepcions.GestorInvalid;
-import Communicacio.Excepcions.InsuficientPermis;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Gestors.GestorColectiu;
 import Domini.CasosUs.Gestors.Accions.FactoriaAccions;
-import Domini.Model.Usuari;
-import Domini.Transaccions.Assignacions.TrBuscarUsuari;
 import Factories.FactoriaControladors;
 
 public class GestorUsuaris extends GestorColectiu{

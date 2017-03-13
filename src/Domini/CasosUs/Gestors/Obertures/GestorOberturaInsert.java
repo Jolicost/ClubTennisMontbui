@@ -3,7 +3,6 @@ package Domini.CasosUs.Gestors.Obertures;
 import Communicacio.Dades.Info;
 import Communicacio.Dades.InfoObertura;
 import Communicacio.Descriptors.FactoriaDescriptors;
-import Communicacio.Excepcions.GestorInvalid;
 import Domini.Model.Calendari;
 import Factories.FactoriaControladors;
 

@@ -1,7 +1,6 @@
 package Domini.CasosUs.Controladors.Quotes;
 
 import Dades.Excepcions.BDExcepcio;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.CasosUs.Resultats.ResultatEscriptura;
 import Domini.Model.Soci;

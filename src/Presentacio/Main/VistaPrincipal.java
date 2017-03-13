@@ -6,8 +6,6 @@ import Presentacio.Components.Errors.LlistaErrors;
 import Presentacio.Components.Footer.Footer;
 import Presentacio.Components.Nav.NavBar;
 import Presentacio.TagBuilder.CustomTag;
-import Presentacio.TagBuilder.NullTag;
-import Presentacio.TagBuilder.TagFactory;
 
 public class VistaPrincipal extends MultipleWebComponent {
 	

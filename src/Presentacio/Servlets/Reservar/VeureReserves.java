@@ -11,11 +11,7 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Generals.CasUsConsultarReserves;
-import Domini.CasosUs.Descriptors.Reservar.CasUsSeleccionarEsport;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
-import Presentacio.Main.PaginaSeleccionarFranja;
 
 /**
  * Servlet implementation class VeureReserves

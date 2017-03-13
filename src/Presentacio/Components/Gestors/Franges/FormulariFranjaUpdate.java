@@ -1,7 +1,6 @@
 package Presentacio.Components.Gestors.Franges;
 
 import Communicacio.Dades.Reserves.InfoFranja;
-import Presentacio.Components.Formularis.Inputs.Ocupacions.TipusOcupacioInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.DiaInput;
 import Presentacio.Components.Formularis.Inputs.Temporals.IntervalInput;
 

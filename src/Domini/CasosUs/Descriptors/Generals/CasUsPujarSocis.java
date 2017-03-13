@@ -2,12 +2,10 @@ package Domini.CasosUs.Descriptors.Generals;
 
 import Communicacio.Dades.PujarSocis.InfoPlantillaSocis;
 import Domini.CasosUs.Controladors.PujarSocis.TrPujarSocis;
-import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Descriptors.Gestors.CasUsGestor;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.CasosUs.Resultats.ResultatEscriptura;
-import Domini.Excepcions.CasUsInvalid;
 import Domini.Model.Rang.FactoriaRangs;
 
 public class CasUsPujarSocis extends CasUsGestor {

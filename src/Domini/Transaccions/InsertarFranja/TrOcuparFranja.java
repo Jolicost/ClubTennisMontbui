@@ -3,7 +3,6 @@ package Domini.Transaccions.InsertarFranja;
 import org.joda.time.Interval;
 
 import Dades.Excepcions.BDExcepcio;
-import Dades.Excepcions.NoExisteix;
 import Domini.Excepcions.NoPotReservar;
 import Domini.Excepcions.PistaOcupada;
 import Domini.Model.Pista;

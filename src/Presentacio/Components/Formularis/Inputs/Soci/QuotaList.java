@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.ListInput;
 
 public class QuotaList extends ListInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public QuotaList() {
 		super("quota","quota");
 		super.AddValue("Individual");

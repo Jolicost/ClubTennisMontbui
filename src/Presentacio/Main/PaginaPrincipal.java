@@ -1,7 +1,6 @@
 package Presentacio.Main;
 
 import Presentacio.Components.WebComponent;
-import Presentacio.Components.Gestors.Usuari.FormulariLogin;
 
 public abstract class PaginaPrincipal extends Pagina{
 

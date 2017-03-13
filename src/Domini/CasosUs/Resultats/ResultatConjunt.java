@@ -1,7 +1,6 @@
 package Domini.CasosUs.Resultats;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -9,7 +8,6 @@ import javax.servlet.ServletException;
 
 import Communicacio.Dades.Info;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaGestor;
 
 public class ResultatConjunt extends ResultatEntitat {

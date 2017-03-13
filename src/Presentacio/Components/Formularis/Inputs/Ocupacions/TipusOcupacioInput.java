@@ -5,6 +5,11 @@ import Presentacio.Components.Formularis.Inputs.ListInput;
 
 public class TipusOcupacioInput extends ListInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public TipusOcupacioInput() {
 		super("tipus","tipus");
 		for (String s:FactoriaTipusOcupacio.getInstance().getAll()){

@@ -7,10 +7,8 @@ import Domini.CasosUs.Controladors.PujarSocis.SociNoIndividual;
 import Domini.CasosUs.Controladors.PujarSocis.SociNoMembre;
 import Domini.CasosUs.Controladors.PujarSocis.TitularNoTrobat;
 import Domini.Excepcions.SociNoTitular;
-import Domini.Model.Soci;
 import Domini.Model.Quotes.Individual;
 import Domini.Model.Quotes.Membre;
-import Domini.Model.Quotes.Quota;
 import Domini.Model.Quotes.Titular;
 
 public abstract class InfoQuota extends Info{

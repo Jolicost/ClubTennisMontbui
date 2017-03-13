@@ -4,13 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-
 import Communicacio.Dades.Info;
-import Dades.Factories.HibernateUtil;
 import Domini.CasosUs.Gestors.GestorColectiu;
 import Factories.FactoriaControladors;
 

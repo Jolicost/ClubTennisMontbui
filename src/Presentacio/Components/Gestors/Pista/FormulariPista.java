@@ -3,7 +3,6 @@ package Presentacio.Components.Gestors.Pista;
 import Presentacio.Components.Formularis.Formulari;
 import Presentacio.Components.Formularis.Inputs.Pista.InputNomPista;
 import Presentacio.Components.Formularis.Inputs.Pista.InputTipusPista;
-import Presentacio.TagBuilder.CenteredDesktopColumnTag;
 
 public abstract class FormulariPista extends Formulari {
 

@@ -1,9 +1,6 @@
 package Domini.InterficieBD;
 
-import java.util.Set;
-
 import Dades.Excepcions.BDExcepcio;
-import Domini.Model.Soci;
 import Domini.Model.Quotes.Quota;
 
 public interface CtrlQuota {

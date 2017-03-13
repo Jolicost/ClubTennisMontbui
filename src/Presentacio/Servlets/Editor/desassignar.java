@@ -13,7 +13,6 @@ import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsDesassignar;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class desassignar

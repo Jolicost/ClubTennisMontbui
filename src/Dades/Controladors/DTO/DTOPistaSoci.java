@@ -1,18 +1,7 @@
 package Dades.Controladors.DTO;
 
 import org.hibernate.HibernateException;
-import org.hibernate.NonUniqueObjectException;
-import org.hibernate.PropertyValueException;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.exception.ConstraintViolationException;
-
-import Dades.Excepcions.BDExcepcio;
-import Dades.Excepcions.JaExisteix;
-import Dades.Excepcions.NoExisteix;
-import Dades.Excepcions.ViolacioNoNull;
-import Dades.Factories.HibernateUtil;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 

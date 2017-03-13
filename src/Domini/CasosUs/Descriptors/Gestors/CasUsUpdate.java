@@ -2,10 +2,8 @@ package Domini.CasosUs.Descriptors.Gestors;
 
 import Communicacio.Descriptors.FactoriaDescriptors;
 import Domini.CasosUs.Gestors.Gestor;
-import Domini.CasosUs.Gestors.Controlador.CuaGestors;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.CasosUs.Resultats.ResultatIndividual;
-import Domini.Excepcions.CasUsInvalid;
 
 public class CasUsUpdate extends CasUsGestorID {
 

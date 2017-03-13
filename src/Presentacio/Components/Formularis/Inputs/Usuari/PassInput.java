@@ -4,6 +4,10 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class PassInput extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public PassInput() {
 		super("password","pass");
 	}

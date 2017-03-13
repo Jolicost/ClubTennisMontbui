@@ -1,7 +1,6 @@
 package Domini.CasosUs.Controladors.Reserva.Confirmar;
 
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarLimitada;
-import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarNomesSocis;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarReserva;
 import Dades.Excepcions.BDExcepcio;
 import Domini.Excepcions.NoPotReservar;

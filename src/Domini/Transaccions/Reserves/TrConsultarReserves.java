@@ -1,15 +1,10 @@
 package Domini.Transaccions.Reserves;
 
 import java.util.SortedSet;
-import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.function.Predicate;
 
-import org.joda.time.DateTime;
-
 import Communicacio.Dades.Reserves.InfoFranja;
-import Communicacio.Dades.Reserves.InfoReserva;
-import Communicacio.Dades.Reserves.InfoReservaSoci;
 import Communicacio.Excepcions.DadaIncorrecta;
 import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;

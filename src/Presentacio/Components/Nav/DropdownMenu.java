@@ -1,8 +1,5 @@
 package Presentacio.Components.Nav;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import Presentacio.Components.MultipleWebComponent;
 import Presentacio.TagBuilder.ComponentTag;
 import Presentacio.TagBuilder.Lists.ListElementTag;

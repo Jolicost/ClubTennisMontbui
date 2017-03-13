@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class NameInput extends TextInput{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public NameInput() {
 		super("nom","nom");
 		

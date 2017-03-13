@@ -1,8 +1,6 @@
 package Communicacio.Dades.PujarSocis;
 
 import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
-
 import Communicacio.Dades.Info;
 import Domini.CasosUs.Controladors.PujarSocis.QuotaInvalida;
 

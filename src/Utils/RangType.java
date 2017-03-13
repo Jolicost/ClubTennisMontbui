@@ -67,6 +67,7 @@ public class RangType implements UserType {
 		return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Class returnedClass() {
 		// TODO Auto-generated method stub

@@ -15,8 +15,6 @@ import Communicacio.Xarxa.FactoriaXarxa;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Descriptors.Gestors.CasUsSubmit;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class submit

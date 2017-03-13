@@ -6,7 +6,6 @@ import Presentacio.Components.Formularis.Inputs.Soci.DniInput;
 import Presentacio.Components.Formularis.Inputs.Soci.NameInput;
 import Presentacio.Components.Formularis.Inputs.Soci.SurnamesInput;
 import Presentacio.Components.Formularis.Inputs.Usuari.MailInput;
-import Presentacio.TagBuilder.DesktopColumnTag;
 
 public abstract class FormulariUsuari extends Formulari {
 

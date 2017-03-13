@@ -6,7 +6,6 @@ import Communicacio.Dades.Reserves.Tipus.InfoTipusNomesSocis;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReservaNomesSocis;
-import Domini.CasosUs.Controladors.Reserva.EstatFerReserva;
 import Domini.CasosUs.Controladors.Reserva.Confirmar.ConfirmacioNomesSocis;
 import Domini.CasosUs.Controladors.Reserva.Confirmar.TrObtenirConfirmacio;
 import Domini.CasosUs.Controladors.Reserva.Tipus.ComprovarNomesSocis;

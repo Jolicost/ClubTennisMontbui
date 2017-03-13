@@ -1,6 +1,5 @@
 package Presentacio.Vistes.Rols;
 
-import Presentacio.Components.Nav.Main.MenuAdmin;
 import Presentacio.Components.Nav.Main.MenuInvitat;
 import Presentacio.Components.Nav.Main.MenuPrincipal;
 import Presentacio.Components.Nav.UserMenu.MenuUsuari;

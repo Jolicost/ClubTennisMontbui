@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import Communicacio.Dades.Info;
 import Communicacio.Excepcions.GestorInvalid;
-import Domini.CasosUs.Gestors.Accions.Accio;
 
 public abstract class GestorIndividual extends Gestor {
 
