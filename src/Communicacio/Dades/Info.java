@@ -27,7 +27,7 @@ public abstract class Info {
 		return s.toJson(this);
 	}
 	
-	public Info toInfo(String json){
+	public <T extends Info> T toInfo(String json){
 		Gson s = Converters.registerAll(new GsonBuilder()).create();
 		return s.fromJson(json,this.getClass());
 	}

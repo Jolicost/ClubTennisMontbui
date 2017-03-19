@@ -8,11 +8,15 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import Communicacio.Descriptors.DescriptorGestor;
 import Communicacio.Excepcions.DescriptorInvalid;
 import Domini.CasosUs.Resultats.Reserva.ResultatReserva;
 import Presentacio.Controladors.UseCaseWebBuilder;
 import Presentacio.Controladors.WebBuilder;
+import Utils.gsonjodatime.Converters;
 
 public abstract class ResultatCasUs {
 
@@ -29,6 +33,11 @@ public abstract class ResultatCasUs {
 		for (String s: pars.keySet()){
 			req.setAttribute(s, pars.get(s));
 		}
+	}
+	
+	public String jsonEncode(){
+		Gson g = Converters.registerAll(new GsonBuilder()).create();
+		return g.toJson(this.createParameters());
 	}
 	
 	public DescriptorGestor getDescriptorGestor() throws DescriptorInvalid{

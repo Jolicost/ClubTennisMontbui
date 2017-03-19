@@ -5,6 +5,7 @@ import java.util.Set;
 import Communicacio.Dades.InfoDiaSetmana;
 import Communicacio.Dades.InfoFranjaSetmanal;
 import Domini.CasosUs.Controladors.FrangesSetmanals.IControladorFrangesSetmanals;
+import Domini.CasosUs.Resultats.FrangesSetmanals.ResultatInsertarFranja;
 
 public class CasUsInsertarFranjaSetmanal extends CasUsFrangesSetmanals {
 
@@ -18,8 +19,8 @@ public class CasUsInsertarFranjaSetmanal extends CasUsFrangesSetmanals {
 		
 		c.Insert(this.i);
 		Set<InfoFranjaSetmanal> taula = c.getAll();
-		//TODO /* Create Result and populate */
-		
+		ResultatInsertarFranja ret = new ResultatInsertarFranja(taula);
+		super.setResultat(ret);
 	}
 
 }

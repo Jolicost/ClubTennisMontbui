@@ -15,4 +15,6 @@ public interface IControladorFrangesSetmanals {
 	public Set<InfoFranjaSetmanal> getAll() throws Exception;
 	
 	public InfoFranjaSetmanal get(int id) throws Exception;
+
+	public void Delete(Set<Integer> ids) throws Exception;
 }

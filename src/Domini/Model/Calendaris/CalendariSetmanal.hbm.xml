@@ -14,7 +14,7 @@
         <property name="nom" type="java.lang.String">
             <column name="NOM" />
         </property>
-        <set name="franges" table="FRANJASETMANAL" lazy="false" cascade="all">
+        <set name="franges" table="FRANJASETMANAL" lazy="false" cascade="all,delete-orphan">
             <key>
                 <column name="CALENDARI" />
             </key>

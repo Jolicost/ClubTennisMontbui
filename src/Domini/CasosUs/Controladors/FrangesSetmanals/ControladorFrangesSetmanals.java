@@ -27,8 +27,7 @@ public class ControladorFrangesSetmanals extends ControladorCasUs implements ICo
 	public ResultatCasUs FerCasDUs(CasUs cu) throws Exception {
 		CasUsFrangesSetmanals cuf = cu.toFrangesSetmanals();
 		cuf.cridarControlador(this);
-		//TODO CREATE RESULTAT AND RETURN IT
-		return null;
+		return cuf.getResultat();
 	}
 	
 	
@@ -57,6 +56,7 @@ public class ControladorFrangesSetmanals extends ControladorCasUs implements ICo
 	public void Delete(int IDFranja) throws Exception{
 		CalendariSetmanal c = get();
 		c.Delete(IDFranja);
+		update(c);
 	}
 	
 	protected FranjaSetmanal crearFranja(){
@@ -70,6 +70,14 @@ public class ControladorFrangesSetmanals extends ControladorCasUs implements ICo
 	@Override
 	public InfoFranjaSetmanal get(int id) throws Exception {
 		return this.get().buscarFranja(id);
+	}
+	@Override
+	public void Delete(Set<Integer> ids) throws Exception {
+		CalendariSetmanal c = get();
+		for (Integer id: ids) {
+			c.Delete(id);
+		}
+		update(c);
 	}
 	
 

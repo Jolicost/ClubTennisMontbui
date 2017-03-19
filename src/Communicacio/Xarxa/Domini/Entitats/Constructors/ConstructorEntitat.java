@@ -8,5 +8,5 @@ import Communicacio.Excepcions.EntitatInvalida;
 public abstract class ConstructorEntitat {
 
 	
-	public abstract Info construir(Info in,ServletRequest req) throws IllegalArgumentException, IllegalAccessException, EntitatInvalida;
+	public abstract <T extends Info> T construir(Info in,ServletRequest req) throws IllegalArgumentException, IllegalAccessException, EntitatInvalida;
 }

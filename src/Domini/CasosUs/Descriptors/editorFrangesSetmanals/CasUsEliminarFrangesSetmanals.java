@@ -1,22 +1,23 @@
 package Domini.CasosUs.Descriptors.editorFrangesSetmanals;
 
+import java.util.Set;
+
 import Communicacio.Dades.InfoDiaSetmana;
 import Communicacio.Dades.InfoFranjaSetmanal;
 import Domini.CasosUs.Controladors.FrangesSetmanals.IControladorFrangesSetmanals;
 import Domini.CasosUs.Resultats.FrangesSetmanals.ResultatUpdateFranja;
 
-public class CasUsUpdateFranjaSetmanal extends CasUsFrangesSetmanals {
+public class CasUsEliminarFrangesSetmanals extends CasUsFrangesSetmanals {
 
-	protected InfoFranjaSetmanal i;
-	public CasUsUpdateFranjaSetmanal(InfoFranjaSetmanal i){
-		this.i = i;
+	protected Set<Integer> ids;
+	public CasUsEliminarFrangesSetmanals(Set<Integer> ids){
+		this.ids = ids;
 	}
 
 	@Override
 	public void cridarControlador(IControladorFrangesSetmanals c) throws Exception {
-		c.Update(this.i);
+		c.Delete(ids);
 		super.resultat = new ResultatUpdateFranja(c.getAll());
-		
 	}
 
 }

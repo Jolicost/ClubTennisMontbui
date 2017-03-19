@@ -21,13 +21,13 @@ public class ResultatConjunt extends ResultatEntitat {
 		this.conjunt = conjunt;
 	}
 
-	protected Set<Info> conjunt;
+	protected Set<? extends Info> conjunt;
 
-	public Set<Info> getConjunt() {
+	public Set<? extends Info> getConjunt() {
 		return conjunt;
 	}
 
-	public void setConjunt(Set<Info> conjunt) {
+	public void setConjunt(Set<? extends Info> conjunt) {
 		this.conjunt = conjunt;
 	}
 	protected Map<String,Object> createParameters(){
