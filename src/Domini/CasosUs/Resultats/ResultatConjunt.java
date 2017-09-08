@@ -1,7 +1,6 @@
 package Domini.CasosUs.Resultats;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -9,7 +8,6 @@ import javax.servlet.ServletException;
 
 import Communicacio.Dades.Info;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaGestor;
 
 public class ResultatConjunt extends ResultatEntitat {
@@ -23,13 +21,13 @@ public class ResultatConjunt extends ResultatEntitat {
 		this.conjunt = conjunt;
 	}
 
-	protected Set<Info> conjunt;
+	protected Set<? extends Info> conjunt;
 
-	public Set<Info> getConjunt() {
+	public Set<? extends Info> getConjunt() {
 		return conjunt;
 	}
 
-	public void setConjunt(Set<Info> conjunt) {
+	public void setConjunt(Set<? extends Info> conjunt) {
 		this.conjunt = conjunt;
 	}
 	protected Map<String,Object> createParameters(){

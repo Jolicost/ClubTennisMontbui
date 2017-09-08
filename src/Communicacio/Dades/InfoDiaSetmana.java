@@ -31,4 +31,9 @@ public class InfoDiaSetmana extends Info {
 		this.fi = fi;
 	}
 
+	@Override
+	public String toString() {
+		return "InfoDiaSetmana [diaSetmana=" + diaSetmana + ", inici=" + inici + ", fi=" + fi + "]";
+	}
+
 }

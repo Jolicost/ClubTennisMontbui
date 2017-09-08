@@ -1,10 +1,8 @@
 package Presentacio.Vistes.Rols;
 
-import Presentacio.Components.Nav.Main.MenuInvitat;
 import Presentacio.Components.Nav.Main.MenuPrincipal;
 import Presentacio.Components.Nav.Main.MenuRegistrat;
 import Presentacio.Components.Nav.UserMenu.MenuUsuari;
-import Presentacio.Components.Nav.UserMenu.MenuUsuariInvitat;
 import Presentacio.Components.Nav.UserMenu.MenuUsuariRegistrat;
 
 public class Usuari extends Rol {

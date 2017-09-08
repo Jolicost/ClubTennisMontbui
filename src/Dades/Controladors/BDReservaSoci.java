@@ -4,7 +4,6 @@ import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;
 import Domini.InterficieBD.CtrlReservaSoci;
-import Domini.Model.Usuari;
 import Domini.Model.Reserves.ReservaSoci;
 
 public class BDReservaSoci extends Controlador implements CtrlReservaSoci {

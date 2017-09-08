@@ -21,6 +21,9 @@ $(document).ready(function() {
 			post("select",{id:getSelectedKey()});
 	    });   
 	    
+		$('#editarfranges').click(function(){
+			post("editarFranges",{id:getSelectedKey()});
+		});
 	 
 	 $('#example tbody').on( 'click', 'tr', function () {
 	        if ( $(this).hasClass('selected') ) {

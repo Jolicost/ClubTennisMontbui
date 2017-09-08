@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 
 import Communicacio.Dades.Info;
 import Presentacio.Components.MultipleWebComponent;
-import Presentacio.Components.Gestors.Botons.BotonsCRUD;
 import Presentacio.Components.Gestors.Botons.BotonsGestor;
 import Presentacio.Components.Gestors.Taules.Taula;
 import Presentacio.TagBuilder.TagFactory;

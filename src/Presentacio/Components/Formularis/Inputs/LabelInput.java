@@ -1,17 +1,17 @@
 package Presentacio.Components.Formularis.Inputs;
 
-import java.io.IOException;
 import java.io.Serializable;
-
-import javax.servlet.ServletException;
 
 import Presentacio.Components.Formularis.ErrorTxt;
 import Presentacio.TagBuilder.CustomTag;
-import Presentacio.TagBuilder.DesktopColumnTag;
 
 public abstract class LabelInput extends Input implements Serializable {
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected String initialValue;
 	protected String type;
 	protected String label;

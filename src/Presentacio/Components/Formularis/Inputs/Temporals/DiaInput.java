@@ -2,6 +2,11 @@ package Presentacio.Components.Formularis.Inputs.Temporals;
 
 public class DiaInput extends DateInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public DiaInput(){
 		super("dia","dia");
 		super.setIsRequired(true);

@@ -13,7 +13,6 @@ import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.Franja;
-import Domini.Model.Transaccions.SocisQuotaSuperada.TrQuotaSuperadaNomesSocis;
 import Domini.Transaccions.InsertarFranja.TrReserva;
 import Factories.FactoriaControladors;
 import Mail.Informacio.InformacioMail;

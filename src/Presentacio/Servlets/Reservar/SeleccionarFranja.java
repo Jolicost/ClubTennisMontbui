@@ -10,15 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.joda.time.Interval;
 
-import Communicacio.Dades.Info;
 import Communicacio.Dades.Reserves.InfoReservar;
-import Communicacio.Excepcions.DadaIncorrecta;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Reservar.CasUsSeleccionarReserva;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class SeleccionarFranja

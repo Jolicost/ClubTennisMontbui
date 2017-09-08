@@ -1,8 +1,5 @@
 package Domini.Model.Reserves;
 
-import java.util.Set;
-
-import Communicacio.Dades.Reserves.InfoReserva;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
 import Communicacio.Dades.Reserves.InfoSenseReserva;
 import Domini.Model.Soci;

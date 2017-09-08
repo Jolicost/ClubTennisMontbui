@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class InputNomPista extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected String getLabelName() {
 		return "Nom: ";

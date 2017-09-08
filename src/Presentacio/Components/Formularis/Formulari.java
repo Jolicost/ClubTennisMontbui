@@ -6,10 +6,7 @@ import javax.servlet.ServletException;
 
 import Presentacio.Components.MultipleWebComponent;
 import Presentacio.Components.Formularis.Inputs.BotoEnviar;
-import Presentacio.TagBuilder.CenteredDesktopColumnTag;
 import Presentacio.TagBuilder.CustomFormTag;
-import Presentacio.TagBuilder.DesktopColumnTag;
-import Presentacio.TagBuilder.RowTag;
 
 public abstract class Formulari extends MultipleWebComponent {
 

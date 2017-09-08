@@ -1,8 +1,6 @@
 package Domini.CasosUs.Controladors.Reserva;
 
 import org.joda.time.DateTime;
-import org.joda.time.Interval;
-
 import Dades.Excepcions.BDExcepcio;
 import Domini.Transaccions.InsertarFranja.TrInvitacio;
 import Domini.Transaccions.InsertarFranja.TrReserva;

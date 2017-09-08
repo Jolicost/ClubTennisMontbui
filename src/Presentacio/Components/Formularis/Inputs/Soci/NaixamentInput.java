@@ -1,10 +1,13 @@
 package Presentacio.Components.Formularis.Inputs.Soci;
 
-import org.joda.time.LocalDate;
-
 import Presentacio.Components.Formularis.Inputs.Temporals.DateInput;
 
 public class NaixamentInput extends DateInput {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public NaixamentInput() {
 		super("naixament","naixament");

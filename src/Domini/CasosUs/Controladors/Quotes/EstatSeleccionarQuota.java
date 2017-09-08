@@ -6,8 +6,6 @@ import java.util.Set;
 import Communicacio.Dades.Info;
 import Communicacio.Descriptors.FactoriaDescriptors;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Domini.CasosUs.Controladors.Reserva.EstatInvalid;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.CasosUs.Resultats.ResultatEscriptura;
 import Domini.CasosUs.Resultats.Generals.ResultatSeleccionarEntitat;

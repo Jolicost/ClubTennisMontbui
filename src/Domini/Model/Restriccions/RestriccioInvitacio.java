@@ -2,14 +2,12 @@ package Domini.Model.Restriccions;
 
 import java.util.function.Predicate;
 
-import org.joda.time.Duration;
 import org.joda.time.Interval;
 
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
-import Domini.Model.Reserves.Tipus.TipusReservaInvalid;
 
 public class RestriccioInvitacio extends RestriccioAnticipada {
 

@@ -6,7 +6,6 @@ import Communicacio.Excepcions.GestorInvalid;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.GestorIndividual;
-import Domini.CasosUs.Gestors.Accions.Accio;
 import Domini.Model.Soci;
 import Factories.FactoriaControladors;
 

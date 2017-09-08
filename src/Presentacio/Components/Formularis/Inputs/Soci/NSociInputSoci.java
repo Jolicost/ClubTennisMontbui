@@ -2,6 +2,10 @@ package Presentacio.Components.Formularis.Inputs.Soci;
 
 public class NSociInputSoci extends NSociInput{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public NSociInputSoci(){
 		super();
 		super.setIsRequired(true);

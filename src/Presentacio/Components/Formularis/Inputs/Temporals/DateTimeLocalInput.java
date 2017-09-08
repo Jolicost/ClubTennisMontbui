@@ -2,6 +2,11 @@ package Presentacio.Components.Formularis.Inputs.Temporals;
 
 public class DateTimeLocalInput extends DateInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public DateTimeLocalInput(){
 		super();
 		super.setType(getInputType());

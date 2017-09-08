@@ -7,7 +7,6 @@ import Presentacio.Components.Formularis.Inputs.Soci.NSociInput;
 import Presentacio.Components.Formularis.Inputs.Soci.NSociInputSoci;
 import Presentacio.Components.Formularis.Inputs.Soci.NaixamentInput;
 import Presentacio.Components.Formularis.Inputs.Soci.NameInput;
-import Presentacio.Components.Formularis.Inputs.Soci.QuotaList;
 import Presentacio.Components.Formularis.Inputs.Soci.SurnamesInput;
 import Presentacio.Components.Formularis.Inputs.Soci.TelefonInput;
 

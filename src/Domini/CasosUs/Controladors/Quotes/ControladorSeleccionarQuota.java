@@ -3,7 +3,6 @@ package Domini.CasosUs.Controladors.Quotes;
 import java.io.Serializable;
 
 import Domini.CasosUs.Gestors.Gestor;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 
 public class ControladorSeleccionarQuota extends Gestor{

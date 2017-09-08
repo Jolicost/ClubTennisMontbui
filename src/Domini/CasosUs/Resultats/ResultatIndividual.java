@@ -3,7 +3,6 @@ package Domini.CasosUs.Resultats;
 import java.util.Map;
 
 import Communicacio.Dades.Info;
-import Presentacio.Controladors.WebBuilder;
 
 public class ResultatIndividual extends ResultatEntitat {
 

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Communicacio.Dades.Accions.InfoAccio;
-import Communicacio.Dades.Accions.InfoAccioGrup;
-import Communicacio.Dades.Accions.InfoAccioIndividual;
 
 public class TrConsultarAccionsSoci extends TrConsultarAccionsMembre {
 

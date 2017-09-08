@@ -1,14 +1,8 @@
 package Domini.CasosUs.Descriptors.Generals;
 
 import Communicacio.Dades.Reserves.InfoFranja;
-import Domini.CasosUs.Actors.Registrat;
-import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Descriptors.CasUsDada;
-import Domini.CasosUs.Resultats.ResultatIndividual;
-import Domini.CasosUs.Resultats.Generals.ResultatReservesSoci;
-import Domini.Model.Usuari;
 import Domini.Transaccions.Reserves.TrCancelarReserva;
-import Factories.FactoriaControladors;
 
 public class CasUsCancelarReserva extends CasUsDada {
 

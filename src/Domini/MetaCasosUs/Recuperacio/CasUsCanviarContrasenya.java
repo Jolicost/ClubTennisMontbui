@@ -1,9 +1,7 @@
 package Domini.MetaCasosUs.Recuperacio;
 
 import Domini.CasosUs.Controladors.CanviContrasenya.ICasUsRecuperacio;
-import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Resultats.ResultatCasUs;
-import Domini.CasosUs.Resultats.Generals.ResultatUnicSuccess;
 
 public class CasUsCanviarContrasenya extends CasUsRecuperacio {
 

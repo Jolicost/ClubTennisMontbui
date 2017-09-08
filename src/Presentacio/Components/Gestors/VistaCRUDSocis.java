@@ -1,6 +1,5 @@
 package Presentacio.Components.Gestors;
 
-import Presentacio.Components.Gestors.Botons.BotonsCRUD;
 import Presentacio.Components.Gestors.Botons.BotonsCRUDSoci;
 import Presentacio.Components.Gestors.Botons.BotonsGestor;
 

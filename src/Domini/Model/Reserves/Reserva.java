@@ -2,7 +2,6 @@ package Domini.Model.Reserves;
 
 import org.joda.time.DateTime;
 
-import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoReserva;
 

@@ -2,7 +2,6 @@ package Presentacio.Controladors;
 
 import java.util.List;
 
-import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Resultats.ResultatCasUs;
 import Presentacio.Vistes.Rols.Rol;

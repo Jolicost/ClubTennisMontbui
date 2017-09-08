@@ -1,10 +1,8 @@
 package Communicacio.Dades;
 
-import java.lang.reflect.Field;
 import java.util.Map;
 
 import Communicacio.Excepcions.DadaIncorrecta;
-import Domini.Model.Usuari;
 
 
 public class InfoUsuari extends Info {

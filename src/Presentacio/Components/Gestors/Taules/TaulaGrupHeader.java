@@ -1,7 +1,5 @@
 package Presentacio.Components.Gestors.Taules;
 
-import java.util.List;
-
 import Presentacio.TagBuilder.ComponentTag;
 import Presentacio.TagBuilder.TagFactory;
 

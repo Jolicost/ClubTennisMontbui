@@ -5,6 +5,8 @@ import Domini.CasosUs.Controladors.ControladorCasUs;
 import Domini.CasosUs.Controladors.ControladorDefecte;
 import Domini.CasosUs.Descriptors.Gestors.CasUsGestor;
 import Domini.CasosUs.Descriptors.Reservar.CasUsReservar;
+import Domini.CasosUs.Descriptors.editorFrangesSetmanals.CasUsEditarFrangesSetmanals;
+import Domini.CasosUs.Descriptors.editorFrangesSetmanals.CasUsFrangesSetmanals;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.Generals.ResultatDefecte;
@@ -44,6 +46,9 @@ public abstract class CasUs {
 	public ControladorCasUs getControladorCasUs() throws ActorInvalid{
 		return new ControladorDefecte();
 	}
+	public CasUsFrangesSetmanals toFrangesSetmanals() throws CasUsInvalid{
+		throw new CasUsInvalid();
+	}
 	
 	public boolean SuficientPermis(){
 		return actor.SuficientPermis(this);
@@ -74,6 +79,8 @@ public abstract class CasUs {
 	public Actor getActor() {
 		return actor;
 	}
+	
+	
 
 	public void setActor(Actor actor) {
 		this.actor = actor;

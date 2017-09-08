@@ -1,9 +1,5 @@
 package Domini.MetaCasosUs.Accions;
 
-import Domini.Model.Esports.FactoriaEsports;
-import Domini.Model.Rang.FactoriaRangs;
-import Domini.Model.Rang.Rang;
-
 public class AccionsVeureReserves extends GrupAccions {
 
 	@Override

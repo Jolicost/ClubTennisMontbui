@@ -7,13 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Communicacio.Excepcions.ExcepcioXarxa;
-import Communicacio.Identificacio.Identificacio;
-import Communicacio.Identificacio.IdentificadorsWeb;
-import Communicacio.Xarxa.FactoriaXarxa;
-import Dades.Excepcions.BDExcepcio;
 import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
 import Presentacio.Main.PaginaLogin;
 
 /**

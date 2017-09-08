@@ -5,7 +5,6 @@ import java.util.Set;
 import Dades.Excepcions.BDExcepcio;
 import Domini.InterficieBD.CtrlSoci;
 import Domini.Model.Soci;
-import Domini.Model.Usuari;
 
 public class BDSoci extends Controlador implements CtrlSoci {
 

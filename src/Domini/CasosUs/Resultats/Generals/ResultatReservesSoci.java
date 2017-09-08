@@ -1,15 +1,11 @@
 package Domini.CasosUs.Resultats.Generals;
 
-import java.io.IOException;
 import java.util.Map;
 import java.util.SortedSet;
-
-import javax.servlet.ServletException;
 
 import Communicacio.Dades.Reserves.InfoFranja;
 import Domini.CasosUs.Resultats.ResultatCasUs;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaVeureReserves;
 
 public class ResultatReservesSoci extends ResultatCasUs {

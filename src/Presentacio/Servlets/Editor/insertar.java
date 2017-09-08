@@ -7,18 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Communicacio.Dades.Info;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Descriptors.Gestors.CasUsInsert;
-import Domini.CasosUs.Descriptors.Gestors.CasUsSelect;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaGestorIndividual;
-import Presentacio.Main.PaginaHome;
-import Presentacio.Main.PaginaInsertIndividual;
 
 /**
  * Servlet implementation class Insertar

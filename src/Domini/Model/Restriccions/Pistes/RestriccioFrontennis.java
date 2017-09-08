@@ -9,12 +9,10 @@ import org.joda.time.Days;
 import org.joda.time.Duration;
 import org.joda.time.Interval;
 
-import Domini.Excepcions.MassesReserves;
 import Domini.Excepcions.MaximAntelacio;
 import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
-import Domini.Model.Restriccions.RestriccioSenseReserva;
 
 public class RestriccioFrontennis implements IRestriccionsPistes{
 

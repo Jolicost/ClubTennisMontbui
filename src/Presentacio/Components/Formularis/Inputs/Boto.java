@@ -6,8 +6,6 @@ import javax.servlet.ServletException;
 
 import Presentacio.Components.SingleWebComponent;
 import Presentacio.TagBuilder.ButtonTag;
-import Presentacio.TagBuilder.CenteredDesktopColumnTag;
-import Presentacio.TagBuilder.TagFactory;
 
 public class Boto extends SingleWebComponent {
 

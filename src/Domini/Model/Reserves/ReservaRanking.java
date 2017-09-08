@@ -2,7 +2,6 @@ package Domini.Model.Reserves;
 
 import Communicacio.Dades.Reserves.InfoReservaRanking;
 import Communicacio.Dades.Reserves.InfoReservaSoci;
-import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;
 import Domini.Model.Reserves.Tipus.FactoriaTipusReserva;
 
 public class ReservaRanking extends NomesSocis {

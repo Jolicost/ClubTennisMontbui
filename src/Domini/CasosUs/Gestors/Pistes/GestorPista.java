@@ -4,8 +4,6 @@ import Communicacio.Dades.Info;
 import Communicacio.Excepcions.GestorInvalid;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Gestors.GestorIndividual;
-import Domini.Model.Pista;
-import Factories.FactoriaControladors;
 
 public abstract class GestorPista extends GestorIndividual{
 

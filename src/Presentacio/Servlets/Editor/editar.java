@@ -10,13 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Domini.CasosUs.Descriptors.Gestors.CasUsGestionar;
 import Domini.CasosUs.Descriptors.Gestors.CasUsUpdate;
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaGestorIndividual;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class Editar

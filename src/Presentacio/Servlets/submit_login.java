@@ -14,8 +14,6 @@ import Communicacio.Xarxa.FactoriaXarxa;
 import Dades.Excepcions.BDExcepcio;
 import Dades.Excepcions.NoExisteix;
 import Domini.Excepcions.ContrasenyaIncorrecta;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaLogin;
 
 /**
  * Servlet implementation class submit_login

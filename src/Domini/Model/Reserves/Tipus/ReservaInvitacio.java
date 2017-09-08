@@ -6,13 +6,10 @@ import Communicacio.Dades.Reserves.Tipus.InfoTipusInvitacio;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReserva;
 import Domini.CasosUs.Controladors.Reserva.ConfirmarReservaInvitacio;
-import Domini.CasosUs.Controladors.Reserva.EstatFerReserva;
 import Domini.CasosUs.Controladors.Reserva.Confirmar.ConfirmacioInvitacio;
 import Domini.CasosUs.Controladors.Reserva.Confirmar.TrObtenirConfirmacio;
 import Domini.CasosUs.Controladors.Reserva.Tipus.ComprovarInvitacio;
 import Domini.CasosUs.Controladors.Reserva.Tipus.TrComprovarTipus;
-import Domini.Transaccions.InsertarFranja.TrInvitacio;
-import Domini.Transaccions.InsertarFranja.TrOcuparFranja;
 
 public class ReservaInvitacio extends TipusReserva {
 

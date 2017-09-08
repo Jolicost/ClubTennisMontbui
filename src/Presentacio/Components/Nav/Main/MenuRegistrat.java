@@ -1,6 +1,5 @@
 package Presentacio.Components.Nav.Main;
 
-import Presentacio.Components.Nav.MenuItem;
 import Presentacio.Components.Nav.Buttons.Reserva.TriarEsportMenu;
 import Presentacio.Components.Nav.Buttons.Reserva.VeureReservesMenu;
 

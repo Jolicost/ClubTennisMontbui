@@ -4,6 +4,12 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class SurnamesInput extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
 	public SurnamesInput() {
 		super("cognoms","cognoms");
 	}

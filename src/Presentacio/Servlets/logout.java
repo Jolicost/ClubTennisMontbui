@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Communicacio.Identificacio.IdentificadorsWeb;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class logout

@@ -5,14 +5,12 @@ import java.util.Set;
 import org.joda.time.DateTime;
 import org.joda.time.Interval;
 
-import Domini.Excepcions.MassesReserves;
 import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Pista;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.NomesSocis;
 import Domini.Model.Reserves.SR;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
 import Domini.Model.Restriccions.RestriccioSenseReserva;
 
 public class TrSenseReserva extends TrNomesSocis {

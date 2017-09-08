@@ -1,7 +1,5 @@
 package Presentacio.Components.Gestors.Usuari;
 
-import Communicacio.Dades.Info;
-import Presentacio.Components.MultipleWebComponent;
 import Presentacio.Components.Gestors.VistaInsertIndividual;
 import Presentacio.TagBuilder.RowTag;
 

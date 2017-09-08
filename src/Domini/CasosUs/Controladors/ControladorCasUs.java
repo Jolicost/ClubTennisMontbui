@@ -5,7 +5,6 @@ import java.util.Stack;
 import Communicacio.Excepcions.CapGestor;
 import Communicacio.Excepcions.GestorInvalid;
 import Domini.CasosUs.Descriptors.CasUs;
-import Domini.CasosUs.Gestors.Controlador.CuaCasosUs;
 import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.Generals.ResultatDefecte;
 import Domini.Excepcions.CasUsInvalid;

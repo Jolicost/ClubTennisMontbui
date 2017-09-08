@@ -3,7 +3,6 @@ package Domini.CasosUs.Descriptors.Gestors;
 import Domini.CasosUs.Controladors.Quotes.ControladorSeleccionarQuota;
 import Domini.CasosUs.Gestors.Gestor;
 import Domini.CasosUs.Resultats.ResultatEntitat;
-import Domini.Excepcions.CasUsInvalid;
 
 public class CasUsSeleccionarQuota extends CasUsSelect{
 

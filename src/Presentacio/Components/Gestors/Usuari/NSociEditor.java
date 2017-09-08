@@ -1,8 +1,6 @@
 package Presentacio.Components.Gestors.Usuari;
 
 import Presentacio.Components.MultipleWebComponent;
-import Presentacio.Components.Formularis.Inputs.Soci.NSociInput;
-import Presentacio.TagBuilder.CenteredDesktopColumnTag;
 
 public class NSociEditor extends MultipleWebComponent {
 

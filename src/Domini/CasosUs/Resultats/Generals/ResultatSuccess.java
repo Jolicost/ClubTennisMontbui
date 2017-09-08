@@ -1,11 +1,7 @@
 package Domini.CasosUs.Resultats.Generals;
 
-import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.ServletException;
-
-import Presentacio.Controladors.UseCaseWebBuilder;
 import Presentacio.Controladors.WebBuilder;
 
 public class ResultatSuccess extends ResultatDefecte {

@@ -10,7 +10,7 @@ Envia un correu a <a href="mailto:info@tennismontbui.net">info@tennismontbui.net
 <br>
 <p><small> 
 Els socis poden reservar a través d'aquesta web, i ténen accés a les següents instal.lacions:
-</br>
+<br>
 </small></p>
 <div class="row">
 	<div class="col col-md-4">

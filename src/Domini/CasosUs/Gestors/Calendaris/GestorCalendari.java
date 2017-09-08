@@ -1,9 +1,5 @@
 package Domini.CasosUs.Gestors.Calendaris;
 
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
-import org.joda.time.LocalDate;
-
 import Communicacio.Dades.Info;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Dades.Excepcions.BDExcepcio;

@@ -13,7 +13,6 @@ import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 import Domini.Model.Transaccions.Transaccio;
-import Factories.FactoriaControladors;
 
 public abstract class TrQuotaSuperada extends Transaccio{
 

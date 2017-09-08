@@ -2,10 +2,8 @@ package Communicacio.Descriptors;
 
 import Communicacio.Xarxa.Domini.Entitats.EntitatInvalida;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Presentacio.Components.EmptyComponent;
 import Presentacio.Components.WebComponent;
 import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaHome;
 
 public class DescriptorCRUD extends DescriptorColectiu {
 	@Override

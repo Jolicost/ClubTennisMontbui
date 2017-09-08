@@ -1,9 +1,5 @@
 package Presentacio.Components.Formularis.Inputs;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-
 import Presentacio.Components.SingleWebComponent;
 import Presentacio.TagBuilder.CustomTag;
 

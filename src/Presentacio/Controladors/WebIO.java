@@ -7,7 +7,6 @@ import java.util.Map;
 
 import Communicacio.Identificacio.IdentificacioTomCat;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Communicacio.Xarxa.Domini.Entitats.Entitat;
 import Domini.CasosUs.Descriptors.CasUs;
 import Domini.CasosUs.Resultats.ResultatCasUs;
 import Presentacio.Vistes.Rols.Rol;

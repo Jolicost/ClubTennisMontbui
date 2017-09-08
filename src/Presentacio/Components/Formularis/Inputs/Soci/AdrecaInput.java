@@ -4,6 +4,11 @@ import Presentacio.Components.Formularis.Inputs.TextInput;
 
 public class AdrecaInput extends TextInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public AdrecaInput() {
 		super("adreca","adreca");
 		

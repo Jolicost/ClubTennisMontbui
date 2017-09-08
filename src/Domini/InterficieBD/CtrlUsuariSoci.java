@@ -3,7 +3,6 @@ package Domini.InterficieBD;
 import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;
-import Dades.Excepcions.NoExisteix;
 import Domini.Model.Usuari;
 import Domini.Model.UsuariSoci;
 

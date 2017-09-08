@@ -1,7 +1,6 @@
 package Communicacio.Xarxa.Domini.Entitats;
 
 import Communicacio.Dades.Info;
-import Communicacio.Dades.InfoObertures;
 import Communicacio.Dades.InfoOcupacions;
 import Communicacio.Excepcions.NoTeGestor;
 import Communicacio.Xarxa.Domini.Entitats.Constructors.ConstructorEntitat;

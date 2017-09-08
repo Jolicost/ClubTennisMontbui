@@ -1,7 +1,5 @@
 package Communicacio.Dades;
 
-import java.util.Set;
-
 import org.joda.time.LocalDate;
 
 import Communicacio.Excepcions.DadaIncorrecta;

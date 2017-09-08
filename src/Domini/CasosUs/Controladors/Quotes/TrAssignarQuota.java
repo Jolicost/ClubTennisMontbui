@@ -1,7 +1,6 @@
 package Domini.CasosUs.Controladors.Quotes;
 
 import Dades.Excepcions.BDExcepcio;
-import Domini.Excepcions.SociNoTitular;
 import Domini.Model.Soci;
 import Domini.Model.Quotes.Quota;
 import Factories.FactoriaControladors;

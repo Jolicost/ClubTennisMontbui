@@ -3,7 +3,6 @@ package Domini.CasosUs.Controladors.Reserva.Tipus;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusNomesSocis;
 import Communicacio.Dades.Reserves.Tipus.InfoTipusReserva;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
 import Domini.Model.Restriccions.RestriccioNomesSocis;
 
 public class ComprovarNomesSocis extends TrComprovarTipus {

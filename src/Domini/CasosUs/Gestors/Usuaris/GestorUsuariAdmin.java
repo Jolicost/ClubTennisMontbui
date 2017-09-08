@@ -8,7 +8,6 @@ import Domini.Excepcions.UsuariNoSoci;
 import Domini.Model.Usuari;
 import Domini.Model.UsuariSoci;
 import Domini.Model.Rang.FactoriaRangs;
-import Domini.Model.Rang.Rang;
 import Domini.Model.Rang.RangInvalid;
 import Factories.FactoriaControladors;
 

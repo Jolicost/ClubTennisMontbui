@@ -7,7 +7,6 @@ import javax.servlet.ServletException;
 
 import Communicacio.Dades.Info;
 import Domini.CasosUs.Resultats.ResultatConjunt;
-import Presentacio.Components.ServletComponent;
 import Presentacio.Controladors.UseCaseWebBuilder;
 import Presentacio.Main.PaginaFrangesPubliques;
 

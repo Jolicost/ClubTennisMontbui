@@ -2,6 +2,8 @@ package Factories;
 
 import Dades.Controladors.BDAnticipada;
 import Dades.Controladors.BDCalendari;
+import Dades.Controladors.BDCalendariOcupacions;
+import Dades.Controladors.BDCalendariSetmanal;
 import Dades.Controladors.BDFranja;
 import Dades.Controladors.BDNomesSocis;
 import Dades.Controladors.BDOcupacio;
@@ -14,6 +16,8 @@ import Dades.Controladors.BDUsuari;
 import Dades.Controladors.BDUsuariSoci;
 import Domini.InterficieBD.CtrlAnticipada;
 import Domini.InterficieBD.CtrlCalendari;
+import Domini.InterficieBD.CtrlCalendariOcupacions;
+import Domini.InterficieBD.CtrlCalendariSetmanal;
 import Domini.InterficieBD.CtrlFranja;
 import Domini.InterficieBD.CtrlNomesSocis;
 import Domini.InterficieBD.CtrlOcupacio;
@@ -41,7 +45,8 @@ public class FactoriaControladors {
 	private CtrlCalendari cc = new BDCalendari();
 	private CtrlUsuariSoci cus = new BDUsuariSoci();
 	private CtrlQuota cq = new BDQuota();
-	
+	private CtrlCalendariSetmanal cs = new BDCalendariSetmanal();
+	private CtrlCalendariOcupacions co = new BDCalendariOcupacions();
 	
 	public CtrlPista getCtrlPista(){return p;}
 	public CtrlSoci getCtrlSoci(){return s;}
@@ -55,4 +60,6 @@ public class FactoriaControladors {
 	public CtrlCalendari getCtrlCalendari(){return cc;}
 	public CtrlUsuariSoci getCtrlUsuariSoci(){return cus;}
 	public CtrlQuota getCtrlQuota(){return cq;}
+	public CtrlCalendariSetmanal getCtrlCalendariSetmanal(){return cs;}
+	public CtrlCalendariOcupacions getCtrlCalendariOcupacions(){return co;}
 }

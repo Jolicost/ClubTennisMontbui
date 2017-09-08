@@ -11,7 +11,6 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Generals.CasUsConsultarPerfil;
-import Presentacio.Components.ServletComponent;
 import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaPerfil;
 

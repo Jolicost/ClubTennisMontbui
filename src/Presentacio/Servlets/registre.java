@@ -12,11 +12,8 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Domini.CasosUs.Descriptors.Gestors.CasUsInsert;
 import Domini.CasosUs.Descriptors.Invitat.CasUsRegistre;
 import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaHome;
 import Presentacio.Main.PaginaRegistre;
 
 /**

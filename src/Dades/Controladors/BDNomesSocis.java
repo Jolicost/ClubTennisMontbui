@@ -4,7 +4,6 @@ import java.util.Set;
 
 import Dades.Excepcions.BDExcepcio;
 import Domini.InterficieBD.CtrlNomesSocis;
-import Domini.Model.Pista;
 import Domini.Model.Reserves.NomesSocis;
 
 public class BDNomesSocis extends Controlador implements CtrlNomesSocis{

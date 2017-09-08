@@ -6,6 +6,11 @@ import Presentacio.Components.Formularis.Inputs.ListInput;
 public class RangList extends ListInput{
 
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public RangList(String initValue) {
 		super("rang","rang");
 		for (String s: FactoriaRangs.getInstance().getAll())

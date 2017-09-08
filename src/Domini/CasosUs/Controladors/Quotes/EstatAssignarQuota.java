@@ -1,7 +1,6 @@
 package Domini.CasosUs.Controladors.Quotes;
 
 import Domini.CasosUs.Controladors.Reserva.EstatInvalid;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 
 public abstract class EstatAssignarQuota {

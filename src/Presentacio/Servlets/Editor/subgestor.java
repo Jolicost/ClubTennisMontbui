@@ -12,10 +12,8 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsSubGestor;
-import Domini.CasosUs.Resultats.ResultatCasUs;
 import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class Gestor

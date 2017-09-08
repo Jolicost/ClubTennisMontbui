@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col col-md-4 col-md-offset-4">
 		<h3>Escriu la nova contrasenya: </h3>
-		</br>
+		<br>
 		<script src="Components/Misc/Validator.js"></script>
 		<form data-toggle="validator" role="form" method="POST" action="RecuperarContrasenya" class="form" novalidate="true">
 		<div>

@@ -1,9 +1,5 @@
 package Domini.CasosUs.Resultats;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-
 import Presentacio.Controladors.UseCaseWebBuilder;
 import Presentacio.Main.PaginaAfegirObertures;
 

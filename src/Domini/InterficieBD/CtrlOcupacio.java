@@ -2,7 +2,6 @@ package Domini.InterficieBD;
 
 import java.util.Set;
 
-import Communicacio.Dades.Info;
 import Dades.Excepcions.BDExcepcio;
 import Domini.Model.Reserves.Ocupacio;
 

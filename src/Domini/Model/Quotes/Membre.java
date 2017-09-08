@@ -2,7 +2,6 @@ package Domini.Model.Quotes;
 
 import java.util.Set;
 
-import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 
 public class Membre extends Familiar {

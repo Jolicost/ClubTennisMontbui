@@ -3,7 +3,6 @@ package Domini.CasosUs.Controladors.Reserva.Confirmar;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarInvitacio;
 import Communicacio.Dades.Reserves.Confirmar.InfoConfirmarLimitada;
 import Dades.Excepcions.BDExcepcio;
-import Domini.Excepcions.NoPotReservar;
 import Domini.Model.Soci;
 import Domini.Model.Restriccions.IRestriccio;
 import Domini.Model.Restriccions.RestriccioInvitacio;

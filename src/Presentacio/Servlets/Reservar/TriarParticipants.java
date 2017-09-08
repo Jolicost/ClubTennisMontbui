@@ -12,7 +12,6 @@ import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Reservar.CasUsSeleccionarParticipants;
-import Domini.CasosUs.Descriptors.Reservar.CasUsSeleccionarTipus;
 import Presentacio.Controladors.UseCaseWebBuilder;
 
 /**

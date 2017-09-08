@@ -1,8 +1,6 @@
 package Domini.CasosUs.Descriptors.Gestors;
 
-import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Gestors.Gestor;
-import Domini.CasosUs.Gestors.Controlador.CuaGestors;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 import Domini.CasosUs.Resultats.ResultatEscriptura;
 import Domini.Model.Rang.FactoriaRangs;

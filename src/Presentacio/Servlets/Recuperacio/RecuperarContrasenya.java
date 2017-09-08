@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Domini.MetaCasosUs.Recuperacio.CasUsDemanarCanvi;
 import Domini.MetaCasosUs.Recuperacio.CasUsSubmitPass;
 import Presentacio.Controladors.UseCaseWebBuilder;
 

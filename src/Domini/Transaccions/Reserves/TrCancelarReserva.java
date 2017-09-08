@@ -7,7 +7,6 @@ import java.util.function.Predicate;
 import org.joda.time.DateTime;
 
 import Domini.Excepcions.CancelarReserva.ReservaInexistent;
-import Domini.Excepcions.CancelarReserva.SuperaAntelacio;
 import Domini.Model.Soci;
 import Domini.Model.Reserves.ReservaSoci;
 import Factories.FactoriaControladors;

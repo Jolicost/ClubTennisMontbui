@@ -10,12 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import Communicacio.Identificacio.Identificacio;
 import Communicacio.Identificacio.IdentificadorsWeb;
 import Communicacio.Xarxa.FactoriaXarxa;
-import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
-import Domini.CasosUs.Descriptors.Gestors.CasUsInsert;
 import Domini.CasosUs.Descriptors.Reservar.CasUsSeleccionarEsport;
 import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaHome;
-import Presentacio.Main.PaginaRegistre;
 import Presentacio.Main.PaginaSeleccionarFranja;
 
 /**

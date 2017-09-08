@@ -2,7 +2,6 @@ package Domini.Model.Reserves.Tipus;
 
 import Communicacio.Dades.Reserves.InfoCursets;
 import Communicacio.Dades.Reserves.InfoOcupacio;
-import Domini.CasosUs.Gestors.Franges.GestorFranja;
 import Domini.Model.Reserves.Cursets;
 import Domini.Model.Reserves.Ocupacio;
 

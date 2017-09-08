@@ -2,6 +2,10 @@ package Presentacio.Components.Formularis.Inputs;
 
 public class TextInput extends LabelInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public TextInput(){
 		super();
 		super.setType(getInputType());

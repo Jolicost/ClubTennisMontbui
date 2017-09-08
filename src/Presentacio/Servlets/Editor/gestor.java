@@ -14,8 +14,6 @@ import Communicacio.Xarxa.FactoriaXarxa;
 import Domini.CasosUs.Descriptors.Gestors.CasUsGestionar;
 import Presentacio.Controladors.WebBuilder;
 import Presentacio.Main.PaginaGestor;
-import Presentacio.Main.PaginaGestorIndividual;
-import Presentacio.Main.PaginaHome;
 
 /**
  * Servlet implementation class Gestor
@@ -36,7 +34,6 @@ public class gestor extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		@SuppressWarnings("unused")
 		String entitat = request.getParameter("entitat");
 		Identificacio id = IdentificadorsWeb.getInstance().get(request);
 		WebBuilder w = new WebBuilder(request,response);

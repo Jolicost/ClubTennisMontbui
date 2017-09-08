@@ -4,8 +4,6 @@ import Communicacio.Descriptors.FactoriaDescriptors;
 import Communicacio.Xarxa.Domini.Entitats.FactoriaEntitats;
 import Domini.CasosUs.Controladors.ControladorCasUs;
 import Domini.CasosUs.Controladors.ControladorGestors;
-import Domini.CasosUs.Gestors.Gestor;
-import Domini.CasosUs.Gestors.Controlador.CuaGestors;
 import Domini.CasosUs.Resultats.ResultatConjunt;
 import Domini.CasosUs.Resultats.ResultatEntitat;
 

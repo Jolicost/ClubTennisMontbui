@@ -4,8 +4,6 @@ import java.util.Map;
 import java.util.Set;
 
 import Presentacio.Controladors.UseCaseWebBuilder;
-import Presentacio.Controladors.WebBuilder;
-import Presentacio.Main.PaginaAfegirObertures;
 import Presentacio.Main.PaginaAfegirOcupacions;
 
 public class ResultatAfegirOcupacions extends ResultatEntitat {

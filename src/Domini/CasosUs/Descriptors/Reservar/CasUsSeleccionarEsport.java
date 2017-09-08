@@ -1,8 +1,5 @@
 package Domini.CasosUs.Descriptors.Reservar;
 
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
-
 import Domini.CasosUs.Controladors.ControladorCasUs;
 import Domini.CasosUs.Controladors.Reserva.ControladorReserves;
 import Domini.CasosUs.Controladors.Reserva.FerReserva;

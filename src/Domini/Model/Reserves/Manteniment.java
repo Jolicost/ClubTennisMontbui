@@ -1,6 +1,5 @@
 package Domini.Model.Reserves;
 
-import Communicacio.Dades.InfoLapse;
 import Communicacio.Dades.Reserves.InfoFranja;
 import Communicacio.Dades.Reserves.InfoManteniment;
 import Domini.Model.Reserves.Tipus.FactoriaTipusOcupacio;

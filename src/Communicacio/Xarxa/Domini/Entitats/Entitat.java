@@ -1,18 +1,13 @@
 package Communicacio.Xarxa.Domini.Entitats;
 
-import java.util.Set;
-
 import javax.servlet.ServletRequest;
 
 import Communicacio.Dades.Info;
 import Communicacio.Excepcions.EntitatInvalida;
-import Communicacio.Excepcions.InsuficientPermis;
 import Communicacio.Excepcions.NoTeGestor;
 import Communicacio.Xarxa.Domini.Entitats.Constructors.ConstructorEntitat;
 import Communicacio.Xarxa.Domini.Entitats.Constructors.FactoriaConstructors;
-import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Gestors.GestorColectiu;
-import Domini.CasosUs.Sessio.CasUsSessio;
 import Presentacio.Components.Gestors.VistaGestorEntitat;
 import Presentacio.Components.Gestors.VistaGestorIndividual;
 import Presentacio.Components.Gestors.VistaInsertIndividual;

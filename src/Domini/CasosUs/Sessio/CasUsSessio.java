@@ -1,14 +1,7 @@
 package Domini.CasosUs.Sessio;
 
-import java.util.Set;
-
-import Communicacio.Dades.Info;
-import Communicacio.Dades.InfoUsuari;
-import Communicacio.Excepcions.GestorInvalid;
 import Communicacio.Excepcions.InsuficientPermis;
-import Dades.Excepcions.BDExcepcio;
 import Domini.CasosUs.Actors.Actor;
-import Domini.CasosUs.Actors.Invitat;
 import Domini.CasosUs.Controladors.ControladorCasUs;
 import Domini.CasosUs.Controladors.ControladorDefecte;
 import Domini.CasosUs.Descriptors.CasUs;

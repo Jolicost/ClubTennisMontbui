@@ -1,8 +1,5 @@
 package Presentacio.Components.Nav;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import Presentacio.Components.MultipleWebComponent;
 import Presentacio.TagBuilder.NavBarMenu;
 

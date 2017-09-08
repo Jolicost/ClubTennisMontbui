@@ -1,7 +1,5 @@
 package Domini.Model.Quotes;
 
-import Factories.FactoriaNormes;
-
 public class Individual extends Quota{
 
 

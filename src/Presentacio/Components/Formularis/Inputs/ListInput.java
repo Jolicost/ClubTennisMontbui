@@ -5,6 +5,10 @@ import java.util.List;
 
 public class ListInput extends LabelInput {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private List<String> values;
 
 	public ListInput(String name,String id){

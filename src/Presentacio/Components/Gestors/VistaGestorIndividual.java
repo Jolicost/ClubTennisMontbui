@@ -3,11 +3,7 @@ package Presentacio.Components.Gestors;
 import java.util.ArrayList;
 import java.util.List;
 
-import Presentacio.Components.MultipleWebComponent;
 import Presentacio.Components.WebComponent;
-import Presentacio.TagBuilder.CenteredDesktopColumnTag;
-import Presentacio.TagBuilder.RowTag;
-import Presentacio.TagBuilder.TagFactory;
 
 public abstract class VistaGestorIndividual extends VistaIndividual{
 

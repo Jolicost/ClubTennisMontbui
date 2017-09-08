@@ -11,7 +11,6 @@ import Domini.Model.Soci;
 import Domini.Model.Reserves.Anticipada;
 import Domini.Model.Reserves.NomesSocis;
 import Domini.Model.Restriccions.IRestriccio;
-import Domini.Model.Restriccions.RestriccioAnticipada;
 import Domini.Model.Restriccions.RestriccioNomesSocis;
 
 public class TrReservaAnticipada extends TrNomesSocis {
