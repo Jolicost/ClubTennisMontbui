@@ -27,9 +27,10 @@ public abstract class Info {
 		return s.toJson(this);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public <T extends Info> T toInfo(String json){
 		Gson s = Converters.registerAll(new GsonBuilder()).create();
-		return s.fromJson(json,this.getClass());
+		return (T) s.fromJson(json,this.getClass());
 	}
 	
 	public String getAttribute(String name){
